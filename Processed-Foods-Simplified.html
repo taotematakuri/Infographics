@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Real Food vs. Factory Food | Healthier Ever After</title>
+<meta name="description" content="A Healthier Ever After easy-read guide to real food vs. factory food: a traffic-light way to sort foods, why factory food keeps you hungry, and how to read a label like a food detective.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12314e;
+    --navy-deep:#0d2439;
+    --green:#2f6f4f;
+    --green-bright:#3f8a63;
+    --gold:#c69a3f;
+    --paper:#f7f3ea;
+    --paper-2:#fbf8f1;
+    --ink:#20303c;
+    --ink-soft:#4c5c66;
+    /* traffic light */
+    --go:#3f8a63;
+    --go-soft:#e3efe6;
+    --slow:#d9a63c;
+    --slow-soft:#f7eccf;
+    --stop:#c05236;
+    --stop-soft:#f6ddd2;
+    --line:#e2d9c6;
+    --shadow:0 10px 26px rgba(13,36,57,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{max-width:940px;margin:0 auto;padding:0 40px 60px;}
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+
+  /* HERO */
+  header.hero{
+    background:linear-gradient(150deg,var(--navy),var(--navy-deep));
+    color:#f6f1e6;border-radius:26px;padding:40px 44px;margin:40px 0 32px;
+    position:relative;overflow:hidden;box-shadow:var(--shadow);text-align:center;
+  }
+  header.hero:after{content:"";position:absolute;left:-60px;bottom:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(63,138,99,.5),transparent 70%);}
+  .brandrow{display:flex;justify-content:center;align-items:center;gap:10px;font-family:'Space Mono',monospace;letter-spacing:.14em;text-transform:uppercase;font-size:11px;color:#bfe0cd;font-weight:700;position:relative;z-index:2;}
+  .brandmark{width:26px;height:26px;border-radius:50%;background:linear-gradient(140deg,var(--green-bright),var(--gold));display:inline-flex;align-items:center;justify-content:center;flex:none;}
+  header.hero h1{font-size:52px;line-height:1.02;margin:16px 0 14px;font-weight:700;color:#fdfbf5;position:relative;z-index:2;}
+  header.hero h1 .rf{color:#7fd0a1;}
+  header.hero h1 .ff{color:var(--gold);}
+  header.hero p{font-size:19px;color:#e6efe4;margin:0 auto;max-width:44ch;position:relative;z-index:2;}
+
+  section{margin:0 0 30px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin:0 0 14px;justify-content:center;text-align:center;}
+  .sec-head h2{font-size:30px;margin:0;color:var(--navy);font-weight:700;}
+  .lead{font-size:18px;color:var(--ink-soft);text-align:center;max-width:60ch;margin:0 auto 22px;}
+
+  /* THREE LIGHTS */
+  .lights{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+  .light{border-radius:22px;padding:22px 20px 24px;text-align:center;border:2px solid;box-shadow:var(--shadow);}
+  .light.go{background:var(--go-soft);border-color:#bcdcc6;}
+  .light.slow{background:var(--slow-soft);border-color:#ecd8a4;}
+  .light.stop{background:var(--stop-soft);border-color:#efc4b4;}
+  .circle{width:74px;height:74px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 6px 14px rgba(0,0,0,.15);}
+  .go .circle{background:var(--go);}
+  .slow .circle{background:var(--slow);}
+  .stop .circle{background:var(--stop);}
+  .light h3{margin:0 0 4px;font-size:22px;font-weight:700;}
+  .go h3{color:var(--go);}
+  .slow h3{color:#a97f1f;}
+  .stop h3{color:var(--stop);}
+  .light .tag{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;color:var(--ink-soft);display:block;margin-bottom:12px;}
+  .foods{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+  .foods span{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:20px;padding:6px 12px;font-size:14px;font-weight:600;color:var(--ink);display:inline-flex;align-items:center;gap:6px;}
+  .emoji{font-size:16px;line-height:1;}
+
+  /* WHY GRID (friend vs trick) */
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .whybox{border-radius:22px;padding:24px 26px;border:2px solid;box-shadow:var(--shadow);}
+  .whybox.friend{background:var(--go-soft);border-color:#bcdcc6;}
+  .whybox.trick{background:var(--stop-soft);border-color:#efc4b4;}
+  .whybox h3{margin:0 0 14px;font-size:24px;font-weight:700;display:flex;align-items:center;gap:10px;}
+  .friend h3{color:var(--go);}
+  .trick h3{color:var(--stop);}
+  .whybox .row{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:16px;color:var(--ink);border-top:2px dotted rgba(0,0,0,.10);}
+  .whybox .row:first-of-type{border-top:none;}
+  .rico{width:34px;height:34px;border-radius:10px;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;}
+  .friend .rico{background:var(--go);}
+  .trick .rico{background:var(--stop);}
+
+  /* DETECTIVE TIPS */
+  .detective{background:var(--paper-2);border:2px solid var(--line);border-radius:22px;padding:26px 28px;box-shadow:var(--shadow);}
+  .detective .dhead{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+  .detective .dhead .mag{width:56px;height:56px;flex:none;}
+  .detective .dhead h3{margin:0;font-size:24px;color:var(--navy);font-weight:700;}
+  .steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .step{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px 16px;}
+  .step .n{width:42px;height:42px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Fraunces',serif;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .step p{margin:0;font-size:16px;color:var(--ink);font-weight:500;}
+  .step p b{color:var(--navy);}
+
+  /* SWAPS */
+  .swaps{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .swap{display:grid;grid-template-columns:1fr 42px 1fr;gap:8px;align-items:center;background:var(--paper-2);border:2px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);}
+  .swap .from{font-size:16px;color:var(--stop);font-weight:600;display:flex;align-items:center;gap:7px;}
+  .swap .to{font-size:16px;color:var(--go);font-weight:700;text-align:right;justify-content:flex-end;display:flex;align-items:center;gap:7px;}
+  .swap .arr{width:38px;height:38px;border-radius:50%;background:var(--go-soft);display:flex;align-items:center;justify-content:center;}
+
+  /* TAKEAWAY */
+  .takeaway{background:linear-gradient(150deg,var(--green),#245a40);color:#f2f7ef;border-radius:24px;padding:30px 34px;box-shadow:var(--shadow);text-align:center;margin-top:6px;}
+  .takeaway .star{font-size:34px;}
+  .takeaway h3{margin:8px 0 8px;font-size:28px;color:#fff;font-weight:700;}
+  .takeaway p{margin:0 auto;font-size:19px;color:#e6efe4;max-width:44ch;}
+
+  footer{margin-top:30px;border-top:2px solid var(--line);padding-top:18px;text-align:center;}
+  .brandfoot{display:flex;justify-content:center;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700;}
+  .disc{font-size:12px;color:var(--ink-soft);margin-top:12px;font-style:italic;}
+
+  @media print{
+    @page{size:Letter;margin:12mm 11mm;}
+    body{background:#fff;}
+    .sheet{max-width:100%;padding:0;}
+    header.hero{margin-top:0;}
+    section,.light,.whybox,.detective,.step,.swap,.takeaway{break-inside:avoid;page-break-inside:avoid;}
+    header.hero,.circle,.takeaway,.step .n,.whybox,.light,.detective,.swap{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+  @media (max-width:720px){
+    .sheet{padding:0 18px 40px;}
+    .lights,.why,.steps,.swaps{grid-template-columns:1fr;}
+    header.hero h1{font-size:38px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="hero">
+    <div class="brandrow">
+      <span class="brandmark"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 17.5 4 14 4 10.2 4 7.3 6.2 5 9 5c1.7 0 3 .9 3 .9S13.3 5 15 5c2.8 0 5 2.3 5 5.2C20 14 17 17.5 12 21Z" fill="#0d2439"/></svg></span>
+      Healthier Ever After &nbsp;·&nbsp; Easy-Read Guide
+    </div>
+    <h1><span class="rf">Real Food</span> vs. <span class="ff">Factory Food</span></h1>
+    <p>Some food grows on a plant or comes from an animal. Some food is made in a factory with lots of extra stuff. Here is how to tell them apart!</p>
+  </header>
+
+  <!-- THREE LIGHTS -->
+  <section>
+    <div class="sec-head"><h2>Foods come in three colors</h2></div>
+    <p class="lead">Think of a traffic light. Some foods are a green light. Some are a yellow light. Some are a red light.</p>
+    <div class="lights">
+      <div class="light go">
+        <div class="circle"><svg width="38" height="38" viewBox="0 0 24 24" fill="none"><path d="M6 12l4 4 8-9" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Green Light</h3>
+        <span class="tag">Real Food · Eat a lot</span>
+        <div class="foods">
+          <span><span class="emoji">🍎</span>Apples</span>
+          <span><span class="emoji">🥚</span>Eggs</span>
+          <span><span class="emoji">🥦</span>Veggies</span>
+          <span><span class="emoji">🍗</span>Chicken</span>
+          <span><span class="emoji">🌾</span>Oats</span>
+          <span><span class="emoji">🫘</span>Beans</span>
+        </div>
+      </div>
+      <div class="light slow">
+        <div class="circle"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="2.6"/><path d="M12 7v5l3 3" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Yellow Light</h3>
+        <span class="tag">Changed a Little · That's OK</span>
+        <div class="foods">
+          <span><span class="emoji">🧀</span>Cheese</span>
+          <span><span class="emoji">🍞</span>Bread</span>
+          <span><span class="emoji">🥫</span>Canned beans</span>
+          <span><span class="emoji">🐟</span>Canned tuna</span>
+        </div>
+      </div>
+      <div class="light stop">
+        <div class="circle"><svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M7 7l10 10M17 7L7 17" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <h3>Red Light</h3>
+        <span class="tag">Factory Food · Just a little</span>
+        <div class="foods">
+          <span><span class="emoji">🥤</span>Soda</span>
+          <span><span class="emoji">🍟</span>Chips</span>
+          <span><span class="emoji">🍬</span>Candy</span>
+          <span><span class="emoji">🍩</span>Donuts</span>
+          <span><span class="emoji">🥣</span>Sugary cereal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section>
+    <div class="sec-head"><h2>Real food helps. Factory food tricks.</h2></div>
+    <div class="why">
+      <div class="whybox friend">
+        <h3><span>🌱</span> Real food is your friend</h3>
+        <div class="row"><span class="rico">✓</span><div>It fills your tummy, so you feel full and happy.</div></div>
+        <div class="row"><span class="rico">✓</span><div>It gives you steady energy to run and play.</div></div>
+        <div class="row"><span class="rico">✓</span><div>It has fiber and water that your body loves.</div></div>
+        <div class="row"><span class="rico">✓</span><div>It helps your body grow big and strong.</div></div>
+      </div>
+      <div class="whybox trick">
+        <h3><span>⚠️</span> Factory food tricks you</h3>
+        <div class="row"><span class="rico">!</span><div>It is made to taste SO good that you want more and more.</div></div>
+        <div class="row"><span class="rico">!</span><div>The fiber is taken out, so you get hungry again fast.</div></div>
+        <div class="row"><span class="rico">!</span><div>Lots of sugar makes your energy zoom up, then crash down.</div></div>
+        <div class="row"><span class="rico">!</span><div>It is easy to eat a whole lot without noticing.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETECTIVE -->
+  <section>
+    <div class="detective">
+      <div class="dhead">
+        <svg class="mag" viewBox="0 0 48 48" fill="none"><circle cx="21" cy="21" r="13" stroke="#c69a3f" stroke-width="4" fill="#f7eccf"/><path d="M31 31l11 11" stroke="#c69a3f" stroke-width="5" stroke-linecap="round"/><path d="M15 21l4 4 8-9" stroke="#2f6f4f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Be a Food Detective at the store</h3>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Turn the box around.</b> Read the list of ingredients on the back.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Count them.</b> A short list is good. A super long list means factory food.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Can you say the word?</b> If you can't say it, you probably don't want to eat it.</p></div>
+        <div class="step"><div class="n">4</div><p><b>Look for "just one thing."</b> An apple is just an apple. That's the best kind!</p></div>
+        <div class="step"><div class="n">5</div><p><b>Shop the walls.</b> Fruits, veggies, meat, and milk are around the edges of the store.</p></div>
+        <div class="step"><div class="n">6</div><p><b>Don't trust big words on the front.</b> The back of the box tells the truth.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWAPS -->
+  <section>
+    <div class="sec-head"><h2>Fun swaps to try</h2></div>
+    <p class="lead">Trade a red-light food for a green-light one. Little changes add up!</p>
+    <div class="swaps">
+      <div class="swap"><div class="from"><span class="emoji">🥣</span>Sugary cereal</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Oats + fruit<span class="emoji">🍓</span></div></div>
+      <div class="swap"><div class="from"><span class="emoji">🍟</span>Chips</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Popcorn or nuts<span class="emoji">🥜</span></div></div>
+      <div class="swap"><div class="from"><span class="emoji">🥤</span>Soda</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Water + fruit<span class="emoji">🍋</span></div></div>
+      <div class="swap"><div class="from"><span class="emoji">🍬</span>Candy</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Berries or an apple<span class="emoji">🍎</span></div></div>
+      <div class="swap"><div class="from"><span class="emoji">🍗</span>Nuggets</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Baked chicken<span class="emoji">🍗</span></div></div>
+      <div class="swap"><div class="from"><span class="emoji">🍩</span>Donut</div><div class="arr"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Eggs + toast<span class="emoji">🍳</span></div></div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAY -->
+  <section>
+    <div class="takeaway">
+      <div class="star">⭐</div>
+      <h3>You don't have to be perfect!</h3>
+      <p>Just pick real, green-light food most of the time. Your body will thank you.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brandfoot">
+      <span class="brandmark" style="width:22px;height:22px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 17.5 4 14 4 10.2 4 7.3 6.2 5 9 5c1.7 0 3 .9 3 .9S13.3 5 15 5c2.8 0 5 2.3 5 5.2C20 14 17 17.5 12 21Z" fill="#0d2439"/></svg></span>
+      Healthier Ever After &nbsp;·&nbsp; Weight Loss · Lifestyle · Longevity
+    </div>
+    <p class="disc">For learning only. Not medical advice. Talk with your doctor about food and health.</p>
+  </footer>
+
+</div>
+</body>
+</html>

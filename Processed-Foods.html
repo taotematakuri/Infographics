@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ultra-Processed Foods, Explained | Healthier Ever After</title>
+<meta name="description" content="A Healthier Ever After explainer on ultra-processed foods: the NOVA scale from whole food to engineered food, how these foods affect appetite and health, and simple ways to spot and swap them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#12314e;
+    --navy-deep:#0d2439;
+    --navy-soft:#1c4a6e;
+    --green:#2f6f4f;
+    --green-bright:#3f8a63;
+    --green-soft:#e6efe8;
+    --gold:#c69a3f;
+    --gold-soft:#f0e4c6;
+    --paper:#f7f3ea;
+    --paper-2:#fbf8f1;
+    --ink:#20303c;
+    --ink-soft:#4c5c66;
+    --red:#b4472f;
+    --red-soft:#f6e2da;
+    --line:#e2d9c6;
+    --shadow:0 10px 30px rgba(13,36,57,.10);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:940px;
+    margin:0 auto;
+    background:var(--paper);
+    padding:0 40px 60px;
+  }
+  h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+  .mono{font-family:'Space Mono',ui-monospace,monospace;}
+  .eyebrow{
+    font-family:'Space Mono',monospace;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:11px;
+    font-weight:700;
+    color:var(--green);
+  }
+
+  /* ---------- HEADER ---------- */
+  header.hero{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy-deep) 100%);
+    color:#f4efe4;
+    border-radius:22px;
+    padding:42px 44px 40px;
+    margin:40px 0 34px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  header.hero:after{
+    content:"";
+    position:absolute;
+    right:-70px;top:-70px;
+    width:260px;height:260px;
+    background:radial-gradient(circle at center,rgba(63,138,99,.55),transparent 70%);
+    pointer-events:none;
+  }
+  .brandrow{
+    display:flex;align-items:center;gap:11px;
+    font-family:'Space Mono',monospace;
+    letter-spacing:.14em;text-transform:uppercase;font-size:11px;
+    color:#bfe0cd;font-weight:700;
+    position:relative;z-index:2;
+  }
+  .brandmark{
+    width:26px;height:26px;border-radius:50%;
+    background:linear-gradient(140deg,var(--green-bright),var(--gold));
+    display:inline-flex;align-items:center;justify-content:center;flex:none;
+  }
+  header.hero h1{
+    font-size:47px;line-height:1.04;margin:18px 0 12px;
+    font-weight:600;color:#fdfbf5;letter-spacing:-.01em;
+    position:relative;z-index:2;max-width:15ch;
+  }
+  header.hero h1 em{font-style:italic;color:var(--gold);}
+  header.hero p.lede{
+    font-size:17px;max-width:60ch;color:#dfe8de;margin:0;
+    position:relative;z-index:2;
+  }
+  .tagpills{margin-top:22px;display:flex;gap:9px;flex-wrap:wrap;position:relative;z-index:2;}
+  .tagpills span{
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);
+    padding:6px 13px;border-radius:20px;color:#eef4ea;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{margin:0 0 30px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 16px;}
+  .sec-num{
+    font-family:'Space Mono',monospace;font-weight:700;font-size:13px;
+    color:#fff;background:var(--green);border-radius:8px;
+    padding:4px 9px;flex:none;letter-spacing:.05em;
+  }
+  h2{font-size:27px;margin:0;color:var(--navy);font-weight:600;letter-spacing:-.01em;line-height:1.12;}
+  .lead{font-size:16px;color:var(--ink-soft);margin:0 0 18px;max-width:66ch;}
+
+  .card{
+    background:var(--paper-2);border:1px solid var(--line);
+    border-radius:16px;padding:22px 24px;box-shadow:var(--shadow);
+  }
+
+  /* ---------- NOVA LADDER ---------- */
+  .ladder{display:flex;flex-direction:column;gap:12px;}
+  .rung{
+    display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:stretch;
+    border-radius:15px;padding:18px 20px;border:1px solid var(--line);
+    background:var(--paper-2);box-shadow:var(--shadow);position:relative;
+  }
+  .rung .num{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border-radius:12px;color:#fff;font-family:'Fraunces',serif;
+  }
+  .rung .num b{font-size:30px;line-height:1;font-weight:600;}
+  .rung .num small{font-family:'Space Mono',monospace;font-size:8.5px;letter-spacing:.1em;margin-top:4px;text-transform:uppercase;opacity:.9;}
+  .rung h3{margin:0 0 3px;font-size:19px;color:var(--navy);font-weight:600;}
+  .rung .kicker{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:6px;display:block;}
+  .rung p{margin:0 0 9px;font-size:14.5px;color:var(--ink-soft);}
+  .rung .ex{font-size:13.5px;color:var(--ink);}
+  .rung .ex b{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px;font-weight:700;}
+  .g1 .num{background:linear-gradient(160deg,#3f8a63,#2f6f4f);}
+  .g2 .num{background:linear-gradient(160deg,#7aa06a,#5f8a53);}
+  .g3 .num{background:linear-gradient(160deg,#c69a3f,#a97f2e);}
+  .g4 .num{background:linear-gradient(160deg,#c1613f,#a2402a);}
+  .g1{border-left:5px solid var(--green);}
+  .g2{border-left:5px solid #7aa06a;}
+  .g3{border-left:5px solid var(--gold);}
+  .g4{border-left:5px solid var(--red);}
+  .spectrum-note{
+    display:flex;align-items:center;gap:12px;margin:6px 2px 16px;
+    font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink-soft);
+  }
+  .spectrum-bar{flex:1;height:8px;border-radius:6px;background:linear-gradient(90deg,#2f6f4f,#7aa06a,#c69a3f,#b4472f);}
+
+  /* ---------- BENEFIT GRID ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .benefit{background:var(--green-soft);border:1px solid #cfe0d3;border-radius:14px;padding:16px 17px;}
+  .benefit .ico{width:40px;height:40px;margin-bottom:9px;}
+  .benefit h4{margin:0 0 5px;font-size:15.5px;color:var(--navy);font-family:'Fraunces',serif;font-weight:600;}
+  .benefit p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+
+  /* ---------- BODY COMPARE (whole vs UPF) ---------- */
+  .bodycompare{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .bcol{border-radius:16px;padding:20px 22px;border:1px solid var(--line);box-shadow:var(--shadow);}
+  .bcol.whole{background:var(--green-soft);border-color:#c7dccb;}
+  .bcol.upf{background:var(--red-soft);border-color:#ecc9bd;}
+  .bcol h3{margin:0 0 4px;font-size:19px;font-family:'Fraunces',serif;font-weight:600;}
+  .bcol.whole h3{color:var(--green);}
+  .bcol.upf h3{color:var(--red);}
+  .bcol .sub{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px;color:var(--ink-soft);}
+  .bcol ul{list-style:none;margin:0;padding:0;}
+  .bcol li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px dashed rgba(0,0,0,.10);font-size:14px;color:var(--ink);}
+  .bcol li:first-child{border-top:none;}
+  .dot{width:9px;height:9px;border-radius:50%;flex:none;margin-top:6px;}
+  .whole .dot{background:var(--green);}
+  .upf .dot{background:var(--red);}
+
+  /* ---------- STAT STRIP ---------- */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:4px;}
+  .stat{background:var(--navy);color:#eef4ea;border-radius:14px;padding:16px 14px;text-align:center;}
+  .stat b{display:block;font-family:'Fraunces',serif;font-size:30px;font-weight:600;color:var(--gold);line-height:1;}
+  .stat span{font-size:12px;color:#cfe0d3;display:block;margin-top:7px;line-height:1.35;}
+  .stat-note{font-size:11.5px;color:var(--ink-soft);margin:10px 2px 0;font-style:italic;}
+
+  /* ---------- SIDE BY SIDE TABLE ---------- */
+  .cmp{width:100%;border-collapse:separate;border-spacing:0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);}
+  .cmp th,.cmp td{padding:13px 16px;text-align:left;font-size:14px;vertical-align:top;}
+  .cmp thead th{background:var(--navy);color:#eef4ea;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;}
+  .cmp tbody tr:nth-child(odd) td{background:var(--paper-2);}
+  .cmp tbody tr:nth-child(even) td{background:#fff;}
+  .cmp td.cat{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--green);font-weight:700;width:24%;}
+  .cmp td.up{color:var(--red);}
+  .cmp .chk{color:var(--green);font-weight:700;}
+
+  /* ---------- SHOPPING TIPS ---------- */
+  .tips{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .tip{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);}
+  .tip .badge{width:44px;height:44px;border-radius:12px;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;flex:none;}
+  .tip h4{margin:0 0 4px;font-size:15px;color:var(--navy);font-family:'Fraunces',serif;font-weight:600;}
+  .tip p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+
+  .rule{background:var(--navy);color:#f4efe4;border-radius:16px;padding:22px 26px;display:flex;gap:20px;align-items:center;margin-top:16px;box-shadow:var(--shadow);}
+  .rule .big{font-family:'Fraunces',serif;font-size:44px;font-weight:600;color:var(--gold);flex:none;line-height:1;}
+  .rule p{margin:0;font-size:15px;color:#e7efe4;}
+  .rule p b{color:#fff;}
+
+  /* ---------- SWAPS ---------- */
+  .swaps{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .swap{display:grid;grid-template-columns:1fr 34px 1fr;gap:8px;align-items:center;background:var(--paper-2);border:1px solid var(--line);border-radius:13px;padding:12px 14px;box-shadow:var(--shadow);}
+  .swap .from{font-size:13.5px;color:var(--red);font-weight:500;}
+  .swap .to{font-size:13.5px;color:var(--green);font-weight:600;text-align:right;}
+  .swap .arr{width:30px;height:30px;border-radius:50%;background:var(--green-soft);display:flex;align-items:center;justify-content:center;}
+
+  /* ---------- CALLOUT / NOTE ---------- */
+  .note{background:var(--gold-soft);border:1px solid #e4d4a4;border-radius:14px;padding:16px 20px;font-size:14px;color:#6b5a2d;display:flex;gap:13px;align-items:flex-start;}
+  .note svg{flex:none;margin-top:1px;}
+  .note b{color:#4d3f16;}
+
+  /* ---------- FOOTER ---------- */
+  footer{margin-top:34px;border-top:2px solid var(--line);padding-top:20px;}
+  .takeaway{background:linear-gradient(150deg,var(--green),#245a40);color:#f2f7ef;border-radius:18px;padding:26px 30px;box-shadow:var(--shadow);}
+  .takeaway h3{margin:0 0 8px;font-size:22px;font-family:'Fraunces',serif;color:#fff;font-weight:600;}
+  .takeaway p{margin:0;font-size:15px;color:#e2eede;max-width:70ch;}
+  .srcline{font-size:11px;color:var(--ink-soft);margin-top:16px;line-height:1.5;font-family:'Space Mono',monospace;letter-spacing:.02em;}
+  .disc{font-size:11px;color:var(--ink-soft);margin-top:8px;font-style:italic;}
+  .brandfoot{display:flex;align-items:center;gap:10px;margin-top:16px;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);font-weight:700;}
+
+  @media print{
+    @page{size:Letter;margin:14mm 12mm;}
+    body{background:#fff;}
+    .sheet{max-width:100%;padding:0;}
+    header.hero{margin-top:0;}
+    section,.rung,.card,.bcol,.tip,.stat,.takeaway,.rule,.swap,.benefit{break-inside:avoid;page-break-inside:avoid;}
+    header.hero,.takeaway,.rule,.stat,.bcol.upf,.bcol.whole,.cmp thead th{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+  @media (max-width:720px){
+    .sheet{padding:0 18px 40px;}
+    .grid2,.grid3,.bodycompare,.tips,.swaps{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr 1fr;}
+    header.hero h1{font-size:34px;}
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brandrow">
+      <span class="brandmark">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 17.5 4 14 4 10.2 4 7.3 6.2 5 9 5c1.7 0 3 .9 3 .9S13.3 5 15 5c2.8 0 5 2.3 5 5.2C20 14 17 17.5 12 21Z" fill="#0d2439"/></svg>
+      </span>
+      Healthier Ever After &nbsp;·&nbsp; Health Explainer
+    </div>
+    <h1>What's Really in Your Food? <em>Ultra-Processed Foods, Made Simple</em></h1>
+    <p class="lede">"Processed" is not a dirty word. But there's a big difference between food that's been lightly prepared and food that's been engineered in a factory. Here's how to tell them apart, and why it matters for your body.</p>
+    <div class="tagpills"><span>Weight Loss</span><span>Lifestyle</span><span>Longevity</span></div>
+  </header>
+
+  <!-- SECTION 1: WHAT DOES PROCESSED MEAN -->
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>"Processed" is a spectrum, not an on/off switch</h2></div>
+    <p class="lead">Almost all food is changed in some way before you eat it. Chopping, freezing, cooking, and canning are all types of processing. Scientists use a system called <b>NOVA</b> to sort food into four groups, from barely touched to heavily engineered. Think of it as a ladder.</p>
+
+    <div class="spectrum-note">
+      <span>Closest to nature</span>
+      <span class="spectrum-bar"></span>
+      <span>Most engineered</span>
+    </div>
+
+    <div class="ladder">
+      <div class="rung g1">
+        <div class="num"><b>1</b><small>Whole</small></div>
+        <div>
+          <span class="kicker">Whole &amp; minimally processed</span>
+          <h3>Real food, close to how it grows</h3>
+          <p>Foods that are just cleaned, cut, dried, or frozen. Nothing is added, and nothing important is taken out.</p>
+          <div class="ex"><b>Looks like</b>Apples, spinach, eggs, plain oats, brown rice, dried beans, fresh chicken, plain milk, nuts in the shell.</div>
+        </div>
+      </div>
+
+      <div class="rung g2">
+        <div class="num"><b>2</b><small>Kitchen</small></div>
+        <div>
+          <span class="kicker">Basic cooking ingredients</span>
+          <h3>The things you cook Group 1 with</h3>
+          <p>Simple ingredients pressed or refined from nature. You rarely eat them alone. They season and cook real food.</p>
+          <div class="ex"><b>Looks like</b>Olive oil, butter, salt, sugar, honey, vinegar, flour.</div>
+        </div>
+      </div>
+
+      <div class="rung g3">
+        <div class="num"><b>3</b><small>Processed</small></div>
+        <div>
+          <span class="kicker">Processed foods</span>
+          <h3>Real food + a few kitchen ingredients</h3>
+          <p>Group 1 foods with salt, sugar, or oil added, usually to preserve them or make them tastier. Still made from ingredients you'd recognize, with a short list.</p>
+          <div class="ex"><b>Looks like</b>Canned beans, tinned tuna, real cheese, fresh bread, salted nuts, fruit canned in juice.</div>
+        </div>
+      </div>
+
+      <div class="rung g4">
+        <div class="num"><b>4</b><small>Ultra</small></div>
+        <div>
+          <span class="kicker">Ultra-processed foods (UPFs)</span>
+          <h3>Made mostly from industrial ingredients</h3>
+          <p>Products built in factories from cheap starches, oils, sugars, and additives you'd never keep in your kitchen: flavorings, colorings, emulsifiers, and protein isolates. Often there's little or no whole food left inside.</p>
+          <div class="ex"><b>Looks like</b>Soda, packaged cookies and chips, instant noodles, chicken nuggets, hot dogs, sugary cereal, most "grab-and-go" snacks.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:16px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#c69a3f"/><path d="M12 7v6M12 16.5v.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <div><b>The quick test:</b> If a food is made mostly from things you <i>could</i> use in your own kitchen, it's Group 1 to 3. If the label is full of ingredients that sound like a chemistry class, it's probably Group 4.</div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: WHY WHOLE FOODS HELP -->
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Why whole and real foods are so good for you</h2></div>
+    <p class="lead">Whole foods come as a complete package. The fiber, water, vitamins, and natural structure all work together, which is something a factory can't fully copy.</p>
+    <div class="grid3">
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><path d="M24 12c-6 4-9 8-9 13a9 9 0 0018 0c0-5-3-9-9-13Z" fill="#2f6f4f"/><path d="M24 20v10" stroke="#e6efe8" stroke-width="2" stroke-linecap="round"/></svg>
+        <h4>Fiber that fills you up</h4>
+        <p>Fiber slows digestion, feeds healthy gut bacteria, and helps you feel full, so you naturally stop eating sooner.</p>
+      </div>
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><circle cx="24" cy="24" r="10" fill="#2f6f4f"/><path d="M24 16v16M16 24h16" stroke="#e6efe8" stroke-width="2"/></svg>
+        <h4>Steady energy</h4>
+        <p>Because they digest slowly, whole foods release sugar into your blood gently, avoiding the big spikes and crashes.</p>
+      </div>
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><path d="M15 30c2-8 6-13 9-15 3 2 7 7 9 15" stroke="#2f6f4f" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="24" cy="33" r="2.5" fill="#2f6f4f"/></svg>
+        <h4>Real nutrition</h4>
+        <p>Vitamins, minerals, and healthy fats come built in, not sprayed on. Your body knows exactly what to do with them.</p>
+      </div>
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><path d="M24 13c-5 6-8 10-8 14a8 8 0 0016 0c0-4-3-8-8-14Z" fill="#2f6f4f"/></svg>
+        <h4>Water and volume</h4>
+        <p>Fruits and vegetables are mostly water. You get to eat a big, satisfying plate for relatively few calories.</p>
+      </div>
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><path d="M18 24l4 4 8-9" stroke="#2f6f4f" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4>Fewer additives</h4>
+        <p>No cosmetic colors, flavors, or emulsifiers, so your body isn't dealing with a long list of extras.</p>
+      </div>
+      <div class="benefit">
+        <svg class="ico" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="#cfe0d3"/><path d="M24 14c4 3 6 6 6 10a6 6 0 01-12 0c0-4 2-7 6-10Z" fill="#2f6f4f"/><path d="M20 33h8" stroke="#2f6f4f" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h4>The "food matrix"</h4>
+        <p>The natural structure of whole food changes how it's digested. Break it down in a factory and it acts differently in your body.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: WHAT UPFs DO DIFFERENTLY -->
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>What ultra-processed foods do differently inside your body</h2></div>
+    <p class="lead">UPFs are designed to be cheap, last a long time, and taste amazing so you keep eating. That design is exactly what can work against your health.</p>
+
+    <div class="bodycompare">
+      <div class="bcol whole">
+        <h3>Whole food goes in&hellip;</h3>
+        <div class="sub">Slow, steady, satisfying</div>
+        <ul>
+          <li><span class="dot"></span>Fiber and water make it bulky, so your stomach signals "full" sooner.</li>
+          <li><span class="dot"></span>Digests slowly, so blood sugar rises gently and stays even.</li>
+          <li><span class="dot"></span>Takes effort to chew and break down, which your brain counts as "a meal."</li>
+          <li><span class="dot"></span>Nutrients arrive with the calories, feeding your body as it goes.</li>
+        </ul>
+      </div>
+      <div class="bcol upf">
+        <h3>Ultra-processed food goes in&hellip;</h3>
+        <div class="sub">Fast, easy, easy to overeat</div>
+        <ul>
+          <li><span class="dot"></span>Fiber is stripped out, so it's easy to eat a lot before you feel full.</li>
+          <li><span class="dot"></span>Digests fast, so blood sugar spikes, then crashes and leaves you hungry again.</li>
+          <li><span class="dot"></span>Soft and calorie-dense, so you can eat a lot of calories very quickly.</li>
+          <li><span class="dot"></span>Engineered flavors hit reward centers in the brain, nudging "just one more."</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule">
+      <div class="big">+500</div>
+      <p>In a careful NIH study, people eating a mostly ultra-processed diet ate about <b>500 extra calories a day</b> and gained weight, compared to when the same people ate whole foods, even though both diets had the same sugar, fat, and fiber on paper. The <b>processing itself</b> changed how much they ate.</p>
+    </div>
+
+    <p class="lead" style="margin-top:22px;">Over months and years, diets high in UPFs are linked with a range of health problems. A 2024 review pooling data from nearly <b>10 million people</b> found higher UPF intake was tied to:</p>
+    <div class="stats">
+      <div class="stat"><b>~50%</b><span>higher risk of heart-related death</span></div>
+      <div class="stat"><b>48–53%</b><span>higher risk of anxiety &amp; common mental disorders</span></div>
+      <div class="stat"><b>+21%</b><span>higher risk of death from any cause</span></div>
+      <div class="stat"><b>+12%</b><span>higher risk of type 2 diabetes</span></div>
+    </div>
+    <p class="stat-note">These are associations from large population studies, not proof that UPFs alone cause each problem. Many things affect health. Still, the pattern is consistent enough that researchers urge cutting back.</p>
+  </section>
+
+  <!-- SECTION 4: PROCESSED vs ULTRA -->
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Processed vs. ultra-processed: same aisle, big difference</h2></div>
+    <p class="lead">Group 3 and Group 4 can sit right next to each other on the shelf. Here's how the same "type" of food can land in very different places.</p>
+    <table class="cmp">
+      <thead>
+        <tr><th>Food type</th><th>Processed (Group 3) <span class="chk">— usually fine</span></th><th class="up">Ultra-processed (Group 4) — limit it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="cat">Dairy</td><td>Block of real cheddar; plain Greek yogurt</td><td class="up">Bright orange cheese product; fruit-on-the-bottom dessert yogurt with candy pieces</td></tr>
+        <tr><td class="cat">Grains</td><td>Fresh bread (flour, water, yeast, salt); plain oats</td><td class="up">Sugary breakfast cereal; packaged muffins with a 30-item ingredient list</td></tr>
+        <tr><td class="cat">Meat</td><td>Fresh chicken breast; a plain roast</td><td class="up">Chicken nuggets; hot dogs; deli meats with fillers and preservatives</td></tr>
+        <tr><td class="cat">Potatoes</td><td>Whole potatoes; plain frozen fries (just potato + oil)</td><td class="up">Stackable chips made from potato powder, starches, and flavor dust</td></tr>
+        <tr><td class="cat">Drinks</td><td>Water, plain milk, unsweetened coffee or tea</td><td class="up">Soda, energy drinks, sweetened "fruit" drinks, flavored coffee creamers</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECTION 5: HOW TO SPOT IT SHOPPING -->
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>How to spot the difference while shopping</h2></div>
+    <p class="lead">You don't need to memorize science. A few simple habits at the store do most of the work.</p>
+    <div class="tips">
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" fill="#c69a3f"/><path d="M7 8h10M7 12h10M7 16h6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h4>Flip it over and read the list</h4><p>The ingredient list tells the real story, more than the health claims on the front. Ingredients are listed most to least.</p></div>
+      </div>
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#c69a3f"/><text x="12" y="16" text-anchor="middle" font-size="11" fill="#fff" font-family="monospace" font-weight="700">5</text></svg></div>
+        <div><h4>Count the ingredients</h4><p>Short lists are a good sign. If there are many ingredients, especially ones you can't picture, it's likely ultra-processed.</p></div>
+      </div>
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#c69a3f" stroke-width="2.4" fill="none"/><path d="M16 16l4 4" stroke="#c69a3f" stroke-width="2.6" stroke-linecap="round"/></svg></div>
+        <div><h4>Watch for "kitchen-stranger" words</h4><p>Emulsifiers, high-fructose corn syrup, hydrogenated oils, maltodextrin, protein isolates, and color/flavor codes signal Group 4.</p></div>
+      </div>
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 8c4-3 12-3 16 0v9c-4-3-12-3-16 0V8Z" fill="#c69a3f"/><path d="M12 6v13" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <div><h4>Shop the outside walls first</h4><p>Produce, meat, eggs, and dairy usually line the store's edges. The most ultra-processed stuff tends to live in the middle aisles.</p></div>
+      </div>
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 6H21l-5 4 2 7-6-4-6 4 2-7-5-4h6.5L12 3Z" fill="#c69a3f"/></svg></div>
+        <div><h4>Be skeptical of front-of-box claims</h4><p>"All natural," "made with real fruit," or "high protein" can still sit on a very ultra-processed product. The back of the box decides.</p></div>
+      </div>
+      <div class="tip">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" fill="#c69a3f"/><path d="M8 6V4h8v2" stroke="#fff" stroke-width="1.6"/><path d="M8 12h8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h4>Aim for "one-ingredient" foods</h4><p>An apple is just an apple. Oats are just oats. Building meals around single-ingredient foods keeps you in Groups 1 to 3 automatically.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: SWAPS -->
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Easy swaps for meal planning</h2></div>
+    <p class="lead">You don't have to be perfect. Trading a few everyday ultra-processed picks for whole-food versions adds up fast.</p>
+    <div class="swaps">
+      <div class="swap"><div class="from">Sugary breakfast cereal</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Oats with fruit &amp; nuts</div></div>
+      <div class="swap"><div class="from">Chips</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Popcorn or nuts</div></div>
+      <div class="swap"><div class="from">Soda</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Sparkling water + fruit</div></div>
+      <div class="swap"><div class="from">Flavored dessert yogurt</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Plain yogurt + berries</div></div>
+      <div class="swap"><div class="from">Chicken nuggets</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Baked chicken pieces</div></div>
+      <div class="swap"><div class="from">Store muffin / pastry</div><div class="arr"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="#2f6f4f" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="to">Eggs &amp; whole-grain toast</div></div>
+    </div>
+  </section>
+
+  <!-- FOOTER / TAKEAWAY -->
+  <footer>
+    <div class="takeaway">
+      <h3>The takeaway: aim for mostly real, be kind to yourself</h3>
+      <p>No single meal makes or breaks your health. The goal isn't zero ultra-processed food, it's making whole and lightly processed foods the base of most of your plates. Small, steady swaps beat short bursts of perfection every time.</p>
+    </div>
+    <div class="brandfoot">
+      <span class="brandmark" style="width:22px;height:22px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 21C7 17.5 4 14 4 10.2 4 7.3 6.2 5 9 5c1.7 0 3 .9 3 .9S13.3 5 15 5c2.8 0 5 2.3 5 5.2C20 14 17 17.5 12 21Z" fill="#0d2439"/></svg></span>
+      Healthier Ever After &nbsp;·&nbsp; Weight Loss · Lifestyle · Longevity
+    </div>
+    <p class="srcline">Sources: NOVA food classification (Monteiro et al.). Hall et al., "Ultra-Processed Diets Cause Excess Calorie Intake and Weight Gain," Cell Metabolism, 2019. Lane et al., "Ultra-processed food exposure and adverse health outcomes," umbrella review of 45 meta-analyses (~9.9M participants), BMJ, 2024.</p>
+    <p class="disc">For general education only. This is not medical advice. Talk with your own clinician about changes to your diet or health.</p>
+  </footer>
+
+</div>
+</body>
+</html>

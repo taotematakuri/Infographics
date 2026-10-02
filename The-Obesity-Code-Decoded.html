@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Obesity Code, Decoded | Healthier Ever After</title><meta name="description" content="An evidence-balanced Healthier Ever After review of Jason Fung's The Obesity Code, its five rules and cited research, with course and podcast talking points."></head><body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --bg:#f4f1e9;
+  --surface:#fffdf8;
+  --surface-2:#f0ece1;
+  --ink:#17293a;
+  --muted:#5d6b78;
+  --faint:#8a97a1;
+  --navy:#143050;
+  --navy-soft:#274d74;
+  --green:#2e7d57;
+  --green-deep:#1f5c40;
+  --gold:#cf9440;
+  --gold-soft:#e7c489;
+  --line:rgba(20,48,80,0.14);
+  --line-soft:rgba(20,48,80,0.08);
+  --good:#2e7d57;
+  --warn:#c98a2b;
+  --argue:#3f6ea5;
+  --shadow:0 1px 2px rgba(20,48,80,0.05),0 8px 26px rgba(20,48,80,0.07);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1826;
+    --surface:#12243a;
+    --surface-2:#0f1f31;
+    --ink:#e9f0f5;
+    --muted:#a6b6c3;
+    --faint:#71828f;
+    --navy:#8fbce8;
+    --navy-soft:#a9cbee;
+    --green:#5cc493;
+    --green-deep:#7ad3a9;
+    --gold:#e6b567;
+    --gold-soft:#8a6a34;
+    --line:rgba(255,255,255,0.14);
+    --line-soft:rgba(255,255,255,0.07);
+    --good:#5cc493;
+    --warn:#e6b567;
+    --argue:#7aa8dc;
+    --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1826;
+  --surface:#12243a;
+  --surface-2:#0f1f31;
+  --ink:#e9f0f5;
+  --muted:#a6b6c3;
+  --faint:#71828f;
+  --navy:#8fbce8;
+  --navy-soft:#a9cbee;
+  --green:#5cc493;
+  --green-deep:#7ad3a9;
+  --gold:#e6b567;
+  --gold-soft:#8a6a34;
+  --line:rgba(255,255,255,0.14);
+  --line-soft:rgba(255,255,255,0.07);
+  --good:#5cc493;
+  --warn:#e6b567;
+  --argue:#7aa8dc;
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+.oc{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  font-size:17px;
+  overflow-x:hidden;
+}
+.oc *{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px;margin-left:auto;margin-right:auto}
+
+.eyebrow{
+  font-family:'Space Mono',monospace;
+  font-size:12px;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--green);font-weight:700;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;color:var(--ink);text-wrap:balance;line-height:1.12}
+h2{font-size:clamp(28px,4.2vw,42px);font-weight:600;letter-spacing:-0.01em}
+h3{font-size:clamp(21px,2.6vw,27px);font-weight:600}
+h4{font-size:19px;font-weight:600}
+p{color:var(--ink)}
+.lead{font-size:19px;color:var(--muted)}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--green);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{border-color:var(--green)}
+
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line-soft)}
+.section-num{font-family:'Space Mono',monospace;font-size:13px;color:var(--gold);font-weight:700;letter-spacing:0.05em}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:
+    radial-gradient(120% 90% at 82% -10%, rgba(46,125,87,0.16), transparent 60%),
+    radial-gradient(90% 80% at 8% 0%, rgba(20,48,80,0.10), transparent 55%),
+    var(--bg);
+  padding:70px 0 60px;
+  border-bottom:1px solid var(--line-soft);
+}
+.brandbar{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+.brandmark{width:34px;height:34px;flex:0 0 auto}
+.brandname{font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em}
+.brandname span{color:var(--green)}
+.hero h1{font-size:clamp(38px,7vw,74px);font-weight:600;letter-spacing:-0.02em;margin:14px 0 0}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero .sub{font-size:clamp(18px,2.3vw,22px);color:var(--muted);max-width:680px;margin-top:22px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{
+  font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.03em;
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:7px 14px;color:var(--muted);
+}
+.chip b{color:var(--ink);font-weight:700}
+
+.thesis{
+  margin-top:44px;background:var(--navy);color:#fff;
+  border-radius:18px;padding:30px 32px;box-shadow:var(--shadow);
+  position:relative;overflow:hidden;
+}
+.thesis:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,125,87,0.35),transparent 55%);pointer-events:none}
+.thesis .k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-soft);font-weight:700}
+.thesis p{color:#eaf1f6;font-size:clamp(19px,2.5vw,24px);font-family:'Fraunces',serif;font-weight:400;line-height:1.34;margin-top:12px;position:relative}
+.thesis .cite{color:#a9c2b6;font-size:14px;font-family:'Inter';margin-top:14px;position:relative}
+
+/* ---------- generic cards / grid ---------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:24px;box-shadow:var(--shadow);
+}
+.card h4{margin-bottom:6px}
+.card .role{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15.5px}
+
+.kicker{max-width:720px;margin-bottom:34px}
+.kicker .eyebrow{display:block;margin-bottom:14px}
+.kicker h2{margin-bottom:14px}
+.kicker p{color:var(--muted);font-size:18px}
+
+/* ---------- diagram frame ---------- */
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 26px 20px;box-shadow:var(--shadow);overflow-x:auto}
+.figure svg{display:block;width:100%;height:auto;min-width:0}
+.figcap{font-size:14px;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.figcap b{color:var(--ink)}
+
+/* stat strip */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat .n{font-family:'Fraunces',serif;font-size:34px;font-weight:600;color:var(--green);line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+/* pull callout */
+.pull{border-left:3px solid var(--gold);background:var(--surface-2);border-radius:0 14px 14px 0;padding:18px 22px;margin:8px 0}
+.pull p{font-family:'Fraunces',serif;font-size:19px;line-height:1.4;color:var(--ink)}
+
+.rules5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px}
+.rule5{background:var(--surface-2);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:12px;padding:16px}
+.rule5 .rn{font-family:'Space Mono',monospace;font-weight:700;color:var(--gold);font-size:13px}
+.rule5 h5{font-family:'Fraunces',serif;font-size:15.5px;font-weight:600;margin:6px 0 4px;color:var(--ink);line-height:1.15}
+.rule5 p{font-size:13px;color:var(--muted)}
+.rulehead{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:26px 0 0}
+
+/* table */
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:720px;background:var(--surface);font-size:14.5px}
+th,td{text-align:left;padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+thead th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;border-bottom:none}
+tbody tr:last-child td{border-bottom:none}
+td b{color:var(--ink)}
+td .s{color:var(--muted)}
+.usecol{color:var(--green);font-weight:600}
+
+/* verdict traffic light */
+.verdict{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcol{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.vhead{padding:18px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line-soft)}
+.vdot{width:14px;height:14px;border-radius:50%;flex:0 0 auto}
+.vhead h4{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;font-weight:700}
+.vcol ul{list-style:none;padding:16px 20px 20px;display:flex;flex-direction:column;gap:14px}
+.vcol li{font-size:14.5px;color:var(--muted);padding-left:18px;position:relative}
+.vcol li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:currentColor;opacity:0.5}
+.vcol li b{color:var(--ink);font-weight:600}
+.v-good .vdot{background:var(--good)}.v-good{color:var(--good)}
+.v-warn .vdot{background:var(--warn)}.v-warn{color:var(--warn)}
+.v-argue .vdot{background:var(--argue)}.v-argue{color:var(--argue)}
+
+/* myth vs fact */
+.mf{display:flex;flex-direction:column;gap:14px}
+.mfrow{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.mfrow>div{padding:18px 20px}
+.myth{border-right:1px solid var(--line-soft)}
+.tag{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;display:inline-block;margin-bottom:8px}
+.myth .tag{color:var(--warn)}
+.fact .tag{color:var(--green)}
+.mfrow p{font-size:15px;color:var(--muted)}
+.mfrow .fact{background:var(--surface-2)}
+
+/* talking points */
+.tp{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.tp-head{padding:22px 26px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;gap:14px}
+.tp-head .badge{width:44px;height:44px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
+.tp-head h3{margin:0}
+.tp-head .sub{font-size:14px;color:var(--muted);font-family:'Inter'}
+.tp-body{padding:8px 26px 24px}
+.tp-item{padding:18px 0;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:34px 1fr;gap:16px}
+.tp-item:last-child{border-bottom:none}
+.tp-item .no{font-family:'Space Mono',monospace;font-weight:700;color:var(--gold);font-size:14px;padding-top:2px}
+.tp-item h4{font-size:16.5px;margin-bottom:5px}
+.tp-item p{font-size:15px;color:var(--muted)}
+.tp-item p .say{color:var(--green);font-weight:600;font-style:italic}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+/* references */
+.refs{columns:2;column-gap:34px;font-size:13.5px;color:var(--muted)}
+.refs p{margin-bottom:12px;break-inside:avoid;padding-left:16px;text-indent:-16px}
+.refs b{color:var(--ink)}
+
+.disclaimer{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:13.5px;color:var(--muted);margin-top:30px}
+.disclaimer b{color:var(--ink)}
+
+.footer{padding:40px 0 56px;text-align:center;color:var(--faint);font-size:13px;font-family:'Space Mono',monospace;letter-spacing:0.04em}
+
+@media (max-width:860px){
+  .g3,.g2,.verdict{grid-template-columns:1fr}
+  .rules5{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr}
+  .mfrow{grid-template-columns:1fr}
+  .myth{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .refs{columns:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="oc">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brandbar">
+      <svg class="brandmark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="var(--navy)" stroke-width="1.5"/>
+        <path d="M20 30c-6-3-10-7-10-13a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 6-4 10-10 13z" fill="var(--green)"/>
+        <path d="M20 14c1.5 3 1.5 7 0 12M14 20c4-1 8-1 12 0" stroke="var(--surface)" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="brandname">Healthier <span>Ever After</span></span>
+    </div>
+    <div class="eyebrow">Evidence Review &middot; Book Decode No. 01</div>
+    <h1>The Obesity Code, <em>Decoded</em></h1>
+    <p class="sub">A comprehensive, evidence-balanced field guide to Jason Fung's hormonal theory of obesity: the argument, the research he leans on, and where the wider science agrees, pushes back, or is still arguing.</p>
+    <div class="chips">
+      <span class="chip">Book: <b>The Obesity Code</b> (2016)</span>
+      <span class="chip">Author: <b>Jason Fung, MD</b></span>
+      <span class="chip">Core lever: <b>Insulin</b></span>
+      <span class="chip">Prescription: <b>Real food + fasting</b></span>
+      <span class="chip">Our stance: <b>Evidence-balanced</b></span>
+    </div>
+
+    <div class="thesis">
+      <div class="k">The one-sentence thesis</div>
+      <p>Obesity is a hormonal disorder of fat regulation, not a failure of willpower. Chronically high insulin raises the body's defended "set weight," so the fat gain drives the overeating, and not the other way around.</p>
+      <div class="cite">Fung's causal reversal: "Obesity isn't caused by overeating. Overeating is caused by obesity."</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 1. THESIS DIAGRAM ================= -->
+<section id="thesis">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">01 &middot; The central argument</span>
+      <h2>One loop explains the whole book</h2>
+      <p>Fung's model is a self-reinforcing cycle. The trigger is not calories in the abstract; it is the hormonal signal that refined carbohydrate, sugar, and constant eating send to fat cells. Follow the arrows.</p>
+    </div>
+
+    <div class="figure">
+      <svg viewBox="0 0 920 430" role="img" aria-label="Vicious cycle: refined carbohydrate and frequent eating raise insulin, which raises the fat set point, which increases hunger and lowers metabolism, which drives overeating and feeds back to more insulin.">
+        <defs>
+          <marker id="arw" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto">
+            <path d="M0 0l8 4-8 4z" fill="var(--gold)"/>
+          </marker>
+          <style>
+            .nx{fill:var(--surface-2);stroke:var(--line);stroke-width:1.5}
+            .nx-hot{fill:var(--navy)}
+            .tl{font-family:'Inter',sans-serif;font-size:15px;font-weight:600;fill:var(--ink)}
+            .tl-w{fill:#fff}
+            .ts{font-family:'Inter',sans-serif;font-size:12.5px;fill:var(--muted)}
+            .ts-w{fill:#cfe0d6}
+            .ed{stroke:var(--gold);stroke-width:2.4;fill:none}
+          </style>
+        </defs>
+
+        <!-- edges -->
+        <path class="ed" marker-end="url(#arw)" d="M250 108 h150"/>
+        <path class="ed" marker-end="url(#arw)" d="M620 130 q70 30 70 90"/>
+        <path class="ed" marker-end="url(#arw)" d="M660 300 q-40 40 -150 45"/>
+        <path class="ed" marker-end="url(#arw)" d="M330 350 q-120 5 -160 -60"/>
+        <path class="ed" marker-end="url(#arw)" d="M150 250 q-5 -60 40 -110"/>
+
+        <!-- node 1: trigger -->
+        <g>
+          <rect class="nx" x="70" y="72" width="180" height="72" rx="14"/>
+          <text class="tl" x="160" y="102" text-anchor="middle">Refined carbs,</text>
+          <text class="tl" x="160" y="122" text-anchor="middle">sugar, frequent eating</text>
+        </g>
+        <!-- node 2: insulin -->
+        <g>
+          <rect class="nx nx-hot" x="400" y="70" width="220" height="76" rx="14"/>
+          <text class="tl tl-w" x="510" y="100" text-anchor="middle">Insulin rises &amp; stays high</text>
+          <text class="ts ts-w" x="510" y="122" text-anchor="middle">the fat-storage signal</text>
+        </g>
+        <!-- node 3: set point -->
+        <g>
+          <rect class="nx" x="655" y="215" width="200" height="86" rx="14"/>
+          <text class="tl" x="755" y="248" text-anchor="middle">Body raises its</text>
+          <text class="tl" x="755" y="268" text-anchor="middle">defended "set weight"</text>
+          <text class="ts" x="755" y="288" text-anchor="middle">fat is stored, not burned</text>
+        </g>
+        <!-- node 4: hunger/metabolism -->
+        <g>
+          <rect class="nx" x="360" y="320" width="230" height="86" rx="14"/>
+          <text class="tl" x="475" y="353" text-anchor="middle">Hunger up,</text>
+          <text class="tl" x="475" y="373" text-anchor="middle">metabolism down</text>
+          <text class="ts" x="475" y="393" text-anchor="middle">the body defends the new weight</text>
+        </g>
+        <!-- node 5: overeating -->
+        <g>
+          <rect class="nx" x="60" y="250" width="180" height="76" rx="14"/>
+          <text class="tl" x="150" y="282" text-anchor="middle">Overeating</text>
+          <text class="ts" x="150" y="303" text-anchor="middle">a symptom, not the cause</text>
+        </g>
+      </svg>
+      <p class="figcap"><b>Read it as a wheel.</b> In the conventional model, willpower is the only brake. In Fung's model, the brake is broken upstream, at the insulin signal, so telling a patient to simply eat less asks them to fight their own physiology.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. WHY CICO UNDERPERFORMS ================= -->
+<section id="cico">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">02 &middot; Why "eat less, move more" underperforms</span>
+      <h2>The body is not a bank account</h2>
+      <p>"Calories in, calories out" is true as accounting, but Fung's point is that the two sides are not independent. Cut intake and the body quietly cuts spending: it lowers metabolic rate and raises hunger to defend its fat stores. Two landmark datasets anchor the case.</p>
+    </div>
+
+    <div class="grid g2" style="margin-bottom:24px">
+      <div class="figure">
+        <h4 style="margin-bottom:4px">Where your energy actually goes</h4>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:14px">Deliberate exercise is a small slice, which is why Fung argues you cannot out-train a hormonal problem.</p>
+        <svg viewBox="0 0 480 150" role="img" aria-label="Stacked bar of daily energy expenditure: resting metabolism about 65 percent, digestion about 10 percent, daily non-exercise movement about 20 percent, deliberate exercise about 5 percent.">
+          <defs><style>.seg{stroke:var(--surface);stroke-width:2}.lb{font-family:'Inter';font-size:12.5px;fill:var(--ink);font-weight:600}.lp{font-family:'Space Mono';font-size:12px;fill:var(--muted)}</style></defs>
+          <rect class="seg" x="10" y="20" width="286" height="34" rx="4" fill="var(--green-deep)"/>
+          <rect class="seg" x="298" y="20" width="44" height="34" fill="var(--green)"/>
+          <rect class="seg" x="344" y="20" width="88" height="34" fill="var(--gold)"/>
+          <rect class="seg" x="434" y="20" width="36" height="34" rx="4" fill="var(--gold-soft)"/>
+          <g class="lb">
+            <text x="12" y="82">Resting metabolism</text><text class="lp" x="12" y="99">~60–70%</text>
+            <text x="12" y="128" fill="var(--muted)" font-weight="400" font-family="Inter" font-size="12.5">Digestion ~10% &middot; Daily movement ~20% &middot; <tspan fill="var(--gold)" font-weight="600">Exercise ~5%</tspan></text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="figure">
+        <h4 style="margin-bottom:4px">The Biggest Loser, six years later</h4>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:14px">Resting metabolism stayed suppressed well below prediction even after most weight returned (Fothergill, 2016).</p>
+        <svg viewBox="0 0 480 170" role="img" aria-label="Resting metabolic rate versus predicted: at the competition's end roughly 610 calories per day below predicted, and six years later still about 500 calories per day below predicted.">
+          <defs><style>.ax{stroke:var(--line);stroke-width:1}.gl{stroke:var(--line-soft);stroke-width:1}.bl{font-family:'Inter';font-size:12px;fill:var(--muted)}.bn{font-family:'Fraunces';font-size:15px;fill:var(--ink);font-weight:600}</style></defs>
+          <line class="ax" x1="60" y1="18" x2="60" y2="130"/>
+          <line class="gl" x1="60" y1="130" x2="460" y2="130"/>
+          <text class="bl" x="55" y="24" text-anchor="end">0</text>
+          <text class="bl" x="55" y="133" text-anchor="end">−700</text>
+          <text class="bl" x="52" y="150" text-anchor="start" font-family="Space Mono" font-size="10.5">kcal/day vs predicted resting rate</text>
+          <rect x="120" y="18" width="90" height="100" rx="4" fill="var(--gold)"/>
+          <rect x="300" y="18" width="90" height="82" rx="4" fill="var(--navy)"/>
+          <text class="bn" x="165" y="145" text-anchor="middle">Contest end</text>
+          <text class="bl" x="165" y="12" text-anchor="middle" font-weight="600" fill="var(--gold)">−610</text>
+          <text class="bn" x="345" y="145" text-anchor="middle">6 years later</text>
+          <text class="bl" x="345" y="12" text-anchor="middle" font-weight="600" fill="var(--navy)">−500</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="n">−40%</div><div class="l">Drop in resting metabolic rate during the Minnesota Starvation Experiment on ~1,570 kcal/day</div></div>
+      <div class="stat"><div class="n">24 wk</div><div class="l">Length of that semi-starvation phase; subjects lost ~25% of body weight, then rebounded</div></div>
+      <div class="stat"><div class="n">~48,835</div><div class="l">Women in the Women's Health Initiative low-fat trial, the "50,000 women" Fung cites</div></div>
+      <div class="stat"><div class="n">&lt;0.5 kg</div><div class="l">Weight difference that low-fat diet produced versus control after ~7.5 years</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--faint);margin-top:14px;font-family:'Space Mono',monospace">Figures rounded and as reported in the original studies; see references for exact values and methods.</p>
+
+    <div class="pull" style="margin-top:26px">
+      <p>Fung's takeaway: a diet that ignores hormones is fighting the body's thermostat with the door held open. The metabolism adapts down, the hunger adapts up, and the deficit quietly closes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. HORMONAL CAST ================= -->
+<section id="hormones">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">03 &middot; The hormonal cast</span>
+      <h2>Meet the regulators of fat</h2>
+      <p>If obesity is hormonal, these are the hormones doing the regulating. Insulin is the lead; the others tune the volume.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="role">Lead actor</div>
+        <h4>Insulin</h4>
+        <p>The storage hormone. It moves glucose into cells and signals fat to be stored rather than burned. Fung's claim: keep it chronically high and you keep the fat locked in.</p>
+      </div>
+      <div class="card">
+        <div class="role">The amplifier</div>
+        <h4>Insulin resistance</h4>
+        <p>When insulin stays high, cells stop listening, so the body secretes even more. High insulin causes resistance, and resistance causes higher insulin. A ratchet, not a switch.</p>
+      </div>
+      <div class="card">
+        <div class="role">The stress route</div>
+        <h4>Cortisol</h4>
+        <p>Chronic stress and short sleep raise cortisol, which raises blood glucose and, in turn, insulin. This is Fung's bridge from lifestyle to hormone.</p>
+      </div>
+      <div class="card">
+        <div class="role">The thermostat</div>
+        <h4>Leptin</h4>
+        <p>Signals fullness and defends fat mass. In obesity the brain grows leptin-resistant, so the "you have enough" message stops getting through.</p>
+      </div>
+      <div class="card">
+        <div class="role">The hunger clock</div>
+        <h4>Ghrelin</h4>
+        <p>The hunger hormone. Fung notes fasting does not send it spiking indefinitely; it moves in waves, which is why hunger during a fast tends to pass.</p>
+      </div>
+      <div class="card">
+        <div class="role">The villain sugar</div>
+        <h4>Fructose</h4>
+        <p>Metabolized in the liver, where Fung argues excess promotes fatty liver and insulin resistance. His case for treating sugar as uniquely harmful, and one of the book's more contested points.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. SET POINT ================= -->
+<section id="setpoint">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">04 &middot; The body-weight thermostat</span>
+      <h2>Weight is defended, like temperature</h2>
+      <p>Fung's organizing metaphor: the body has a fat "set point" it defends the way a thermostat defends a room temperature. Diets that only cut calories try to force the room colder while the furnace fights back. To lose fat and keep it off, you have to lower the set point itself, and the dial for that, in his model, is insulin.</p>
+    </div>
+    <div class="figure">
+      <svg viewBox="0 0 700 210" role="img" aria-label="Two dials. Turning down calories alone leaves the set point high and the body resists. Turning down insulin lowers the set point so weight follows.">
+        <defs><style>.ring{fill:none;stroke:var(--line);stroke-width:10}.arc-w{fill:none;stroke:var(--warn);stroke-width:10;stroke-linecap:round}.arc-g{fill:none;stroke:var(--green);stroke-width:10;stroke-linecap:round}.dl{font-family:'Fraunces';font-size:17px;fill:var(--ink);font-weight:600}.dm{font-family:'Inter';font-size:12.5px;fill:var(--muted)}.dn{font-family:'Space Mono';font-size:12px;font-weight:700}</style></defs>
+        <!-- dial 1 -->
+        <circle class="ring" cx="150" cy="95" r="60"/>
+        <path class="arc-w" d="M150 35 a60 60 0 0 1 42 102"/>
+        <text class="dn" x="150" y="90" text-anchor="middle" fill="var(--warn)">SET POINT</text>
+        <text class="dn" x="150" y="110" text-anchor="middle" fill="var(--warn)">STILL HIGH</text>
+        <text class="dl" x="150" y="188" text-anchor="middle">Cut calories only</text>
+        <text class="dm" x="150" y="207" text-anchor="middle">body resists, weight returns</text>
+        <!-- dial 2 -->
+        <circle class="ring" cx="530" cy="95" r="60"/>
+        <path class="arc-g" d="M530 155 a60 60 0 0 1 -42 -102"/>
+        <text class="dn" x="530" y="90" text-anchor="middle" fill="var(--green)">SET POINT</text>
+        <text class="dn" x="530" y="110" text-anchor="middle" fill="var(--green)">LOWERED</text>
+        <text class="dl" x="530" y="188" text-anchor="middle">Lower insulin</text>
+        <text class="dm" x="530" y="207" text-anchor="middle">weight follows, stays off</text>
+        <!-- arrow -->
+        <path d="M245 95 h210" stroke="var(--gold)" stroke-width="2.5" fill="none" marker-end="url(#arw)"/>
+        <text class="dm" x="350" y="82" text-anchor="middle" font-weight="600" fill="var(--ink)">change the dial</text>
+      </svg>
+      <p class="figcap"><b>Why this matters clinically.</b> It reframes weight regain from "the patient lost discipline" to "the patient's set point was never reset." Whether insulin is truly the master dial is the crux of the scientific debate in section 07.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. PRESCRIPTION ================= -->
+<section id="rx">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">05 &middot; Fung's prescription</span>
+      <h2>Two knobs: what you eat, and when</h2>
+      <p>The plan follows from the theory. If the problem is chronically high insulin, the fix is to lower it, first by changing the food, then by widening the gaps between meals.</p>
+    </div>
+    <div class="grid g2">
+      <div class="card">
+        <div class="role">Knob 1 &middot; What you eat</div>
+        <h4>Lower the insulin load of the plate</h4>
+        <p style="margin-bottom:12px">Fung's dietary rules, in order of emphasis:</p>
+        <p style="color:var(--ink)"><b>Cut added sugar and refined grains.</b> The biggest insulin drivers, and fructose gets special scrutiny.<br><br>
+        <b>Eat real, whole food.</b> Fiber blunts the insulin response; protein and natural fats carry less of it.<br><br>
+        <b>Don't fear natural fat.</b> Olive oil, nuts, avocado, and full-fat whole foods are rehabilitated.<br><br>
+        <b>Stop grazing.</b> Constant snacking means insulin never comes down. Fewer eating windows, not more.</p>
+      </div>
+      <div class="card">
+        <div class="role">Knob 2 &middot; When you eat</div>
+        <h4>Use fasting to let insulin fall</h4>
+        <p style="margin-bottom:12px">Fung's signature tool. The mechanism he emphasizes:</p>
+        <p style="color:var(--ink)"><b>Insulin drops between meals.</b> Extended gaps let the body switch from storing to burning fat.<br><br>
+        <b>Short-term fasting protects metabolism.</b> Counter-regulatory hormones keep energy up over a fast, unlike a sustained calorie cut.<br><br>
+        <b>Flexible protocols.</b> From 16:8 daily windows to 24–36 hour fasts, matched to the person.<br><br>
+        <b>An old practice, reframed.</b> Fasting appears across cultures and faiths; Fung presents it as normal physiology, not deprivation.</p>
+      </div>
+    </div>
+    <div class="pull" style="margin-top:24px">
+      <p>Supporting cast: eight-plus hours of sleep, active stress reduction, and vinegar or fiber to blunt glucose spikes. All of it points at the same target, keeping insulin low.</p>
+    </div>
+
+    <div class="rulehead">Fung's five rules, in his own order</div>
+    <div class="rules5">
+      <div class="rule5"><div class="rn">Rule 1</div><h5>Reduce added sugars</h5><p>The single biggest insulin driver; cut it in every form.</p></div>
+      <div class="rule5"><div class="rn">Rule 2</div><h5>Reduce refined grains</h5><p>Less bread, pasta, and refined cereal.</p></div>
+      <div class="rule5"><div class="rn">Rule 3</div><h5>Moderate protein</h5><p>Enough, not excessive; very high protein also raises insulin.</p></div>
+      <div class="rule5"><div class="rn">Rule 4</div><h5>Increase natural fats</h5><p>Olive oil, nuts, avocado, and whole-food fats.</p></div>
+      <div class="rule5"><div class="rn">Rule 5</div><h5>Add protective factors</h5><p>Fiber and vinegar to blunt the glucose and insulin response.</p></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:14px;font-family:'Inter'">Plus the timing layer: stop snacking and use intermittent fasting so insulin has long stretches to fall.</p>
+  </div>
+</section>
+
+<!-- ================= 6. CITED RESEARCH ================= -->
+<section id="research">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">06 &middot; The research he builds on</span>
+      <h2>The evidence Fung cites, on the table</h2>
+      <p>A representative map of the studies and classic experiments the book leans on, what each actually found, and how Fung deploys it. Full citations are listed at the end.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th style="min-width:180px">Study / experiment</th><th style="min-width:160px">What it tested</th><th style="min-width:200px">What it found</th><th style="min-width:180px">How Fung uses it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Minnesota Starvation Experiment</b><span class="s"> &middot; Keys, 1944–45</span></td>
+            <td>32 men on ~1,570 kcal/day for 24 weeks</td>
+            <td>~25% body-weight loss; resting metabolism fell up to ~40%; relentless hunger and preoccupation with food</td>
+            <td class="usecol">Proof that the body defends weight by slowing metabolism when calories are cut</td>
+          </tr>
+          <tr>
+            <td><b>"The Biggest Loser" follow-up</b><span class="s"> &middot; Fothergill, 2016</span></td>
+            <td>14 contestants tracked 6 years after rapid weight loss</td>
+            <td>Metabolism stayed ~500 kcal/day below predicted; most weight regained despite effort</td>
+            <td class="usecol">Metabolic adaptation is real and persistent, not a short-term blip</td>
+          </tr>
+          <tr>
+            <td><b>Women's Health Initiative</b><span class="s"> &middot; Dietary Modification, 2006</span></td>
+            <td>~48,835 women; low-fat, calorie-reduced diet vs usual diet</td>
+            <td>Minimal weight difference (&lt;0.5 kg) and no major disease benefit after ~7.5 years</td>
+            <td class="usecol">A giant test of "eat less fat, count calories" that essentially failed</td>
+          </tr>
+          <tr>
+            <td><b>Insulin-therapy trials</b><span class="s"> &middot; DCCT 1993; UKPDS 1998</span></td>
+            <td>Intensive insulin / glucose lowering in diabetes</td>
+            <td>Better glucose control, but consistent, dose-related weight gain</td>
+            <td class="usecol">Direct evidence that raising insulin raises body weight</td>
+          </tr>
+          <tr>
+            <td><b>Fructose &amp; the liver</b><span class="s"> &middot; metabolic studies</span></td>
+            <td>High-dose fructose feeding vs glucose</td>
+            <td>More liver fat and insulin resistance in high-dose fructose conditions</td>
+            <td class="usecol">Basis for singling out sugar, especially fructose, as uniquely fattening</td>
+          </tr>
+          <tr>
+            <td><b>Fasting physiology</b><span class="s"> &middot; Zauner 2000 and others</span></td>
+            <td>Short-term fasting; resting energy expenditure and hormones</td>
+            <td>Insulin falls; noradrenaline rises; resting metabolism holds or briefly rises over ~short fasts</td>
+            <td class="usecol">Argument that fasting lowers insulin without the metabolic slowdown of dieting</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--faint);margin-top:12px;font-family:'Space Mono',monospace">Findings summarized for clarity; see references for original wording, effect sizes, and limitations.</p>
+  </div>
+</section>
+
+<!-- ================= 7. EVIDENCE VERDICT ================= -->
+<section id="verdict">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">07 &middot; Where the wider evidence lands</span>
+      <h2>What holds up, what's overstated, what's still argued</h2>
+      <p>This is the evidence-balanced heart of the review. Fung gets important things right, presses some claims further than the data support, and stakes out positions that remain genuinely unsettled. Kept honest, all three columns are usable on air and in the clinic.</p>
+    </div>
+    <div class="verdict">
+      <div class="vcol v-good">
+        <div class="vhead"><span class="vdot"></span><h4>Well supported</h4></div>
+        <ul>
+          <li><b>Metabolic adaptation is real.</b> Resting metabolism falls with weight loss and can stay low for years.</li>
+          <li><b>Insulin-raising drugs add weight.</b> Insulin, sulfonylureas, and similar agents reliably increase fat mass.</li>
+          <li><b>Food quality matters.</b> Refined carbohydrate and ultra-processed food promote overconsumption; whole foods are more satiating.</li>
+          <li><b>Weight loss can reverse type 2 diabetes.</b> The DiRECT trial showed ~46% remission at one year with major weight loss.</li>
+          <li><b>Fasting produces real weight loss</b> and can improve several metabolic markers for many people.</li>
+        </ul>
+      </div>
+      <div class="vcol v-warn">
+        <div class="vhead"><span class="vdot"></span><h4>Overstated / contested</h4></div>
+        <ul>
+          <li><b>"Insulin is THE cause."</b> Controlled feeding studies (Hall and colleagues) do not support insulin as the single master switch for everyone.</li>
+          <li><b>"Calories don't count."</b> Energy balance still governs the ledger; hormones shape appetite and expenditure within it, they do not repeal it.</li>
+          <li><b>Fructose as uniquely toxic.</b> The harm shows up mainly at extreme doses; typical intake in whole foods is far less dramatic.</li>
+          <li><b>Exercise as nearly useless.</b> It is a weak weight-loss lever but a strong lever for maintenance, health, and body composition.</li>
+        </ul>
+      </div>
+      <div class="vcol v-argue">
+        <div class="vhead"><span class="vdot"></span><h4>Still being argued</h4></div>
+        <ul>
+          <li><b>Is fasting better, or just another way to eat less?</b> Head-to-head RCTs (TREAT; Trepanowski) show it works but is not clearly superior to steady calorie restriction.</li>
+          <li><b>Carbohydrate-insulin vs energy-balance model.</b> A 2023 "great debate" ended in partial reconciliation, not a winner.</li>
+          <li><b>Meal timing effects.</b> Early time-restricted eating may improve insulin sensitivity independent of weight (Sutton, 2018), but results vary.</li>
+          <li><b>Who benefits most.</b> The insulin-resistant may respond differently to carb restriction than the insulin-sensitive.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <b>The honest synthesis.</b> The mainstream position is not "Fung is wrong," it is "Fung is directionally useful but too absolute." Reducing refined carbohydrate, eating whole foods, and using structured eating windows help many people, plausibly by improving appetite and insulin dynamics. The overreach is treating insulin as the sole cause and total calories as beside the point; energy balance remains the ultimate ledger, even if hormones are what determine how much we eat and burn within it. For coaching and podcasting, the strongest ground is the overlap: <b>real food, fewer refined carbs, sensible eating windows, and patience with a metabolism that adapts.</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. MYTH VS FACT ================= -->
+<section id="myths">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">08 &middot; Myth vs fact</span>
+      <h2>Clearing up what the book is taken to say</h2>
+      <p>Popular summaries flatten Fung into slogans. Here is the more careful version, ready for a segment.</p>
+    </div>
+    <div class="mf">
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"The Obesity Code proves calories don't matter."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Calories still balance the ledger. The book's real point is that appetite and metabolism, driven by hormones, decide how many calories you take in and burn, so willpower is not the whole story.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Fasting works because it beats metabolism into a corner."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Short fasts lower insulin and, briefly, do not crash metabolic rate. Over long periods any method that reduces intake can still trigger adaptation, which is why maintenance is the hard part.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Just cut carbs and the weight melts off for everyone."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Cutting refined carbs helps many, especially the insulin-resistant. Responses vary, and total food quality and quantity still matter. It is a strong first move, not a universal guarantee.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Exercise is pointless for weight."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Exercise is a weak tool for <em>losing</em> weight but a powerful one for keeping it off, protecting muscle, and improving nearly every health marker. Do it for those reasons.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. COURSE TALKING POINTS ================= -->
+<section id="course-tp">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">09 &middot; Talking points, part one</span>
+      <h2>For the weight-loss &amp; health courses</h2>
+      <p>Framed for teaching members through GLP-1 Foundations, Restart, and the Wellness Transformation arc. Education and lifestyle coaching, with medical decisions left to each member's own prescriber.</p>
+    </div>
+    <div class="tp">
+      <div class="tp-head">
+        <div class="badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V5a1 1 0 011-1h11l4 4v11a1 1 0 01-1 1H5a1 1 0 01-1-1z" stroke="var(--green)" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div><h3>Teach the lever, not the dogma</h3><div class="sub">Use Fung to reframe effort, then keep it evidence-honest</div></div>
+      </div>
+      <div class="tp-body">
+        <div class="tp-item"><div class="no">01</div><div><h4>Open by removing the shame</h4><p>Lead with the reframe: weight regulation is largely hormonal, so past "failures" were often physiology, not weakness. <span class="say">Say: "Your body has been defending a set point. We're going to lower it, not just fight it."</span></p></div></div>
+        <div class="tp-item"><div class="no">02</div><div><h4>Make insulin the throughline</h4><p>Tie the course's food guidance back to one idea members can hold: lower the insulin load of the plate. It connects sugar, refined grains, protein, fiber, and meal timing into a single story instead of a rules list.</p></div></div>
+        <div class="tp-item"><div class="no">03</div><div><h4>Pair it honestly with GLP-1s</h4><p>Position GLP-1 medications as a tool that works on the same appetite-and-satiety system Fung describes, not a competitor to it. The medication quiets hunger; the habits lower the set point. Both, not either.</p></div></div>
+        <div class="tp-item"><div class="no">04</div><div><h4>Pre-empt the plateau</h4><p>Teach metabolic adaptation up front using the Biggest Loser and Minnesota data, so when the scale stalls, members expect it and stay the course instead of quitting. Frame plateaus as the body defending, not the plan failing.</p></div></div>
+        <div class="tp-item"><div class="no">05</div><div><h4>Introduce fasting as a skill, gently</h4><p>Offer time-restricted eating (for example 16:8) as an optional, teachable tool, with clear cautions for anyone on glucose-lowering medication. Present it as "one way to lower insulin," not a mandate.</p></div></div>
+        <div class="tp-item"><div class="no">06</div><div><h4>Keep the claims defensible</h4><p>Coach the overlap, not the overreach: real food, fewer refined carbs, structured eating windows, sleep, and stress. Avoid "calories don't count" and "sugar is poison." Credibility is the brand's asset.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. PODCAST TALKING POINTS ================= -->
+<section id="pod-tp">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">10 &middot; Talking points, part two</span>
+      <h2>For the podcast</h2>
+      <p>Angles, hooks, and discussion beats for a Healthier Ever After episode on The Obesity Code. Built for conversation between you and Greg, with room for the evidence-balanced turn your listeners trust.</p>
+    </div>
+    <div class="tp">
+      <div class="tp-head">
+        <div class="badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="12" rx="3" stroke="var(--green)" stroke-width="1.6"/><path d="M6 11a6 6 0 0012 0M12 17v4M9 21h6" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <div><h3>Hook, tension, honest landing</h3><div class="sub">A full episode arc in ten beats</div></div>
+      </div>
+      <div class="tp-body">
+        <div class="tp-item"><div class="no">01</div><div><h4>Cold-open hook</h4><p><span class="say">"What if overeating isn't why you gained weight, but a symptom of it?"</span> Fung's causal flip is the most shareable idea in the book. Open there.</p></div></div>
+        <div class="tp-item"><div class="no">02</div><div><h4>The relatable villain</h4><p>Everyone has "eaten less and moved more" and watched it stall. Name that shared frustration early, then offer the hormonal explanation as relief, not blame.</p></div></div>
+        <div class="tp-item"><div class="no">03</div><div><h4>The thermostat analogy</h4><p>The body-weight set point as a thermostat is a gift for audio. Let one of you play the dieter turning the dial down while the body cranks the furnace back up.</p></div></div>
+        <div class="tp-item"><div class="no">04</div><div><h4>The "aha" study moment</h4><p>Drop the Biggest Loser six-years-later finding. It is vivid, it is famous, and it makes metabolic adaptation feel real to a listener who has lived it.</p></div></div>
+        <div class="tp-item"><div class="no">05</div><div><h4>The myth-busting segment</h4><p>Run the myth-vs-fact rows as a fast back-and-forth. It signals that you have actually read the science, not just the summary.</p></div></div>
+        <div class="tp-item"><div class="no">06</div><div><h4>The honest pushback</h4><p>Here is the turn your audience expects from you: where Fung goes too far. "Calories don't count" and "sugar is uniquely toxic" don't survive the controlled trials. Say so, kindly.</p></div></div>
+        <div class="tp-item"><div class="no">07</div><div><h4>The steelman</h4><p>Then give the book its due: the practical advice is sound, and it helped a lot of people who were stuck. Being fair to a flawed book builds more trust than trashing it.</p></div></div>
+        <div class="tp-item"><div class="no">08</div><div><h4>The GLP-1 bridge</h4><p>Connect to your wheelhouse: modern medications act on the same appetite biology Fung was pointing at. A natural segue to your other episodes and the courses.</p></div></div>
+        <div class="tp-item"><div class="no">09</div><div><h4>Listener discussion questions</h4><p>Close the loop with the audience: <span class="say">"Have you hit a plateau that felt like your body fighting back? Have you tried an eating window?"</span> Invite replies for a follow-up.</p></div></div>
+        <div class="tp-item"><div class="no">10</div><div><h4>The one-line takeaway</h4><p><span class="say">"Eat real food, cut the refined carbs, give your body real breaks from eating, and be patient with a metabolism that's built to adapt."</span> That is the book at its best, and it is true.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REFERENCES ================= -->
+<section id="refs">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">Sources &amp; further reading</span>
+      <h2>References</h2>
+      <p>Primary book plus the key studies referenced in this review. Findings above are summarized; consult originals for full methods, effect sizes, and limitations.</p>
+    </div>
+    <div class="refs">
+      <p><b>Fung J.</b> The Obesity Code: Unlocking the Secrets of Weight Loss. Greystone Books, 2016.</p>
+      <p><b>Keys A, et al.</b> The Biology of Human Starvation (Minnesota Starvation Experiment). University of Minnesota Press, 1950.</p>
+      <p><b>Fothergill E, et al.</b> Persistent metabolic adaptation 6 years after "The Biggest Loser" competition. <i>Obesity</i>, 2016;24(8):1612–1619.</p>
+      <p><b>Howard BV, et al.</b> Low-fat dietary pattern and weight change over 7 years: the Women's Health Initiative Dietary Modification Trial. <i>JAMA</i>, 2006;295(1):39–49.</p>
+      <p><b>DCCT Research Group.</b> The effect of intensive treatment of diabetes. <i>N Engl J Med</i>, 1993;329:977–986.</p>
+      <p><b>UK Prospective Diabetes Study (UKPDS) Group.</b> Intensive blood-glucose control. <i>Lancet</i>, 1998;352:837–853.</p>
+      <p><b>Zauner C, et al.</b> Resting energy expenditure in short-term starvation is increased as a result of raised norepinephrine. <i>Am J Clin Nutr</i>, 2000;71(6):1511–1515.</p>
+      <p><b>Lean MEJ, et al.</b> Primary care-led weight management for remission of type 2 diabetes (DiRECT). <i>Lancet</i>, 2018;391:541–551.</p>
+      <p><b>Lowe DA, et al.</b> Effects of time-restricted eating on weight loss (TREAT). <i>JAMA Intern Med</i>, 2020;180(11):1491–1499.</p>
+      <p><b>Trepanowski JF, et al.</b> Effect of alternate-day fasting vs daily calorie restriction. <i>JAMA Intern Med</i>, 2017;177(7):930–938.</p>
+      <p><b>Sutton EF, et al.</b> Early time-restricted feeding improves insulin sensitivity independent of weight loss. <i>Cell Metab</i>, 2018;27(6):1212–1221.</p>
+      <p><b>Hall KD, et al.</b> Carbohydrate-insulin model: a physiological perspective; and controlled feeding studies. <i>Am J Clin Nutr</i> / <i>Cell Metab</i>, 2015–2022.</p>
+      <p><b>Ludwig DS, et al.</b> The carbohydrate-insulin model of obesity. <i>Am J Clin Nutr</i>, 2021;114(6):1873–1885.</p>
+      <p><b>Speakman JR, Hall KD.</b> Moderating "the great debate": carbohydrate-insulin vs energy balance models. <i>Cell Metab</i>, 2023.</p>
+    </div>
+    <div class="disclaimer">
+      <b>Educational use only.</b> This review summarizes and critiques a published book for coaching and content purposes. It is general education, not medical advice. Individual decisions, especially fasting while on glucose-lowering or other medications, belong in a conversation with the member's own prescribing clinician.
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Healthier Ever After &middot; Evidence Review Series &middot; Weight Loss &middot; Lifestyle &middot; Longevity
+</div>
+
+</div>
+
+</body></html>

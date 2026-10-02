@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Fiber Works | Healthier Ever After</title>
+<meta name="description" content="A Healthier Ever After explainer on how fiber works in the body: digestion, blood sugar and insulin, gut hormones, and other benefits.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#143050; --navy-2:#24507E; --green:#2E7D5B; --green-2:#4FB386; --mint:#E2F3EA;
+  --cream:#F8F5EE; --paper:#FFFFFF; --ink:#17293A; --muted:#5A6577; --line:#D8E2E8;
+  --gold:#3E7CB8; --clay:#D98B23; --sky:#DCE8F4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
+h2{font-size:clamp(28px,4.5vw,40px);font-weight:800;margin-bottom:10px}
+h3{font-size:21px;font-weight:600;margin-bottom:6px}
+.kicker{font-family:"Space Mono",monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:8px;display:block}
+.lede{font-size:19px;color:var(--muted);max-width:760px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+svg{display:block;max-width:100%;height:auto}
+.mono{font-family:"Space Mono",monospace}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:64px 0 48px;border:0;position:relative;overflow:hidden}
+.hero h1{color:#fff;font-size:clamp(40px,7vw,72px);font-weight:800;max-width:820px}
+.hero h1 em{font-style:italic;color:var(--green-2)}
+.hero .lede{color:#C9D5E6;margin-top:16px}
+.hero .kicker{color:var(--green-2)}
+.series{display:inline-flex;gap:10px;align-items:center;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#C9D5E6;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+.series b{color:#fff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:36px}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px}
+.stat .n{font-family:Fraunces,serif;font-size:40px;font-weight:800;color:var(--green-2);line-height:1}
+.stat .l{font-size:15px;color:#DCE4EF;margin-top:6px}
+.hero-art{position:absolute;right:-40px;top:20px;opacity:.12;width:360px}
+
+/* types */
+.type{border-radius:18px;padding:26px;border:1px solid var(--line);background:var(--paper)}
+.type.sol{border-top:6px solid var(--green)}
+.type.ins{border-top:6px solid var(--navy-2)}
+.type.fer{border-top:6px solid var(--gold)}
+.tag{display:inline-block;font-family:"Space Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.tag.sol{background:var(--mint);color:var(--green)}
+.tag.ins{background:var(--sky);color:var(--navy-2)}
+.tag.fer{background:#DCE8F4;color:#24507E}
+.foods{font-size:15px;color:var(--muted);margin-top:10px}
+.foods b{color:var(--ink)}
+
+/* journey */
+.journey{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:start;margin-top:26px}
+@media(max-width:820px){.journey{grid-template-columns:1fr}.journey .body-svg{max-width:300px;margin:0 auto}}
+.steps{display:grid;gap:14px}
+.step{display:grid;grid-template-columns:48px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+.num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:#fff;font-family:Fraunces,serif;font-weight:800;font-size:22px;display:grid;place-items:center}
+.step p{font-size:16px;color:var(--ink)}
+.step .what{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:700}
+
+/* glucose */
+.chart-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:22px;height:4px;border-radius:2px;display:inline-block}
+.note{font-size:13px;color:var(--muted);font-style:italic;margin-top:6px}
+.mech{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start}
+.icon{width:56px;height:56px;border-radius:14px;background:var(--mint);display:grid;place-items:center}
+.callout{background:var(--mint);border-left:6px solid var(--green);border-radius:14px;padding:20px 22px;margin-top:22px}
+.callout h3{color:var(--green)}
+
+/* hormones */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px;margin-top:22px}
+.fbox{flex:1 1 150px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center}
+.fbox .t{font-family:Fraunces,serif;font-weight:700;color:var(--navy);font-size:18px}
+.fbox .s{font-size:14px;color:var(--muted)}
+.arrow{display:grid;place-items:center;color:var(--green);font-size:26px;font-weight:700}
+@media(max-width:700px){.arrow{transform:rotate(90deg);flex:1 1 100%}}
+.honest{background:#EEF4FA;border:1px solid #C9DCEF;border-radius:14px;padding:18px 20px;margin-top:20px;font-size:16px}
+
+/* benefits */
+.ben{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.ben .big{font-family:Fraunces,serif;font-size:30px;font-weight:800;color:var(--green);line-height:1}
+.ben .src{font-size:12px;color:var(--muted);font-family:"Space Mono",monospace;margin-top:auto;padding-top:6px}
+
+/* glp1 */
+.glp{background:var(--navy);color:#fff;border-radius:22px;padding:34px}
+.glp h2{color:#fff}
+.glp .kicker{color:var(--green-2)}
+.glp p{color:#D6DFEC}
+.glp ul{list-style:none;display:grid;gap:12px;margin-top:18px}
+.glp li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px 16px;color:#EEF2F8}
+.glp li b{color:var(--green-2)}
+
+/* foods table */
+.food{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.food .g{font-family:"Space Mono",monospace;font-weight:700;color:var(--green);font-size:18px}
+.food .serv{font-size:13px;color:var(--muted);grid-column:1/-1;margin-top:-4px}
+.bar{grid-column:1/-1;height:8px;background:var(--mint);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:999px}
+
+/* day plan */
+.day{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+.meal{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px}
+.meal .when{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meal .g{font-family:Fraunces,serif;font-size:28px;font-weight:800;color:var(--green)}
+.total{margin-top:16px;background:var(--navy);color:#fff;border-radius:16px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.total .g{font-family:Fraunces,serif;font-size:34px;font-weight:800;color:var(--green-2)}
+
+/* tips */
+.tip{display:grid;grid-template-columns:40px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.tip .k{width:40px;height:40px;border-radius:10px;background:var(--green);color:#fff;font-family:Fraunces,serif;font-weight:800;display:grid;place-items:center;font-size:18px}
+
+footer{padding:40px 0 60px;font-size:13px;color:var(--muted)}
+footer ol{padding-left:20px;display:grid;gap:6px;margin-top:10px}
+.brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
+.brandbar .name{font-family:Fraunces,serif;font-weight:800;color:var(--navy);font-size:20px}
+.brandbar .tagline{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+@media print{section{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="hero-art" viewBox="0 0 200 200" aria-hidden="true"><path d="M100 10 C40 60 40 140 100 190 C160 140 160 60 100 10Z" fill="#fff"/><path d="M100 20 V185" stroke="#143050" stroke-width="4"/><path d="M100 60 L70 40 M100 90 L62 66 M100 120 L66 100 M100 60 L130 40 M100 90 L138 66 M100 120 L134 100" stroke="#143050" stroke-width="3"/></svg>
+  <div class="wrap">
+    <div class="series"><b>Healthier Ever After</b> · Explainer Series</div>
+    <span class="kicker">Nutrition basics</span>
+    <h1>Fiber: the <em>quiet workhorse</em> on your plate</h1>
+    <p class="lede">Your body cannot digest fiber, and that is exactly why it helps. Here is what fiber does on its trip through your body: how it slows digestion, smooths out blood sugar, feeds your gut, and protects your heart for the long haul.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">25–38 g</div><div class="l">Daily goal for most adults (about 14 g for every 1,000 calories you eat)</div></div>
+      <div class="stat"><div class="n">~15 g</div><div class="l">What the average American actually eats in a day</div></div>
+      <div class="stat"><div class="n">9 in 10</div><div class="l">Adults who fall short of the daily goal</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- WHAT IS FIBER -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part one · What is fiber?</span>
+    <h2>A carb your body can't break down</h2>
+    <p class="lede">Fiber is the part of plant foods that your digestive enzymes cannot split apart. It passes through your stomach and small intestine mostly whole. That trip is where all the good work happens. There are a few kinds, and each one has its own job.</p>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="type sol">
+        <span class="tag sol">Soluble</span>
+        <svg viewBox="0 0 220 90" aria-hidden="true"><rect x="10" y="20" width="200" height="60" rx="30" fill="#E2F3EA"/><circle cx="50" cy="50" r="10" fill="#2E7D5B" opacity=".5"/><circle cx="85" cy="44" r="7" fill="#2E7D5B" opacity=".4"/><circle cx="120" cy="56" r="12" fill="#2E7D5B" opacity=".55"/><circle cx="160" cy="46" r="8" fill="#2E7D5B" opacity=".45"/><path d="M20 50 Q60 30 100 50 T200 50" stroke="#2E7D5B" stroke-width="3" fill="none"/></svg>
+        <h3>The gel maker</h3>
+        <p>Mixes with water and turns into a thick gel. That gel slows digestion, helps you feel full, softens stool, and grabs onto cholesterol.</p>
+        <p class="foods"><b>Find it in:</b> oats, barley, beans, lentils, apples, citrus, chia, flax, psyllium</p>
+      </div>
+      <div class="type ins">
+        <span class="tag ins">Insoluble</span>
+        <svg viewBox="0 0 220 90" aria-hidden="true"><rect x="10" y="20" width="200" height="60" rx="30" fill="#DCE8F4"/><g stroke="#24507E" stroke-width="4" stroke-linecap="round"><path d="M40 40 L70 62"/><path d="M80 36 L96 66"/><path d="M110 60 L140 38"/><path d="M150 64 L176 42"/><path d="M60 66 L58 38"/></g></svg>
+        <h3>The broom</h3>
+        <p>Does not dissolve. Adds bulk and helps food move through your intestines so you stay regular.</p>
+        <p class="foods"><b>Find it in:</b> wheat bran, whole grains, nuts, seeds, and the skins of fruits and vegetables</p>
+      </div>
+      <div class="type fer">
+        <span class="tag fer">Fermentable</span>
+        <svg viewBox="0 0 220 90" aria-hidden="true"><rect x="10" y="20" width="200" height="60" rx="30" fill="#DCE8F4"/><g fill="#3E7CB8"><ellipse cx="50" cy="50" rx="12" ry="7"/><ellipse cx="90" cy="40" rx="10" ry="6" transform="rotate(30 90 40)"/><ellipse cx="130" cy="58" rx="12" ry="7" transform="rotate(-20 130 58)"/><ellipse cx="170" cy="44" rx="10" ry="6"/></g><g fill="#24507E"><circle cx="70" cy="62" r="3"/><circle cx="112" cy="34" r="3"/><circle cx="152" cy="66" r="3"/></g></svg>
+        <h3>The gut food</h3>
+        <p>Feeds the helpful bacteria in your colon. Includes many soluble fibers plus "resistant starch." Also called prebiotics.</p>
+        <p class="foods"><b>Find it in:</b> beans, onions, garlic, leeks, slightly green bananas, oats, and cooked then cooled potatoes or rice</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part two · Digestion</span>
+    <h2>Fiber's trip through your body</h2>
+    <p class="lede">Most of what you eat gets absorbed in the first few feet of your gut. Fiber keeps going. Follow it from top to bottom.</p>
+    <div class="journey">
+      <svg class="body-svg" viewBox="0 0 300 520" role="img" aria-label="Diagram of the digestive tract with four numbered stops">
+        <!-- esophagus -->
+        <path d="M150 20 C150 60 148 90 150 110" stroke="#B9C6D6" stroke-width="16" fill="none" stroke-linecap="round"/>
+        <!-- mouth -->
+        <circle cx="150" cy="28" r="22" fill="#DCE8F4" stroke="#24507E" stroke-width="2"/>
+        <!-- stomach -->
+        <path d="M150 110 C200 100 230 130 220 175 C210 220 160 230 130 210 C110 196 118 168 140 160 C150 150 140 130 150 110Z" fill="#E2F3EA" stroke="#2E7D5B" stroke-width="3"/>
+        <!-- small intestine -->
+        <g fill="none" stroke="#D98B23" stroke-width="10" stroke-linecap="round" opacity=".75">
+          <path d="M135 215 C120 240 180 245 170 265 C160 285 110 270 115 295 C120 320 185 305 180 330 C175 355 115 340 120 365 C125 385 175 380 170 400"/>
+        </g>
+        <!-- large intestine -->
+        <path d="M80 420 L80 280 C80 255 95 245 120 245 L190 245 C215 245 225 255 225 280 L225 420 C225 440 205 450 185 450 L150 450 L150 500" fill="none" stroke="#143050" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>
+        <!-- dots for microbes -->
+        <g fill="#3E7CB8"><circle cx="80" cy="330" r="4"/><circle cx="80" cy="380" r="4"/><circle cx="225" cy="320" r="4"/><circle cx="225" cy="390" r="4"/><circle cx="150" cy="245" r="4"/></g>
+        <!-- number badges -->
+        <g font-family="Fraunces, serif" font-weight="800" font-size="18" text-anchor="middle">
+          <circle cx="40" cy="28" r="18" fill="#143050"/><text x="40" y="34" fill="#fff">1</text>
+          <circle cx="262" cy="160" r="18" fill="#143050"/><text x="262" y="166" fill="#fff">2</text>
+          <circle cx="262" cy="335" r="18" fill="#143050"/><text x="262" y="341" fill="#fff">3</text>
+          <circle cx="40" cy="470" r="18" fill="#143050"/><text x="40" y="476" fill="#fff">4</text>
+        </g>
+        <g stroke="#143050" stroke-width="1.5" stroke-dasharray="3 4"><path d="M58 28 L128 28"/><path d="M244 160 L218 160"/><path d="M244 335 L184 335"/><path d="M58 470 L80 430"/></g>
+      </svg>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><span class="what">Mouth</span><h3>More chewing, slower eating</h3><p>High fiber foods take longer to chew. That small delay gives your brain time to notice you are getting full before you overeat.</p></div></div>
+        <div class="step"><div class="num">2</div><div><span class="what">Stomach</span><h3>The gel slows things down</h3><p>Soluble fiber soaks up water and forms a thick gel. Your stomach empties more slowly, so you feel full longer and food trickles into your intestine instead of rushing in.</p></div></div>
+        <div class="step"><div class="num">3</div><div><span class="what">Small intestine</span><h3>Sugar enters slowly; cholesterol gets trapped</h3><p>The gel acts like a sponge around your food. Sugar from your meal soaks into your blood more gradually. The gel also traps bile, which your body makes from cholesterol, and carries it out. To make new bile, your liver pulls cholesterol out of your blood.</p></div></div>
+        <div class="step"><div class="num">4</div><div><span class="what">Large intestine (colon)</span><h3>Feeding your gut and keeping you regular</h3><p>Trillions of gut bacteria ferment fiber and turn it into helpful compounds called <b>short chain fatty acids</b>. These feed the cells lining your colon and send signals to the rest of your body. Insoluble fiber adds bulk so waste moves out easily.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLUCOSE & INSULIN -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part three · Blood sugar and insulin</span>
+    <h2>From spike to gentle hill</h2>
+    <p class="lede">When a meal lands fast, blood sugar shoots up. Your pancreas answers with a big wave of insulin to push that sugar into your cells. Then sugar can crash, and you feel hungry again. Fiber changes the shape of that curve.</p>
+
+    <div class="grid g2" style="margin-top:26px;align-items:start">
+      <div class="chart-card">
+        <svg viewBox="0 0 520 320" role="img" aria-label="Line chart comparing blood sugar after a low fiber meal and a high fiber meal">
+          <rect x="0" y="0" width="520" height="320" fill="#fff"/>
+          <!-- grid -->
+          <g stroke="#E6EBE5" stroke-width="1"><path d="M60 40 H500"/><path d="M60 100 H500"/><path d="M60 160 H500"/><path d="M60 220 H500"/></g>
+          <path d="M60 30 V270 H500" stroke="#5A6577" stroke-width="1.5" fill="none"/>
+          <!-- baseline -->
+          <path d="M60 220 H500" stroke="#B9C6D6" stroke-dasharray="5 5" stroke-width="1.5"/>
+          <text x="496" y="214" font-family="Space Mono, monospace" font-size="11" fill="#5A6577" text-anchor="end">fasting level</text>
+          <!-- low fiber curve -->
+          <path d="M60 220 C100 220 115 60 160 55 C205 50 220 250 270 248 C310 246 330 225 380 222 C430 220 470 220 500 220" stroke="#D98B23" stroke-width="4" fill="none"/>
+          <!-- high fiber curve -->
+          <path d="M60 220 C110 220 140 140 200 132 C260 124 300 190 360 208 C410 220 460 220 500 220" stroke="#2E7D5B" stroke-width="4" fill="none"/>
+          <!-- labels -->
+          <text x="164" y="44" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D98B23" text-anchor="middle">Spike</text>
+          <text x="270" y="266" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#D98B23" text-anchor="middle">Crash</text>
+          <text x="210" y="122" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#2E7D5B" text-anchor="middle">Lower, slower</text>
+          <!-- axis labels -->
+          <text x="280" y="300" font-family="Space Mono, monospace" font-size="12" fill="#5A6577" text-anchor="middle">Time after eating (about 3 hours) →</text>
+          <text x="22" y="150" font-family="Space Mono, monospace" font-size="12" fill="#5A6577" text-anchor="middle" transform="rotate(-90 22 150)">Blood sugar →</text>
+        </svg>
+        <div class="legend"><span><i class="sw" style="background:#D98B23"></i>Low fiber meal (white bread, juice)</span><span><i class="sw" style="background:#2E7D5B"></i>High fiber meal (beans, veggies, whole grains)</span></div>
+        <p class="note">Illustration of a typical pattern, not real patient data.</p>
+      </div>
+
+      <div class="grid" style="gap:16px">
+        <div class="mech"><div class="icon"><svg viewBox="0 0 32 32" width="30"><path d="M8 6 H24 L20 16 L24 26 H8 L12 16Z" fill="none" stroke="#2E7D5B" stroke-width="2.5" stroke-linejoin="round"/></svg></div><div><h3>Slower stomach emptying</h3><p>The gel holds food in your stomach longer, so carbs reach your blood in a steady stream instead of a flood.</p></div></div>
+        <div class="mech"><div class="icon"><svg viewBox="0 0 32 32" width="30"><rect x="5" y="9" width="22" height="14" rx="7" fill="none" stroke="#2E7D5B" stroke-width="2.5"/><circle cx="12" cy="16" r="2.5" fill="#2E7D5B"/><circle cx="20" cy="16" r="2.5" fill="#2E7D5B"/></svg></div><div><h3>A barrier in the gut</h3><p>Sugar has to work its way through the gel to reach the gut wall. That flattens the peak.</p></div></div>
+        <div class="mech"><div class="icon"><svg viewBox="0 0 32 32" width="30"><path d="M16 4 V28 M8 12 L16 4 L24 12" fill="none" stroke="#2E7D5B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Less insulin needed</h3><p>A smaller sugar rise calls for a smaller insulin response. Over time, short chain fatty acids from your gut bacteria also help your muscles and liver respond to insulin better. That is called better insulin sensitivity.</p></div></div>
+        <div class="mech"><div class="icon"><svg viewBox="0 0 32 32" width="30"><circle cx="11" cy="16" r="6" fill="none" stroke="#2E7D5B" stroke-width="2.5"/><circle cx="22" cy="16" r="6" fill="#2E7D5B" opacity=".5"/></svg></div><div><h3>The "second meal" effect</h3><p>A fiber rich breakfast, like oats or beans, can soften your blood sugar rise at lunch too. The benefit carries forward.</p></div></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>Try this: veggies first</h3>
+      <p>Studies show that eating the vegetables and protein on your plate before the bread, rice, or potatoes can noticeably lower the blood sugar spike from the same meal. Same food, different order, better curve.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HORMONES -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part four · Hunger signals</span>
+    <h2>How fiber talks to your brain</h2>
+    <p class="lede">Your gut is not just a tube. It is lined with cells that sense what you eat and send "I'm full" messages to your brain. Fiber helps turn those signals up.</p>
+    <div class="flow">
+      <div class="fbox"><div class="t">You eat fiber</div><div class="s">Beans, oats, veggies, fruit</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="t">Gut bacteria ferment it</div><div class="s">In your colon</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="t">Short chain fatty acids</div><div class="s">Butyrate, acetate, propionate</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="t">Gut cells release GLP-1 and PYY</div><div class="s">Natural fullness hormones</div></div>
+      <div class="arrow">→</div>
+      <div class="fbox"><div class="t">Brain gets the message</div><div class="s">Less hunger, steadier appetite</div></div>
+    </div>
+    <div class="honest"><b>Keeping it honest:</b> GLP-1 is the same hormone that medications like semaglutide and tirzepatide are built to mimic. Fiber gives your own GLP-1 a gentle nudge. The medications create a much stronger and longer lasting effect. Fiber is not a substitute for medication, though it works well alongside it.</div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part five · Beyond digestion</span>
+    <h2>What fiber does for the rest of you</h2>
+    <p class="lede">Large studies that follow people for years keep finding the same thing: people who eat more fiber tend to live longer and get sick less often.</p>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="ben"><div class="big">15–30%</div><h3>Longer, healthier life</h3><p>People who ate the most fiber had a 15 to 30 percent lower risk of dying early, and of heart disease, stroke, type 2 diabetes, and colon cancer, compared with those who ate the least.</p><div class="src">Reynolds et al., Lancet 2019</div></div>
+      <div class="ben"><div class="big">LDL ↓</div><h3>Lower "bad" cholesterol</h3><p>Soluble fiber from oats, barley, beans, and psyllium carries cholesterol out of your body. A daily dose can trim LDL cholesterol by a modest but real amount.</p><div class="src">FDA approved health claim for oat and psyllium fiber</div></div>
+      <div class="ben"><div class="big">♥</div><h3>Heart and blood pressure</h3><p>Higher fiber diets are linked with lower blood pressure and less inflammation in the body, two big drivers of heart disease.</p><div class="src">Meta-analyses of observational and trial data</div></div>
+      <div class="ben"><div class="big">Fuller</div><h3>Easier weight management</h3><p>Fiber adds volume without many calories and keeps you satisfied longer. That makes a calorie deficit easier to live with, without a nutrition deficit.</p><div class="src">Satiety and weight loss trials</div></div>
+      <div class="ben"><div class="big">Regular</div><h3>Healthier bowels</h3><p>Fiber plus water softens stool and keeps things moving. It lowers the risk of constipation, hemorrhoids, and diverticular disease.</p><div class="src">Clinical guidelines on constipation</div></div>
+      <div class="ben"><div class="big">Microbes</div><h3>A stronger gut ecosystem</h3><p>A wider variety of plant fibers feeds a wider variety of gut bacteria. A diverse gut is linked with better metabolic and immune health.</p><div class="src">Microbiome research</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLP-1 -->
+<section>
+  <div class="wrap">
+    <div class="glp">
+      <span class="kicker">Part six · If you take a GLP-1 medication</span>
+      <h2>Fiber is your teammate</h2>
+      <p>GLP-1 medications slow down your stomach and gut. That helps with fullness, but it also makes constipation one of the most common side effects. Fiber can help, as long as you add it the right way.</p>
+      <ul>
+        <li><b>Go slow.</b> Your stomach is already emptying slowly. Piling on a lot of fiber at once can add to fullness, bloating, or nausea. Build up over a few weeks.</li>
+        <li><b>Drink more water.</b> Fiber needs water to work. Without enough fluid, extra fiber can actually make constipation worse.</li>
+        <li><b>Smaller portions still count.</b> When you can only eat a little, make it count: beans in your soup, berries in your yogurt, chia in your oats.</li>
+        <li><b>Pair with protein.</b> Protein and fiber together give you the most fullness and help protect muscle while you lose weight.</li>
+        <li><b>Keep moving.</b> A daily walk helps your gut move along too.</li>
+        <li><b>Ask before supplementing.</b> If you are thinking about a fiber supplement like psyllium, or if constipation lasts more than a few days, talk with your prescriber.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOODS -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part seven · Where to find it</span>
+    <h2>Fiber all-stars</h2>
+    <p class="lede">You do not need special products. Everyday plant foods do the job. Approximate grams per serving:</p>
+    <div class="grid g4" style="margin-top:24px">
+      <div class="food"><b>Lentils, cooked</b><span class="g">15 g</span><span class="serv">1 cup</span><div class="bar"><i style="width:100%"></i></div></div>
+      <div class="food"><b>Black beans, cooked</b><span class="g">15 g</span><span class="serv">1 cup</span><div class="bar"><i style="width:100%"></i></div></div>
+      <div class="food"><b>Chia seeds</b><span class="g">10 g</span><span class="serv">2 tablespoons</span><div class="bar"><i style="width:67%"></i></div></div>
+      <div class="food"><b>Avocado</b><span class="g">10 g</span><span class="serv">1 whole</span><div class="bar"><i style="width:67%"></i></div></div>
+      <div class="food"><b>Raspberries</b><span class="g">8 g</span><span class="serv">1 cup</span><div class="bar"><i style="width:53%"></i></div></div>
+      <div class="food"><b>Pear, with skin</b><span class="g">6 g</span><span class="serv">1 medium</span><div class="bar"><i style="width:40%"></i></div></div>
+      <div class="food"><b>Broccoli, cooked</b><span class="g">5 g</span><span class="serv">1 cup</span><div class="bar"><i style="width:33%"></i></div></div>
+      <div class="food"><b>Oatmeal, cooked</b><span class="g">4 g</span><span class="serv">1 cup</span><div class="bar"><i style="width:27%"></i></div></div>
+      <div class="food"><b>Apple, with skin</b><span class="g">4 g</span><span class="serv">1 medium</span><div class="bar"><i style="width:27%"></i></div></div>
+      <div class="food"><b>Ground flaxseed</b><span class="g">4 g</span><span class="serv">2 tablespoons</span><div class="bar"><i style="width:27%"></i></div></div>
+      <div class="food"><b>Almonds</b><span class="g">3.5 g</span><span class="serv">1 ounce (about 23)</span><div class="bar"><i style="width:23%"></i></div></div>
+      <div class="food"><b>Popcorn, air popped</b><span class="g">3.5 g</span><span class="serv">3 cups</span><div class="bar"><i style="width:23%"></i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE DAY -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part eight · Putting it together</span>
+    <h2>What 30+ grams looks like</h2>
+    <p class="lede">One example day. No supplements, no strange foods.</p>
+    <div class="day">
+      <div class="meal"><div class="when">Breakfast</div><div class="g">~13 g</div><p>Oatmeal with one tablespoon of chia and a half cup of raspberries</p></div>
+      <div class="meal"><div class="when">Lunch</div><div class="g">~11 g</div><p>Big salad with a half cup of lentils, veggies, and a quarter avocado</p></div>
+      <div class="meal"><div class="when">Snack</div><div class="g">~8 g</div><p>A pear and a small handful of almonds</p></div>
+      <div class="meal"><div class="when">Dinner</div><div class="g">~12 g</div><p>Chicken, a cup of broccoli, and a half cup of black beans on the side</p></div>
+    </div>
+    <div class="total"><span style="font-family:Fraunces,serif;font-size:22px;font-weight:700">Daily total</span><span class="g">about 44 g</span></div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part nine · Getting started</span>
+    <h2>Small steps that carry a lot of weight</h2>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="tip"><div class="k">1</div><div><h3>Start low, go slow</h3><p>Add a few grams every few days. Your gut bacteria need time to adjust, and going slowly keeps gas and bloating down.</p></div></div>
+      <div class="tip"><div class="k">2</div><div><h3>Drink up</h3><p>As fiber goes up, water should too. Keep a bottle nearby through the day.</p></div></div>
+      <div class="tip"><div class="k">3</div><div><h3>Eat the fruit, skip the juice</h3><p>Juicing strips out most of the fiber and leaves the sugar behind.</p></div></div>
+      <div class="tip"><div class="k">4</div><div><h3>Spread it out</h3><p>A little fiber at every meal works better and feels better than one giant bowl of bran.</p></div></div>
+      <div class="tip"><div class="k">5</div><div><h3>Read the label</h3><p>Look for about three grams or more of fiber per serving in breads, cereals, and crackers. Five grams or more is excellent.</p></div></div>
+      <div class="tip"><div class="k">6</div><div><h3>Mix it up</h3><p>Different plants feed different gut bacteria. Aim for variety across the week: beans, grains, nuts, seeds, fruits, and vegetables.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Selected sources</b>
+    <ol>
+      <li>Reynolds A, et al. Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <i>Lancet</i>. 2019.</li>
+      <li>U.S. Department of Agriculture and U.S. Department of Health and Human Services. <i>Dietary Guidelines for Americans</i> (14 g fiber per 1,000 calories).</li>
+      <li>Institute of Medicine. <i>Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids</i>. 2005.</li>
+      <li>Shukla AP, et al. Food order has a significant impact on postprandial glucose and insulin levels. <i>Diabetes Care</i>. 2015.</li>
+      <li>Chambers ES, et al. Effects of targeted delivery of propionate to the human colon on appetite regulation and body weight. <i>Gut</i>. 2015.</li>
+      <li>U.S. Food and Drug Administration. Health claims for soluble fiber from certain foods and risk of coronary heart disease (21 CFR 101.81).</li>
+      <li>USDA FoodData Central (food fiber values, rounded).</li>
+    </ol>
+    <p style="margin-top:14px">This explainer is for education only and is not medical advice. Talk with your own healthcare provider about changes to your diet, supplements, or medications.</p>
+    <div class="brandbar"><span class="name">Healthier Ever After</span><span class="tagline">Weight Loss · Lifestyle · Longevity</span></div>
+  </div>
+</footer>
+</body>
+</html>

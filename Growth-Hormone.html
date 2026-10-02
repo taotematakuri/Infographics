@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Growth Hormone Explained | Healthier Ever After</title>
+<meta name="description" content="A Healthier Ever After explainer on growth hormone: what it is, how the signal works, what raises and lowers it naturally, the medications and peptides people use, and what the evidence says about weight loss and safety.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#143050; --navy-2:#24507E; --green:#2E7D5B; --green-2:#4FB386; --mint:#E2F3EA;
+  --cream:#F8F5EE; --paper:#FFFFFF; --ink:#17293A; --muted:#5A6577; --line:#D8E2E8;
+  --gold:#3E7CB8; --gold-soft:#DCE8F4; --clay:#D98B23; --clay-soft:#FBEBD2; --sky:#DCE8F4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;color:var(--navy);line-height:1.15}
+h2{font-size:clamp(28px,4.5vw,40px);font-weight:800;margin-bottom:10px}
+h3{font-size:21px;font-weight:600;margin-bottom:6px}
+p+p{margin-top:10px}
+.kicker{font-family:"Space Mono",monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:8px;display:block}
+.lede{font-size:19px;color:var(--muted);max-width:780px}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+svg{display:block;max-width:100%;height:auto}
+.mono{font-family:"Space Mono",monospace}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}
+.note{font-size:13px;color:var(--muted);font-style:italic;margin-top:8px}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:64px 0 48px;border:0;position:relative;overflow:hidden}
+.hero h1{color:#fff;font-size:clamp(40px,7vw,72px);font-weight:800;max-width:860px}
+.hero h1 em{font-style:italic;color:var(--green-2)}
+.hero .lede{color:#C9D5E6;margin-top:16px}
+.hero .kicker{color:var(--green-2)}
+.series{display:inline-flex;gap:10px;align-items:center;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#C9D5E6;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;margin-bottom:22px}
+.series b{color:#fff}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:36px}
+.stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:18px}
+.stat .n{font-family:Fraunces,serif;font-size:38px;font-weight:800;color:var(--green-2);line-height:1}
+.stat .l{font-size:15px;color:#DCE4EF;margin-top:6px}
+.hero-art{position:absolute;right:-30px;top:10px;opacity:.10;width:380px}
+
+/* define */
+.define{background:var(--mint);border-left:6px solid var(--green);border-radius:0 14px 14px 0;padding:14px 18px;font-size:16px;margin-top:18px}
+.define b{color:var(--green)}
+
+/* jobs */
+.job{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start}
+.icon{width:56px;height:56px;border-radius:14px;background:var(--mint);display:grid;place-items:center}
+.icon.navy{background:var(--sky)}
+.icon.gold{background:var(--gold-soft)}
+.icon.clay{background:var(--clay-soft)}
+.job p{font-size:15.5px;color:var(--muted)}
+.when{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--green);display:block;margin-bottom:2px}
+
+/* loop */
+.loop{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:start;margin-top:26px}
+@media(max-width:860px){.loop{grid-template-columns:1fr}}
+.chart-card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:44px 1fr;gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-family:Fraunces,serif;font-weight:800;font-size:20px;display:grid;place-items:center}
+.step p{font-size:15.5px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:22px;height:4px;border-radius:2px;display:inline-block}
+
+/* up / down */
+.updown{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.updown{grid-template-columns:1fr}}
+.ud{border-radius:18px;padding:24px;border:1px solid var(--line);background:var(--paper)}
+.ud.up{border-top:6px solid var(--green)}
+.ud.down{border-top:6px solid var(--clay)}
+.tag{display:inline-block;font-family:"Space Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.tag.up{background:var(--mint);color:var(--green)}
+.tag.down{background:var(--clay-soft);color:#8A5B12}
+.tag.navy{background:var(--sky);color:var(--navy-2)}
+.tag.gold{background:var(--gold-soft);color:#24507E}
+.ud ul{list-style:none;display:grid;gap:12px}
+.ud li{display:grid;grid-template-columns:28px 1fr;gap:10px;font-size:15.5px}
+.ud li b{color:var(--ink)}
+.dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;margin-top:1px}
+.up .dot{background:var(--green)}
+.down .dot{background:var(--clay)}
+.callout{background:var(--mint);border-left:6px solid var(--green);border-radius:14px;padding:20px 22px;margin-top:22px}
+.callout h3{color:var(--green)}
+
+/* uses */
+.use{border-radius:18px;padding:24px;border:1px solid var(--line);background:var(--paper)}
+.use.ok{border-top:6px solid var(--green)}
+.use.off{border-top:6px solid var(--gold)}
+.use ul{padding-left:20px;display:grid;gap:6px;font-size:15.5px}
+
+/* strategies */
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+@media(max-width:760px){.teams{grid-template-columns:1fr}}
+.team{border-radius:18px;padding:22px;background:var(--paper);border:1px solid var(--line)}
+.team.a{border-top:6px solid var(--navy-2)}
+.team.b{border-top:6px solid var(--green)}
+.buttons{margin-top:22px}
+
+/* table */
+.tbl-wrap{overflow-x:auto;margin-top:24px;background:var(--paper);border:1px solid var(--line);border-radius:18px}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:720px}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:#FAFBF8}
+tr:last-child td{border-bottom:0}
+td.name b{font-family:Fraunces,serif;font-size:17px;color:var(--navy);display:block}
+td.name small{font-family:"Space Mono",monospace;font-size:11px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;margin-bottom:4px}
+.pill.ok{background:var(--mint);color:#1C5540}
+.pill.was{background:var(--sky);color:var(--navy-2)}
+.pill.no{background:var(--gold-soft);color:#1D4369}
+.pill.warn{background:var(--clay-soft);color:#8A5B12}
+.stamp{font-family:"Space Mono",monospace;font-size:12px;color:var(--muted);margin-top:10px}
+
+/* evidence */
+.ev{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.ev .big{font-family:Fraunces,serif;font-size:32px;font-weight:800;color:var(--green);line-height:1}
+.ev .big.clay{color:var(--clay)}
+.ev .src{font-size:12px;color:var(--muted);font-family:"Space Mono",monospace;margin-top:auto;padding-top:6px}
+.honest{background:#EEF4FA;border:1px solid #C9DCEF;border-radius:14px;padding:18px 20px;margin-top:20px;font-size:16px}
+
+/* glp1 block */
+.glp{background:var(--navy);color:#fff;border-radius:22px;padding:34px}
+.glp h2{color:#fff}
+.glp .kicker{color:var(--green-2)}
+.glp p{color:#D6DFEC}
+.glp ul{list-style:none;display:grid;gap:12px;margin-top:18px}
+.glp li{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px 16px;color:#EEF2F8}
+.glp li b{color:var(--green-2)}
+
+/* risks */
+.risk{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:start}
+.risk .icon{width:48px;height:48px;border-radius:12px;background:var(--clay-soft)}
+.risk p{font-size:15px;color:var(--muted)}
+.risk h3{font-size:18px}
+.legal{background:var(--paper);border:1px solid var(--line);border-left:6px solid var(--navy-2);border-radius:14px;padding:20px 22px;margin-top:22px}
+
+/* questions */
+.tip{display:grid;grid-template-columns:40px 1fr;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px}
+.tip .k{width:40px;height:40px;border-radius:10px;background:var(--green);color:#fff;font-family:Fraunces,serif;font-weight:800;display:grid;place-items:center;font-size:18px}
+.tip p{font-size:15.5px;color:var(--muted)}
+
+footer{padding:40px 0 60px;font-size:13px;color:var(--muted)}
+footer ol{padding-left:20px;display:grid;gap:6px;margin-top:10px}
+.brandbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
+.brandbar .name{font-family:Fraunces,serif;font-weight:800;color:var(--navy);font-size:20px}
+.brandbar .tagline{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+@media print{
+  @page{size:Letter;margin:10mm}
+  body{font-size:15px}
+  section{padding:30px 0}
+  .card,.job,.step,.ud,.use,.team,.ev,.risk,.tip,.glp,.chart-card,.legal,.callout,.honest,tr{break-inside:avoid}
+  .hero,.glp,.num,.tip .k,.dot,.pill,.tag,.icon{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .tbl-wrap{overflow:visible}
+  table{min-width:0}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="hero-art" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="86" fill="none" stroke="#fff" stroke-width="6"/><path d="M28 120 C52 120 56 60 72 60 C88 60 90 140 108 140 C124 140 126 40 142 40 C158 40 160 120 176 120" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="series"><b>Healthier Ever After</b> · Explainer Series</div>
+    <span class="kicker">Hormones and metabolism</span>
+    <h1>Growth hormone: your body's <em>night-shift</em> builder</h1>
+    <p class="lede">Growth hormone helps kids grow, and it keeps working long after we stop getting taller. Here is what it does, how your body controls it, what turns it up or down, and an honest look at the shots, pills, and peptides people are using to chase it.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">Pea-sized</div><div class="l">The pituitary gland at the base of your brain that makes it</div></div>
+      <div class="stat"><div class="n">Deep sleep</div><div class="l">When your biggest daily burst usually happens, shortly after you fall asleep</div></div>
+      <div class="stat"><div class="n">~14%</div><div class="l">Average drop in daily output for each decade of adult life</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- PART ONE -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part one · What is growth hormone?</span>
+    <h2>A messenger with a long job list</h2>
+    <p class="lede">Growth hormone (also called <b>GH</b>, <b>HGH</b>, or <b>somatotropin</b>) is a protein hormone made by the pituitary gland. It travels through your blood and tells tissues all over your body to grow, repair, and use fuel in certain ways.</p>
+    <div class="define"><b>Hormone</b> = a chemical messenger made in one part of the body that travels through the blood to change what happens somewhere else.</div>
+
+    <div class="grid g3" style="margin-top:26px">
+      <div class="job"><div class="icon navy"><svg viewBox="0 0 32 32" width="30"><path d="M16 28 V6 M10 12 L16 6 L22 12" fill="none" stroke="#24507E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 28 H24" stroke="#24507E" stroke-width="2.5" stroke-linecap="round"/></svg></div><div><span class="when">Childhood</span><h3>Helps kids grow taller</h3><p>Signals the growth plates at the ends of bones to keep lengthening until puberty ends.</p></div></div>
+      <div class="job"><div class="icon"><svg viewBox="0 0 32 32" width="30"><rect x="3" y="12" width="4" height="8" rx="1" fill="#2E7D5B"/><rect x="25" y="12" width="4" height="8" rx="1" fill="#2E7D5B"/><rect x="7" y="10" width="4" height="12" rx="1" fill="#2E7D5B"/><rect x="21" y="10" width="4" height="12" rx="1" fill="#2E7D5B"/><rect x="11" y="15" width="10" height="2" fill="#2E7D5B"/></svg></div><div><span class="when">All ages</span><h3>Builds and keeps muscle</h3><p>Helps your body make protein and hold on to lean tissue.</p></div></div>
+      <div class="job"><div class="icon gold"><svg viewBox="0 0 32 32" width="30"><path d="M9 6 a3 3 0 1 1 3 4 L20 22 a3 3 0 1 1 1 4 a3 3 0 1 1 -4 -1 L11 13 a3 3 0 1 1 -4 -1 a3 3 0 1 1 2 -6Z" fill="none" stroke="#24507E" stroke-width="2.2" stroke-linejoin="round"/></svg></div><div><span class="when">All ages</span><h3>Keeps bones strong</h3><p>Supports bone building and bone density across your lifetime.</p></div></div>
+      <div class="job"><div class="icon clay"><svg viewBox="0 0 32 32" width="30"><path d="M16 4 C20 10 24 13 24 19 a8 8 0 0 1 -16 0 C8 15 11 12 12 9 C13 12 14 13 16 13 C16 10 15 7 16 4Z" fill="none" stroke="#D98B23" stroke-width="2.4" stroke-linejoin="round"/></svg></div><div><span class="when">Adulthood</span><h3>Burns stored fat for fuel</h3><p>Tells fat cells to release stored fat so it can be used for energy. This is called <b>lipolysis</b>.</p></div></div>
+      <div class="job"><div class="icon navy"><svg viewBox="0 0 32 32" width="30"><path d="M4 22 L10 14 L15 18 L22 8 L28 12" fill="none" stroke="#24507E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="8" r="2.5" fill="#24507E"/></svg></div><div><span class="when">Adulthood</span><h3>Shapes blood sugar</h3><p>Pushes blood sugar up between meals and overnight so your brain stays fueled. Too much of it can work against insulin.</p></div></div>
+      <div class="job"><div class="icon"><svg viewBox="0 0 32 32" width="30"><path d="M8 24 L20 12 M18 8 a5 5 0 0 0 6 6 l-2 -2 l2 -2 l2 2 a5 5 0 0 0 -6 -6Z M6 26 l2 -2" fill="none" stroke="#2E7D5B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><span class="when">All ages</span><h3>Repairs and restores</h3><p>Supports the repair of skin, tendons, and other tissues, much of it overnight.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART TWO -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part two · How the signal works</span>
+    <h2>A gas pedal, a brake, and a thermostat</h2>
+    <p class="lede">Your brain does not release growth hormone in a steady drip. It sends it out in bursts, then checks the result and adjusts. That loop is what keeps levels from running too low or too high.</p>
+
+    <div class="loop">
+      <div class="chart-card">
+        <svg viewBox="0 0 520 520" role="img" aria-label="Diagram of the growth hormone control loop: hypothalamus, pituitary, liver, IGF-1, body tissues, and feedback back to the brain">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#143050"/></marker>
+            <marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#2E7D5B"/></marker>
+            <marker id="ahc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#D98B23"/></marker>
+            <marker id="ahd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#3E7CB8"/></marker>
+          </defs>
+          <rect width="520" height="520" fill="#fff"/>
+          <!-- brain -->
+          <path d="M150 30 C110 30 92 60 100 86 C80 100 88 132 116 134 C126 152 160 156 176 142 C196 156 236 152 244 130 C276 128 282 92 260 80 C268 50 240 26 210 34 C196 22 166 20 150 30Z" fill="#DCE8F4" stroke="#24507E" stroke-width="2.5"/>
+          <text x="180" y="78" font-family="Fraunces, serif" font-weight="800" font-size="17" fill="#143050" text-anchor="middle">Hypothalamus</text>
+          <text x="180" y="98" font-family="Inter, sans-serif" font-size="12" fill="#5A6577" text-anchor="middle">the control center</text>
+          <!-- go and brake labels -->
+          <rect x="300" y="44" width="150" height="30" rx="15" fill="#E2F3EA"/><text x="375" y="64" font-family="Inter, sans-serif" font-weight="700" font-size="12.5" fill="#1C5540" text-anchor="middle">GHRH = gas pedal</text>
+          <rect x="300" y="84" width="150" height="30" rx="15" fill="#FBEBD2"/><text x="375" y="104" font-family="Inter, sans-serif" font-weight="700" font-size="12.5" fill="#8A5B12" text-anchor="middle">Somatostatin = brake</text>
+          <path d="M248 72 L296 60" stroke="#2E7D5B" stroke-width="2" stroke-dasharray="3 3"/>
+          <path d="M252 100 L296 99" stroke="#D98B23" stroke-width="2" stroke-dasharray="3 3"/>
+          <!-- arrow to pituitary -->
+          <path d="M180 146 L180 186" stroke="#143050" stroke-width="3" marker-end="url(#ah)"/>
+          <!-- pituitary -->
+          <ellipse cx="180" cy="214" rx="46" ry="24" fill="#E2F3EA" stroke="#2E7D5B" stroke-width="2.5"/>
+          <text x="180" y="219" font-family="Fraunces, serif" font-weight="800" font-size="15" fill="#143050" text-anchor="middle">Pituitary</text>
+          <!-- ghrelin input from stomach -->
+          <path d="M70 304 C70 256 96 224 128 216" stroke="#3E7CB8" stroke-width="2.5" fill="none" marker-end="url(#ahd)"/>
+          <ellipse cx="72" cy="330" rx="32" ry="22" fill="#DCE8F4" stroke="#3E7CB8" stroke-width="2"/>
+          <text x="72" y="334" font-family="Inter, sans-serif" font-weight="700" font-size="11" fill="#24507E" text-anchor="middle">Stomach</text>
+          <text x="72" y="370" font-family="Inter, sans-serif" font-size="11" fill="#24507E" text-anchor="middle">ghrelin</text>
+          <text x="72" y="384" font-family="Inter, sans-serif" font-size="11" fill="#24507E" text-anchor="middle">"hunger hormone"</text>
+          <text x="72" y="398" font-family="Inter, sans-serif" font-size="11" fill="#24507E" text-anchor="middle">also says "go"</text>
+          <!-- GH arrow to liver -->
+          <path d="M218 230 C270 250 300 280 318 318" stroke="#143050" stroke-width="3" fill="none" marker-end="url(#ah)"/>
+          <rect x="226" y="262" width="56" height="24" rx="12" fill="#143050"/><text x="254" y="279" font-family="Space Mono, monospace" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">GH</text>
+          <!-- liver -->
+          <path d="M268 330 C300 312 400 312 432 330 C452 344 440 380 404 384 C360 390 300 392 276 372 C262 360 260 340 268 330Z" fill="#FBEBD2" stroke="#D98B23" stroke-width="2.5"/>
+          <text x="352" y="356" font-family="Fraunces, serif" font-weight="800" font-size="16" fill="#143050" text-anchor="middle">Liver</text>
+          <text x="352" y="374" font-family="Inter, sans-serif" font-size="12" fill="#5A6577" text-anchor="middle">makes IGF-1</text>
+          <!-- IGF-1 arrow to body -->
+          <path d="M352 392 L352 432" stroke="#143050" stroke-width="3" marker-end="url(#ah)"/>
+          <rect x="370" y="402" width="70" height="24" rx="12" fill="#2E7D5B"/><text x="405" y="419" font-family="Space Mono, monospace" font-weight="700" font-size="13" fill="#fff" text-anchor="middle">IGF-1</text>
+          <!-- body tissues -->
+          <rect x="250" y="440" width="204" height="54" rx="16" fill="#E2F3EA" stroke="#2E7D5B" stroke-width="2"/>
+          <text x="352" y="463" font-family="Fraunces, serif" font-weight="800" font-size="15" fill="#143050" text-anchor="middle">Muscle · Bone · Fat</text>
+          <text x="352" y="482" font-family="Inter, sans-serif" font-size="12" fill="#5A6577" text-anchor="middle">get the message</text>
+          <!-- feedback -->
+          <path d="M470 360 C500 300 500 160 456 112" stroke="#D98B23" stroke-width="2.5" fill="none" stroke-dasharray="7 6" marker-end="url(#ahc)"/>
+          <text x="496" y="250" font-family="Space Mono, monospace" font-weight="700" font-size="11" fill="#8A5B12" text-anchor="middle" transform="rotate(90 496 250)">"enough" signal</text>
+          <!-- direct GH arrow to fat -->
+          <path d="M150 238 C130 330 170 430 244 462" stroke="#2E7D5B" stroke-width="2" fill="none" stroke-dasharray="4 5" marker-end="url(#ahg)"/>
+          <text x="128" y="430" font-family="Inter, sans-serif" font-size="11" fill="#1C5540" text-anchor="middle">GH also acts</text>
+          <text x="128" y="444" font-family="Inter, sans-serif" font-size="11" fill="#1C5540" text-anchor="middle">directly on fat</text>
+        </svg>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h3>The brain presses the gas</h3><p>The hypothalamus sends <b>GHRH</b>, a "make growth hormone now" signal. Ghrelin from an empty stomach can also nudge the pituitary to release a burst.</p></div></div>
+        <div class="step"><div class="num">2</div><div><h3>The pituitary releases a burst</h3><p>Growth hormone pours into your blood in pulses, several times a day. It only lasts a few minutes in the blood, so the pulses matter.</p></div></div>
+        <div class="step"><div class="num">3</div><div><h3>The liver makes IGF-1</h3><p>Much of growth hormone's work is handed off to <b>IGF-1</b> (insulin-like growth factor 1). IGF-1 lasts much longer in the blood, which is why doctors usually test IGF-1 instead of growth hormone itself.</p></div></div>
+        <div class="step"><div class="num">4</div><div><h3>The brain hits the brake</h3><p>When IGF-1 rises, the brain releases <b>somatostatin</b>, which slows things down. This feedback loop is your body's thermostat.</p></div></div>
+      </div>
+    </div>
+
+    <div class="chart-card" style="margin-top:22px">
+      <h3>A day in the life of growth hormone</h3>
+      <svg viewBox="0 0 900 260" role="img" aria-label="Illustration of growth hormone pulses across 24 hours, with the largest pulse soon after falling asleep">
+        <rect width="900" height="260" fill="#fff"/>
+        <rect x="560" y="20" width="250" height="190" fill="#143050" opacity=".07"/>
+        <text x="685" y="38" font-family="Space Mono, monospace" font-size="12" fill="#143050" text-anchor="middle">SLEEP</text>
+        <path d="M50 20 V210 H870" stroke="#5A6577" stroke-width="1.5" fill="none"/>
+        <path d="M50 210 L120 208 L135 175 L150 208 L250 207 L268 160 L285 207 L380 208 L396 182 L412 208 L500 207 L515 170 L530 207 L590 207 L612 60 L640 206 L690 205 L706 150 L722 206 L780 206 L795 168 L810 207 L870 208" stroke="#2E7D5B" stroke-width="3.5" fill="none" stroke-linejoin="round"/>
+        <text x="612" y="52" font-family="Inter, sans-serif" font-weight="700" font-size="13" fill="#1C5540" text-anchor="middle">Biggest burst</text>
+        <g font-family="Space Mono, monospace" font-size="12" fill="#5A6577" text-anchor="middle">
+          <text x="50" y="232">8 am</text><text x="230" y="232">2 pm</text><text x="410" y="232">8 pm</text><text x="590" y="232">11 pm</text><text x="730" y="232">4 am</text><text x="870" y="232">8 am</text>
+        </g>
+        <text x="20" y="120" font-family="Space Mono, monospace" font-size="12" fill="#5A6577" text-anchor="middle" transform="rotate(-90 20 120)">GH in blood</text>
+      </svg>
+      <p class="note">Illustration of a typical adult pattern, not real patient data. Pulses are smaller and less frequent with age and with extra belly fat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PART THREE -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part three · Your natural levels</span>
+    <h2>What turns it up, and what turns it down</h2>
+    <p class="lede">Before anyone reaches for a shot, it helps to know that everyday habits move growth hormone in real, measurable ways. Many of the things that lower it are also the things that make weight loss harder.</p>
+    <div class="updown">
+      <div class="ud up">
+        <span class="tag up">Turns it up</span>
+        <ul>
+          <li><span class="dot">+</span><div><b>Deep sleep.</b> The largest pulse of the day comes in the first stretch of deep sleep. A steady bedtime protects it.</div></li>
+          <li><span class="dot">+</span><div><b>Hard exercise.</b> Strength training and higher intensity intervals trigger a strong growth hormone release.</div></li>
+          <li><span class="dot">+</span><div><b>Time between meals.</b> Levels rise when insulin is low, such as overnight or during a longer gap between meals.</div></li>
+          <li><span class="dot">+</span><div><b>Losing belly fat.</b> As deep belly fat shrinks, growth hormone output tends to recover toward normal.</div></li>
+        </ul>
+      </div>
+      <div class="ud down">
+        <span class="tag down">Turns it down</span>
+        <ul>
+          <li><span class="dot">−</span><div><b>Extra belly fat.</b> People with obesity release much less growth hormone. Some of this is caused by the extra weight, not just age.</div></li>
+          <li><span class="dot">−</span><div><b>Short or broken sleep.</b> Less deep sleep means a smaller nighttime burst.</div></li>
+          <li><span class="dot">−</span><div><b>Late, sugary snacks.</b> A spike of insulin near bedtime can blunt the nighttime release.</div></li>
+          <li><span class="dot">−</span><div><b>Alcohol in the evening.</b> Drinking before bed reduces the growth hormone released during sleep.</div></li>
+          <li><span class="dot">−</span><div><b>Age.</b> Output slowly declines each decade. This is normal, and it is not the same thing as a medical deficiency.</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout">
+      <h3>The good news for weight loss</h3>
+      <p>In studies of people who lost a large amount of weight, their 24-hour growth hormone pattern moved back toward normal. Sleep, strength training, protein, and steady fat loss are the small steps that carry a lot of weight here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PART FOUR -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part four · Why people use it</span>
+    <h2>Real medical needs, and a popular wellness trend</h2>
+    <p class="lede">Growth hormone treatment changes lives for people who truly lack it. The wellness version is a different story, with far less evidence behind it.</p>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="use ok">
+        <span class="tag up">Approved medical uses</span>
+        <ul>
+          <li>Children with growth hormone deficiency or certain genetic and kidney conditions that limit growth</li>
+          <li>Adults with a true, tested deficiency, often after pituitary surgery, tumors, radiation, or head injury</li>
+          <li>Muscle wasting from HIV, and short bowel syndrome</li>
+        </ul>
+      </div>
+      <div class="use off">
+        <span class="tag gold">Off-label wellness uses</span>
+        <ul>
+          <li>"Anti-aging" and more energy</li>
+          <li>Building muscle or improving athletic performance</li>
+          <li>Losing fat, especially belly fat</li>
+          <li>Faster recovery, better sleep, or healthier skin</li>
+        </ul>
+      </div>
+    </div>
+    <div class="define"><b>Off-label</b> = using a drug for something it was not approved to treat. Doctors do this legally with many drugs. Growth hormone is an exception: in the U.S., giving or selling it for anti-aging or athletic use is against federal law. All of the products on this page are also banned in competitive sports.</div>
+  </div>
+</section>
+
+<!-- PART FIVE -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part five · The medications and peptides</span>
+    <h2>Two ways to raise growth hormone</h2>
+    <p class="lede">Every product people talk about falls into one of two strategies: add growth hormone directly, or press a button that tells your own pituitary to release more.</p>
+
+    <div class="teams">
+      <div class="team a">
+        <span class="tag navy">Strategy one · Add it directly</span>
+        <h3>Synthetic growth hormone</h3>
+        <p><b>Somatropin</b> is lab-made human growth hormone given as a shot. It is the strongest option and works whether or not the pituitary is healthy. Newer once-weekly versions now exist for diagnosed deficiency.</p>
+      </div>
+      <div class="team b">
+        <span class="tag up">Strategy two · Press a button</span>
+        <h3>Secretagogues and peptides</h3>
+        <p>These are small proteins (peptides) or pills that signal your pituitary to release <i>your own</i> growth hormone. They only work if the pituitary still has growth hormone to give, and the body's brakes still apply.</p>
+      </div>
+    </div>
+
+    <div class="chart-card buttons">
+      <svg viewBox="0 0 900 300" role="img" aria-label="A pituitary cell with two receptor buttons: the GHRH button pressed by sermorelin, CJC-1295, and tesamorelin, and the ghrelin button pressed by ipamorelin, GHRP-2, GHRP-6, MK-677, and macimorelin">
+        <rect width="900" height="300" fill="#fff"/>
+        <ellipse cx="450" cy="190" rx="200" ry="92" fill="#E2F3EA" stroke="#2E7D5B" stroke-width="3"/>
+        <text x="450" y="212" font-family="Fraunces, serif" font-weight="800" font-size="20" fill="#143050" text-anchor="middle">Pituitary cell</text>
+        <text x="450" y="236" font-family="Inter, sans-serif" font-size="13" fill="#5A6577" text-anchor="middle">releases a burst of growth hormone</text>
+        <!-- buttons -->
+        <rect x="300" y="102" width="70" height="30" rx="10" fill="#24507E"/><rect x="312" y="94" width="46" height="14" rx="6" fill="#4A6E9C"/>
+        <rect x="530" y="102" width="70" height="30" rx="10" fill="#2E7D5B"/><rect x="542" y="94" width="46" height="14" rx="6" fill="#4FB386"/>
+        <text x="335" y="152" font-family="Space Mono, monospace" font-weight="700" font-size="12" fill="#143050" text-anchor="middle">GHRH button</text>
+        <text x="565" y="152" font-family="Space Mono, monospace" font-weight="700" font-size="12" fill="#1C5540" text-anchor="middle">Ghrelin button</text>
+        <!-- left list -->
+        <path d="M230 60 C285 60 318 70 334 90" stroke="#24507E" stroke-width="2.5" fill="none" marker-end="url(#ah)"/>
+        <rect x="20" y="20" width="210" height="96" rx="14" fill="#DCE8F4"/>
+        <text x="125" y="44" font-family="Fraunces, serif" font-weight="800" font-size="15" fill="#143050" text-anchor="middle">Copies the brain's signal</text>
+        <text x="125" y="68" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">Sermorelin</text>
+        <text x="125" y="86" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">CJC-1295</text>
+        <text x="125" y="104" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">Tesamorelin</text>
+        <!-- right list -->
+        <path d="M670 60 C615 60 582 70 566 90" stroke="#2E7D5B" stroke-width="2.5" fill="none" marker-end="url(#ahg)"/>
+        <rect x="670" y="14" width="210" height="118" rx="14" fill="#E2F3EA"/>
+        <text x="775" y="38" font-family="Fraunces, serif" font-weight="800" font-size="15" fill="#143050" text-anchor="middle">Copies the hunger signal</text>
+        <text x="775" y="60" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">Ipamorelin</text>
+        <text x="775" y="78" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">GHRP-2 and GHRP-6</text>
+        <text x="775" y="96" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">MK-677 (ibutamoren)</text>
+        <text x="775" y="114" font-family="Inter, sans-serif" font-size="13" fill="#17293A" text-anchor="middle">Macimorelin (a test)</text>
+        <!-- side note -->
+        <text x="450" y="296" font-family="Inter, sans-serif" font-style="italic" font-size="12.5" fill="#5A6577" text-anchor="middle">Clinics often "stack" one from each side because the two buttons work better together.</text>
+      </svg>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>What it is</th><th>Why people use it</th><th>U.S. status</th></tr></thead>
+        <tbody>
+          <tr><td class="name"><b>Somatropin</b><small>Synthetic HGH</small></td><td>Lab-made growth hormone, injected daily. Weekly long-acting versions are also approved.</td><td>Treats true deficiency. Misused for muscle and "anti-aging."</td><td><span class="pill ok">FDA-approved</span><br>Only for specific diagnoses. Prescription only.</td></tr>
+          <tr><td class="name"><b>Tesamorelin</b><small>GHRH button</small></td><td>A strong, lab-made version of the brain's "go" signal.</td><td>Shrinks deep belly fat in people with HIV.</td><td><span class="pill ok">FDA-approved</span><br>For HIV-related belly fat only.</td></tr>
+          <tr><td class="name"><b>Macimorelin</b><small>Ghrelin button</small></td><td>An oral drink that triggers a growth hormone burst.</td><td>Used as a test to diagnose adult deficiency, not as a treatment.</td><td><span class="pill ok">FDA-approved</span><br>Diagnostic test only.</td></tr>
+          <tr><td class="name"><b>Sermorelin</b><small>GHRH button</small></td><td>A short copy of the brain's "go" signal. Mimics natural pulses.</td><td>Gently raises your own growth hormone. Popular in anti-aging clinics.</td><td><span class="pill was">Formerly approved</span><br>Approved for children until the maker stopped selling it in 2008. Now made by compounding pharmacies.</td></tr>
+          <tr><td class="name"><b>CJC-1295</b><small>GHRH button</small></td><td>A longer-lasting cousin of sermorelin, so fewer shots.</td><td>Lean muscle and fat loss. Often paired with ipamorelin.</td><td><span class="pill no">Not approved</span><br>Not on the list of ingredients pharmacies may legally compound.</td></tr>
+          <tr><td class="name"><b>Ipamorelin</b><small>Ghrelin button</small></td><td>A selective "release now" peptide with less effect on hunger and stress hormones.</td><td>Raises growth hormone with fewer side effects. Often paired with CJC-1295.</td><td><span class="pill warn">FDA safety-risk list</span><br>Flagged as a significant safety risk for compounding.</td></tr>
+          <tr><td class="name"><b>GHRP-2 / GHRP-6</b><small>Ghrelin button</small></td><td>Older "release now" peptides. GHRP-6 strongly increases hunger.</td><td>Raise growth hormone. Sometimes used to increase appetite.</td><td><span class="pill warn">FDA safety-risk list</span><br>Flagged as a significant safety risk for compounding.</td></tr>
+          <tr><td class="name"><b>MK-677</b><small>Ibutamoren · ghrelin button</small></td><td>A daily pill, not a peptide shot.</td><td>Convenient. Raises growth hormone, IGF-1, and appetite. A study in older adults was stopped early over heart failure concerns.</td><td><span class="pill warn">FDA safety-risk list</span><br>Never approved. Sold online as a "research chemical."</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="stamp">Status as of October 2026. Peptide compounding rules are under active FDA review and can change.</p>
+  </div>
+</section>
+
+<!-- PART SIX -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part six · Growth hormone and weight loss</span>
+    <h2>It moves the needle, but only a little</h2>
+    <p class="lede">Growth hormone does tell fat cells to let go of stored fat. The question is how much that matters in real people. Here is what the research shows.</p>
+    <div class="grid g3" style="margin-top:26px">
+      <div class="ev"><div class="big">~2 kg</div><h3>Small shift in body makeup</h3><p>In healthy older adults given growth hormone, fat mass dropped by about two kilograms (about four pounds) and lean mass rose by about the same. Body weight barely changed.</p><div class="src">Liu et al., Annals of Internal Medicine, 2007</div></div>
+      <div class="ev"><div class="big clay">No gain</div><h3>Bigger muscle is not stronger muscle</h3><p>Those same studies found no meaningful improvement in strength or fitness. Much of the "lean mass" gain can be extra fluid.</p><div class="src">Liu et al., Annals of Internal Medicine, 2007</div></div>
+      <div class="ev"><div class="big">~15%</div><h3>Belly fat, in one condition</h3><p>Tesamorelin reduced deep belly fat by about 15 percent over six months in people with HIV-related fat buildup. It is not approved for general weight loss.</p><div class="src">Falutz et al., New England Journal of Medicine, 2007</div></div>
+    </div>
+    <div class="honest"><b>Keeping it honest:</b> Growth hormone can raise blood sugar and make your body less responsive to insulin, which works against metabolic health. For comparison, GLP-1 medications like semaglutide led to an average weight loss of about 15 percent of body weight in major trials. Growth hormone and its peptides are not weight-loss drugs and are not a replacement for proven treatments.</div>
+  </div>
+</section>
+
+<!-- PART SEVEN -->
+<section>
+  <div class="wrap">
+    <div class="glp">
+      <span class="kicker">Part seven · If you take a GLP-1 medication</span>
+      <h2>Protect your muscle the proven way</h2>
+      <p>Many people on a GLP-1 hear about growth hormone peptides as a way to hold on to muscle. The tools with the best evidence are simpler, safer, and already in your hands.</p>
+      <ul>
+        <li><b>Lift something.</b> Strength training two or three times a week is the most reliable way to keep muscle while you lose weight.</li>
+        <li><b>Hit your protein.</b> Protein at every meal gives your muscles the building blocks they need. A calorie deficit should never become a nutrition deficit.</li>
+        <li><b>Guard your sleep.</b> Deep sleep is when your own growth hormone does its biggest work.</li>
+        <li><b>Watch for crossed wires.</b> MK-677 and GHRP-6 can increase hunger and raise blood sugar, which pulls against what your GLP-1 is doing.</li>
+        <li><b>Tell your prescriber.</b> If you are using or thinking about any peptide, including one bought online, bring it up. Your prescriber can watch your blood sugar and labs.</li>
+        <li><b>Remember the big picture.</b> Your GLP-1 is a tool, not a finish line. The habits you build now are what keep the results.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PART EIGHT -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part eight · Safety and the legal side</span>
+    <h2>More is not automatically better</h2>
+    <p class="lede">When growth hormone or IGF-1 runs higher than your body needs, side effects are common. In studies of healthy older adults, these were the problems people had most often.</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><path d="M16 5 C20 12 24 15 24 20 a8 8 0 0 1 -16 0 C8 15 12 12 16 5Z" fill="none" stroke="#D98B23" stroke-width="2.4"/></svg></div><div><h3>Swelling</h3><p>Fluid buildup in the hands, feet, and legs.</p></div></div>
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><circle cx="11" cy="16" r="5" fill="none" stroke="#D98B23" stroke-width="2.4"/><circle cx="21" cy="16" r="5" fill="none" stroke="#D98B23" stroke-width="2.4"/><path d="M16 9 V5 M16 27 V23" stroke="#D98B23" stroke-width="2.4" stroke-linecap="round"/></svg></div><div><h3>Joint and muscle pain</h3><p>Aches and stiffness, especially early on.</p></div></div>
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><path d="M10 28 V14 a2 2 0 0 1 4 0 V12 a2 2 0 0 1 4 0 V13 a2 2 0 0 1 4 0 V20 C22 25 19 28 15 28Z" fill="none" stroke="#D98B23" stroke-width="2.2" stroke-linejoin="round"/><path d="M5 8 L9 6 M5 13 L9 12" stroke="#D98B23" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3>Carpal tunnel</h3><p>Numbness and tingling in the hands.</p></div></div>
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><path d="M4 24 L12 16 L17 20 L28 8" fill="none" stroke="#D98B23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 8 H28 V14" fill="none" stroke="#D98B23" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Higher blood sugar</h3><p>Less insulin sensitivity and a higher risk of type 2 diabetes.</p></div></div>
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><circle cx="16" cy="16" r="10" fill="none" stroke="#D98B23" stroke-width="2.4"/><path d="M16 10 V17 M16 21 V22" stroke="#D98B23" stroke-width="2.8" stroke-linecap="round"/></svg></div><div><h3>Breast tissue growth in men</h3><p>Called gynecomastia.</p></div></div>
+      <div class="risk"><div class="icon"><svg viewBox="0 0 32 32" width="26"><circle cx="16" cy="16" r="10" fill="none" stroke="#D98B23" stroke-width="2.4"/><path d="M12.5 12.5 a3.5 3.5 0 1 1 5 3.2 C16.5 16.4 16 17 16 18.5 M16 22 V22.5" fill="none" stroke="#D98B23" stroke-width="2.4" stroke-linecap="round"/></svg></div><div><h3>Unknowns over time</h3><p>IGF-1 helps cells grow, so long-term cancer risk is a real question. Growth hormone is not used in people with active cancer.</p></div></div>
+    </div>
+    <div class="legal">
+      <h3>The legal and quality picture</h3>
+      <p>Real growth hormone is prescription only, and distributing it for anti-aging, bodybuilding, or athletic performance is a federal crime in the U.S. Most growth hormone peptides are not FDA-approved. Several are on the FDA's list of substances that raise significant safety concerns when compounded. Products sold online as "research chemicals" or "not for human use" have no guarantee of purity, dose, or sterility, and testing has repeatedly found products that do not match their labels.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PART NINE -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Part nine · Talking with your doctor</span>
+    <h2>Good questions to bring to the visit</h2>
+    <p class="lede">Whether growth hormone or a peptide makes sense for you is a decision for you and a licensed clinician who can test, weigh the risks, and monitor you over time.</p>
+    <div class="grid g2" style="margin-top:22px">
+      <div class="tip"><div class="k">1</div><div><h3>Has my level been tested?</h3><p>An IGF-1 blood test is a starting point. A true deficiency diagnosis usually needs a stimulation test.</p></div></div>
+      <div class="tip"><div class="k">2</div><div><h3>What should come first?</h3><p>Ask about sleep, strength training, protein, and fat loss before adding any medication.</p></div></div>
+      <div class="tip"><div class="k">3</div><div><h3>Where does it come from?</h3><p>Is it an FDA-approved product, a compounded product, or something bought online?</p></div></div>
+      <div class="tip"><div class="k">4</div><div><h3>How will we monitor it?</h3><p>Plan for follow-up labs, including blood sugar and IGF-1, and a check for side effects.</p></div></div>
+      <div class="tip"><div class="k">5</div><div><h3>Does it mix with my other medicines?</h3><p>Especially a GLP-1, insulin, thyroid medicine, or estrogen, which can all change how growth hormone works.</p></div></div>
+      <div class="tip"><div class="k">6</div><div><h3>What is the goal, and when do we stop?</h3><p>Agree on what success looks like and how you will know if it is not working.</p></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Selected sources</b>
+    <ol>
+      <li>Liu H, et al. Systematic review: the safety and efficacy of growth hormone in the healthy elderly. <i>Annals of Internal Medicine</i>. 2007.</li>
+      <li>Falutz J, et al. Metabolic effects of a growth hormone-releasing factor in patients with HIV. <i>New England Journal of Medicine</i>. 2007.</li>
+      <li>Iranmanesh A, Lizarralde G, Veldhuis JD. Age and relative adiposity are specific negative determinants of the frequency and amplitude of growth hormone secretory bursts. <i>Journal of Clinical Endocrinology and Metabolism</i>. 1991.</li>
+      <li>Van Cauter E, Plat L. Physiology of growth hormone secretion during sleep. <i>Journal of Pediatrics</i>. 1996.</li>
+      <li>Rasmussen MH, et al. Massive weight loss restores 24-hour growth hormone release profiles and serum IGF-I levels in obese subjects. <i>Journal of Clinical Endocrinology and Metabolism</i>. 1995.</li>
+      <li>Molitch ME, et al. Evaluation and treatment of adult growth hormone deficiency: an Endocrine Society clinical practice guideline. 2011.</li>
+      <li>Perls TT, Reisman NR, Olshansky SJ. Provision or distribution of growth hormone for "antiaging": clinical and legal issues. <i>JAMA</i>. 2005.</li>
+      <li>Adunsky A, et al. MK-0677 (ibutamoren mesylate) for the treatment of patients recovering from hip fracture. <i>Archives of Gerontology and Geriatrics</i>. 2011.</li>
+      <li>Wilding JPH, et al. Once-weekly semaglutide in adults with overweight or obesity. <i>New England Journal of Medicine</i>. 2021.</li>
+      <li>U.S. Food and Drug Administration. Certain bulk drug substances for use in compounding that may present significant safety risks (content current as of April 2026).</li>
+      <li>World Anti-Doping Agency. Prohibited List, section S2: peptide hormones, growth factors, and related substances.</li>
+    </ol>
+    <p style="margin-top:14px">This explainer is for education only and is not medical advice. It should not be used to start, stop, or dose any medication, peptide, or supplement. Talk with your own healthcare provider about your health.</p>
+    <div class="brandbar"><span class="name">Healthier Ever After</span><span class="tagline">Weight Loss · Lifestyle · Longevity</span></div>
+  </div>
+</footer>
+</body>
+</html>
