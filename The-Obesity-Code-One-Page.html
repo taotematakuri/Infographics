@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Obesity Code Member Handout</title><meta name="description" content="A one-page Healthier Ever After member handout summarizing The Obesity Code: Fung's five rules, the fat thermostat, and quick wins."></head><body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+:root{
+  --bg:#f4f1e9;--surface:#fffdf8;--surface-2:#f0ece1;--ink:#17293a;--muted:#5d6b78;--faint:#8a97a1;
+  --navy:#143050;--green:#2e7d57;--gold:#cf9440;--line:rgba(20,48,80,0.14);--line-soft:rgba(20,48,80,0.08);
+  --shadow:0 1px 2px rgba(20,48,80,0.05),0 6px 20px rgba(20,48,80,0.07);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+  --navy:#8fbce8;--green:#5cc493;--gold:#e6b567;--line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 8px 24px rgba(0,0,0,0.35);
+}}
+:root[data-theme="dark"]{
+  --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+  --navy:#8fbce8;--green:#5cc493;--gold:#e6b567;--line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 8px 24px rgba(0,0,0,0.35);
+}
+*{box-sizing:border-box}
+.hd{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.45;-webkit-font-smoothing:antialiased}
+.hd *{margin:0}
+.sheet{max-width:850px;margin:0 auto;padding:30px 34px 26px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:2px solid var(--navy);padding-bottom:14px;margin-bottom:16px}
+.bm{display:flex;align-items:center;gap:10px}
+.bm svg{width:30px;height:30px}
+.bm .nm{font-family:'Fraunces',serif;font-weight:600;font-size:15px}
+.bm .nm span{color:var(--green)}
+.top .tag{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:700;text-align:right}
+h1{font-family:'Fraunces',serif;font-size:30px;font-weight:600;letter-spacing:-0.01em;line-height:1.05}
+h1 em{font-style:italic;color:var(--green)}
+.thesis{font-family:'Fraunces',serif;font-size:15.5px;color:var(--muted);margin-top:8px;line-height:1.35}
+.sec{margin-top:18px}
+.sh{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sh:before{content:"";width:14px;height:2px;background:var(--gold);display:inline-block}
+.rules{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.rule{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:11px;padding:13px;box-shadow:var(--shadow)}
+.rule .n{font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--gold)}
+.rule h3{font-family:'Fraunces',serif;font-size:14px;font-weight:600;margin:5px 0 3px;line-height:1.12}
+.rule p{font-size:11px;color:var(--muted);line-height:1.35}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.box{background:var(--surface-2);border:1px solid var(--line);border-radius:11px;padding:14px 16px}
+.box .lab{font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.box h4{font-family:'Fraunces',serif;font-size:15.5px;font-weight:600;margin:4px 0 6px}
+.box p{font-size:12.5px;color:var(--muted);line-height:1.4}
+.box p b{color:var(--ink)}
+.ask{background:var(--navy);color:#fff;border-radius:11px;padding:12px 16px;margin-top:12px;font-family:'Fraunces',serif;font-size:14.5px;line-height:1.35}
+.ask b{color:#fff}
+.ask .q{color:#a9c2b6;font-style:italic}
+.wins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px;box-shadow:var(--shadow)}
+.win h5{font-family:'Inter';font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.win p{font-size:11.5px;color:var(--muted);line-height:1.35}
+.take{margin-top:16px;border-left:3px solid var(--gold);background:var(--surface-2);border-radius:0 11px 11px 0;padding:12px 16px}
+.take p{font-family:'Fraunces',serif;font-size:15px;color:var(--ink);line-height:1.3}
+.foot{margin-top:14px;padding-top:12px;border-top:1px solid var(--line-soft);display:flex;justify-content:space-between;gap:14px;align-items:flex-end}
+.foot .disc{font-size:10px;color:var(--faint);line-height:1.35;max-width:70%}
+.foot .brand{font-family:'Space Mono',monospace;font-size:10px;color:var(--faint);letter-spacing:0.05em;text-align:right;white-space:nowrap}
+@media (max-width:720px){.rules{grid-template-columns:1fr 1fr}.row2,.wins{grid-template-columns:1fr}}
+</style>
+
+<div class="hd">
+<div class="sheet">
+  <div class="top">
+    <div class="bm">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="var(--navy)" stroke-width="1.5"/>
+        <path d="M20 30c-6-3-10-7-10-13a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 6-4 10-10 13z" fill="var(--green)"/>
+        <path d="M20 14c1.5 3 1.5 7 0 12M14 20c4-1 8-1 12 0" stroke="var(--surface)" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="nm">Healthier <span>Ever After</span></span>
+    </div>
+    <div class="tag">Member Handout<br>The Obesity Code</div>
+  </div>
+
+  <h1>The Obesity Code, in <em>one page</em></h1>
+  <p class="thesis">Obesity is a hormonal problem, not a willpower problem. Chronically high insulin raises the body's fat "set point," so the fat gain drives the overeating, not the other way around. Lower insulin, and weight follows.</p>
+
+  <div class="sec">
+    <div class="sh">Fung's five rules: what to eat</div>
+    <div class="rules">
+      <div class="rule"><div class="n">Rule 1</div><h3>Cut added sugars</h3><p>The biggest insulin driver. Cut it in every form.</p></div>
+      <div class="rule"><div class="n">Rule 2</div><h3>Cut refined grains</h3><p>Less bread, pasta, and refined cereal.</p></div>
+      <div class="rule"><div class="n">Rule 3</div><h3>Moderate protein</h3><p>Enough, not excessive.</p></div>
+      <div class="rule"><div class="n">Rule 4</div><h3>Eat natural fats</h3><p>Olive oil, nuts, avocado, whole foods.</p></div>
+      <div class="rule"><div class="n">Rule 5</div><h3>Add protective factors</h3><p>Fiber and vinegar to blunt spikes.</p></div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="box">
+      <div class="lab">The other half: when to eat</div>
+      <h4>Give insulin time to fall</h4>
+      <p><b>Stop grazing.</b> Constant snacking keeps insulin up all day. <b>Use an eating window or regular fasting</b> so your body gets long stretches to switch from storing fat to burning it.</p>
+    </div>
+    <div class="box">
+      <div class="lab">The one idea to remember</div>
+      <h4>Your body has a fat thermostat</h4>
+      <p>Cut calories alone and the body defends its set point with more hunger and a slower metabolism. Lowering insulin over time is what resets the thermostat down, so the loss actually sticks.</p>
+    </div>
+  </div>
+
+  <div class="ask"><b>Why plateaus happen:</b> <span class="q">your metabolism adapts to defend your weight. That is normal, not failure. Stay the course.</span></div>
+
+  <div class="sec">
+    <div class="sh">Six quick wins</div>
+    <div class="wins">
+      <div class="win"><h5>Drop the sugary drinks</h5><p>Soda and juice are the fastest insulin hit.</p></div>
+      <div class="win"><h5>Swap refined for whole</h5><p>Whole foods over anything white and processed.</p></div>
+      <div class="win"><h5>Don't fear natural fat</h5><p>It keeps you full without the insulin spike.</p></div>
+      <div class="win"><h5>Add fiber and vinegar</h5><p>They soften the glucose response of a meal.</p></div>
+      <div class="win"><h5>Stop snacking</h5><p>Let meals end; give insulin a real break.</p></div>
+      <div class="win"><h5>Sleep and de-stress</h5><p>Both lower the cortisol that raises insulin.</p></div>
+    </div>
+  </div>
+
+  <div class="take">
+    <p>Your one line: eat real food, cut the sugar and refined carbs, give your body real breaks from eating, and be patient with a metabolism that is built to adapt.</p>
+  </div>
+
+  <div class="foot">
+    <div class="disc"><b>Educational use only.</b> This is general lifestyle education, not medical advice. Any big change, especially fasting while on a GLP-1 or other medication, is a conversation for you and your own prescribing clinician.</div>
+    <div class="brand">Weight Loss &middot; Lifestyle &middot; Longevity</div>
+  </div>
+</div>
+</div>
+
+</body></html>

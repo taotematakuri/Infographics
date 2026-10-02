@@ -130,7 +130,15 @@ footer p+p{margin-top:8px}
   var REPO = 'taotematakuri/Infographics';
   var SKIP = ['index.html','404.html'];
   // Backup list used only if GitHub's file listing can't be reached.
-  var FALLBACK = ['The-Hunger-Code-Decoded.html'];
+  var FALLBACK = ['Fiber-in-the-Body.html',
+    'Growth-Hormone-Simplified.html',
+    'Growth-Hormone.html',
+    'Processed-Foods-Simplified.html',
+    'Processed-Foods.html',
+    'Sweeteners-Glycemic-Load.html',
+    'The-Hunger-Code-Decoded.html',
+    'The-Obesity-Code-Decoded.html',
+    'The-Obesity-Code-One-Page.html'];
 
   var grid = document.getElementById('grid');
   var countEl = document.getElementById('count');
@@ -163,7 +171,7 @@ footer p+p{margin-top:8px}
       var title = (doc.querySelector('title') || {}).textContent;
       return {
         url: url,
-        title: (title && title.trim()) || prettyName(file),
+        title: (title && title.replace(/\s*\|\s*Healthier Ever After\s*$/i,'').trim()) || prettyName(file),
         desc: meta ? meta.getAttribute('content') : '',
         tag: eyebrow ? eyebrow.textContent.replace(/\s+/g,' ').trim() : 'Infographic'
       };
