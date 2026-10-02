@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Hunger Code, Decoded</title>
+<meta name="description" content="An evidence-balanced Healthier Ever After review of Jason Fung's The Hunger Code, its three Golden Rules and cited research, with course and podcast talking points.">
+</head>
+<body>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --bg:#f4f1e9;--surface:#fffdf8;--surface-2:#f0ece1;--ink:#17293a;--muted:#5d6b78;--faint:#8a97a1;
+  --navy:#143050;--navy-soft:#274d74;--green:#2e7d57;--green-deep:#1f5c40;--gold:#cf9440;--gold-soft:#e7c489;
+  --line:rgba(20,48,80,0.14);--line-soft:rgba(20,48,80,0.08);
+  --good:#2e7d57;--warn:#c98a2b;--argue:#3f6ea5;
+  --shadow:0 1px 2px rgba(20,48,80,0.05),0 8px 26px rgba(20,48,80,0.07);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+    --navy:#8fbce8;--navy-soft:#a9cbee;--green:#5cc493;--green-deep:#7ad3a9;--gold:#e6b567;--gold-soft:#8a6a34;
+    --line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+    --good:#5cc493;--warn:#e6b567;--argue:#7aa8dc;
+    --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+  --navy:#8fbce8;--navy-soft:#a9cbee;--green:#5cc493;--green-deep:#7ad3a9;--gold:#e6b567;--gold-soft:#8a6a34;
+  --line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+  --good:#5cc493;--warn:#e6b567;--argue:#7aa8dc;
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+}
+
+*{box-sizing:border-box}
+.oc{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;font-size:17px;overflow-x:hidden}
+.oc *{margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px;margin-left:auto;margin-right:auto}
+.eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);font-weight:700}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;color:var(--ink);text-wrap:balance;line-height:1.12}
+h2{font-size:clamp(28px,4.2vw,42px);font-weight:600;letter-spacing:-0.01em}
+h3{font-size:clamp(21px,2.6vw,27px);font-weight:600}
+h4{font-size:19px;font-weight:600}
+.lead{font-size:19px;color:var(--muted)}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--green);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{border-color:var(--green)}
+section{padding:64px 0}
+section+section{border-top:1px solid var(--line-soft)}
+
+.hero{background:radial-gradient(120% 90% at 82% -10%, rgba(46,125,87,0.16), transparent 60%),radial-gradient(90% 80% at 8% 0%, rgba(20,48,80,0.10), transparent 55%),var(--bg);padding:70px 0 60px;border-bottom:1px solid var(--line-soft)}
+.brandbar{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+.brandmark{width:34px;height:34px;flex:0 0 auto}
+.brandname{font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:0.01em}
+.brandname span{color:var(--green)}
+.hero h1{font-size:clamp(38px,7vw,74px);font-weight:600;letter-spacing:-0.02em;margin:14px 0 0}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero .sub{font-size:clamp(18px,2.3vw,22px);color:var(--muted);max-width:700px;margin-top:22px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.03em;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--muted)}
+.chip b{color:var(--ink);font-weight:700}
+.thesis{margin-top:44px;background:var(--navy);color:#fff;border-radius:18px;padding:30px 32px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.thesis:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,125,87,0.35),transparent 55%);pointer-events:none}
+.thesis .k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-soft);font-weight:700}
+.thesis p{color:#eaf1f6;font-size:clamp(19px,2.5vw,24px);font-family:'Fraunces',serif;font-weight:400;line-height:1.34;margin-top:12px;position:relative}
+.thesis .cite{color:#a9c2b6;font-size:14px;font-family:'Inter';margin-top:14px;position:relative}
+
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.card h4{margin-bottom:6px}
+.card .role{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15.5px}
+.card .fix{color:var(--ink)}
+.kicker{max-width:730px;margin-bottom:34px}
+.kicker .eyebrow{display:block;margin-bottom:14px}
+.kicker h2{margin-bottom:14px}
+.kicker p{color:var(--muted);font-size:18px}
+
+/* Golden Rules */
+.grules{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grule{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
+.grule .gn{font-family:'Fraunces',serif;font-size:44px;font-weight:600;color:var(--gold);line-height:0.9}
+.grule h4{margin:12px 0 8px;font-size:20px}
+.grule p{color:var(--muted);font-size:15px}
+.grules-note{margin-top:18px;font-size:14px;color:var(--muted);font-family:'Inter'}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 26px 20px;box-shadow:var(--shadow);overflow-x:auto}
+.figure svg{display:block;width:100%;height:auto;min-width:0}
+.figcap{font-size:14px;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft)}
+.figcap b{color:var(--ink)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.stat .n{font-family:'Fraunces',serif;font-size:34px;font-weight:600;color:var(--green);line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.4}
+
+.pull{border-left:3px solid var(--gold);background:var(--surface-2);border-radius:0 14px 14px 0;padding:18px 22px;margin:8px 0}
+.pull p{font-family:'Fraunces',serif;font-size:19px;line-height:1.4;color:var(--ink)}
+
+.tbl-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:720px;background:var(--surface);font-size:14.5px}
+th,td{text-align:left;padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line-soft)}
+thead th{background:var(--navy);color:#fff;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:0.06em;text-transform:uppercase;font-weight:700;border-bottom:none}
+tbody tr:last-child td{border-bottom:none}
+td b{color:var(--ink)}
+td .s{color:var(--muted)}
+.usecol{color:var(--green);font-weight:600}
+
+.verdict{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.vcol{background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.vhead{padding:18px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line-soft)}
+.vdot{width:14px;height:14px;border-radius:50%;flex:0 0 auto}
+.vhead h4{font-family:'Space Mono',monospace;font-size:12.5px;letter-spacing:0.05em;text-transform:uppercase;font-weight:700}
+.vcol ul{list-style:none;padding:16px 20px 20px;display:flex;flex-direction:column;gap:14px}
+.vcol li{font-size:14.5px;color:var(--muted);padding-left:18px;position:relative}
+.vcol li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:currentColor;opacity:0.5}
+.vcol li b{color:var(--ink);font-weight:600}
+.v-good .vdot{background:var(--good)}.v-good{color:var(--good)}
+.v-warn .vdot{background:var(--warn)}.v-warn{color:var(--warn)}
+.v-argue .vdot{background:var(--argue)}.v-argue{color:var(--argue)}
+
+.mf{display:flex;flex-direction:column;gap:14px}
+.mfrow{display:grid;grid-template-columns:1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.mfrow>div{padding:18px 20px}
+.myth{border-right:1px solid var(--line-soft)}
+.tag{font-family:'Space Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;display:inline-block;margin-bottom:8px}
+.myth .tag{color:var(--warn)}
+.fact .tag{color:var(--green)}
+.mfrow p{font-size:15px;color:var(--muted)}
+.mfrow .fact{background:var(--surface-2)}
+
+.tp{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.tp-head{padding:22px 26px;border-bottom:1px solid var(--line-soft);display:flex;align-items:center;gap:14px}
+.tp-head .badge{width:44px;height:44px;border-radius:12px;flex:0 0 auto;display:grid;place-items:center;background:var(--surface-2);border:1px solid var(--line)}
+.tp-head h3{margin:0}
+.tp-head .sub{font-size:14px;color:var(--muted);font-family:'Inter'}
+.tp-body{padding:8px 26px 24px}
+.tp-item{padding:18px 0;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:34px 1fr;gap:16px}
+.tp-item:last-child{border-bottom:none}
+.tp-item .no{font-family:'Space Mono',monospace;font-weight:700;color:var(--gold);font-size:14px;padding-top:2px}
+.tp-item h4{font-size:16.5px;margin-bottom:5px}
+.tp-item p{font-size:15px;color:var(--muted)}
+.tp-item p .say{color:var(--green);font-weight:600;font-style:italic}
+
+.refs{columns:2;column-gap:34px;font-size:13.5px;color:var(--muted)}
+.refs p{margin-bottom:12px;break-inside:avoid;padding-left:16px;text-indent:-16px}
+.refs b{color:var(--ink)}
+.disclaimer{background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:20px 22px;font-size:13.5px;color:var(--muted);margin-top:30px}
+.disclaimer b{color:var(--ink)}
+.footer{padding:40px 0 56px;text-align:center;color:var(--faint);font-size:13px;font-family:'Space Mono',monospace;letter-spacing:0.04em}
+
+@media (max-width:860px){
+  .g3,.g2,.verdict,.grules{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .mfrow{grid-template-columns:1fr}
+  .myth{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .refs{columns:1}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="oc">
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="brandbar">
+      <svg class="brandmark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" stroke="var(--navy)" stroke-width="1.5"/>
+        <path d="M20 30c-6-3-10-7-10-13a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 6-4 10-10 13z" fill="var(--green)"/>
+        <path d="M20 14c1.5 3 1.5 7 0 12M14 20c4-1 8-1 12 0" stroke="var(--surface)" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+      <span class="brandname">Healthier <span>Ever After</span></span>
+    </div>
+    <div class="eyebrow">Evidence Review &middot; Book Decode No. 02</div>
+    <h1>The Hunger Code, <em>Decoded</em></h1>
+    <p class="sub">An evidence-balanced field guide to Jason Fung's follow-up to The Obesity Code. The question shifts from "how much you eat" to "how hungry you are, and why." Here is what the book gets right about ultra-processed food, appetite, and GLP-1s, and where the science still pushes back.</p>
+    <div class="chips">
+      <span class="chip">Book: <b>The Hunger Code</b> (2026)</span>
+      <span class="chip">Author: <b>Jason Fung, MD</b></span>
+      <span class="chip">Framework: <b>Three hungers</b></span>
+      <span class="chip">Program: <b>Three Golden Rules</b></span>
+      <span class="chip">Our stance: <b>Evidence-balanced</b></span>
+    </div>
+
+    <div class="thesis">
+      <div class="k">The one-sentence thesis</div>
+      <p>The real problem was never how many calories we eat. It was always how hungry we are, and why. Lower the hunger, and the calories take care of themselves.</p>
+      <div class="cite">The sequel's move: The Obesity Code asked what and when to eat. The Hunger Code asks why we eat at all.</div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 1. THE REFRAME ================= -->
+<section id="reframe">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">01 &middot; The reframe</span>
+      <h2>Stop fighting hunger. Decode it.</h2>
+      <p>The Obesity Code put insulin at the center of fat storage. The Hunger Code steps back one link and asks what drives eating in the first place. Willpower loses to hunger every time, so the goal is to lower the hunger, not to out-muscle it.</p>
+    </div>
+    <div class="figure">
+      <svg viewBox="0 0 920 220" role="img" aria-label="Old model: willpower fights hunger and usually loses. New model: change food, environment, and timing to lower hunger, so eating less becomes effortless.">
+        <defs>
+          <marker id="arw" markerWidth="11" markerHeight="11" refX="8" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="var(--gold)"/></marker>
+          <style>
+            .nx{fill:var(--surface-2);stroke:var(--line);stroke-width:1.5}
+            .nx-hot{fill:var(--navy)}
+            .tl{font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;fill:var(--ink)}
+            .tl-w{fill:#fff}.ts{font-family:'Inter',sans-serif;font-size:12px;fill:var(--muted)}.ts-w{fill:#cfe0d6}
+            .ed{stroke:var(--gold);stroke-width:2.4;fill:none}
+            .hd{font-family:'Space Mono';font-size:12px;font-weight:700;letter-spacing:0.08em}
+          </style>
+        </defs>
+        <text class="hd" x="60" y="30" fill="var(--warn)">THE OLD MODEL</text>
+        <rect class="nx" x="60" y="45" width="150" height="56" rx="12"/><text class="tl" x="135" y="78" text-anchor="middle">Willpower</text>
+        <rect class="nx" x="320" y="45" width="150" height="56" rx="12"/><text class="tl" x="395" y="78" text-anchor="middle">vs Hunger</text>
+        <path class="ed" marker-end="url(#arw)" d="M215 73 h95"/>
+        <text class="ts" x="560" y="77" fill="var(--warn)" font-weight="700">Hunger wins. Diet fails.</text>
+        <path class="ed" marker-end="url(#arw)" d="M475 73 h60"/>
+
+        <text class="hd" x="60" y="140" fill="var(--green)">THE HUNGER CODE MODEL</text>
+        <rect class="nx" x="60" y="155" width="220" height="52" rx="12"/><text class="tl" x="170" y="186" text-anchor="middle">Change food, timing, cues</text>
+        <rect class="nx nx-hot" x="360" y="155" width="150" height="52" rx="12"/><text class="tl tl-w" x="435" y="186" text-anchor="middle">Hunger falls</text>
+        <rect class="nx" x="590" y="155" width="230" height="52" rx="12"/><text class="tl" x="705" y="180" text-anchor="middle">Eating less is</text><text class="tl" x="705" y="197" text-anchor="middle">effortless</text>
+        <path class="ed" marker-end="url(#arw)" d="M285 181 h70"/>
+        <path class="ed" marker-end="url(#arw)" d="M515 181 h70"/>
+      </svg>
+      <p class="figcap"><b>Same destination, different route.</b> Both models want you eating less. Fung's argument is that you get there by lowering the drive to eat, not by resisting it, which is why the book is organized around the sources of hunger rather than a calorie target.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. THREE GOLDEN RULES ================= -->
+<section id="golden">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">02 &middot; The spine of the program</span>
+      <h2>The Three Golden Rules</h2>
+      <p>Fung distills the entire book into three rules. Everything else, the three hungers, the fat thermostat, and all fifty practical tips, exists to serve these three. If a member remembers nothing else, they should remember this.</p>
+    </div>
+    <div class="grules">
+      <div class="grule">
+        <div class="gn">1</div>
+        <h4>Avoid ultra-processed foods</h4>
+        <p>Remove the engineered, hyper-palatable products designed to override fullness. This is the single highest-confidence move in the book.</p>
+      </div>
+      <div class="grule">
+        <div class="gn">2</div>
+        <h4>Don't eat all the time. Fast regularly.</h4>
+        <p>Constant eating means insulin and hunger signals never fully reset. Deliberate gaps between meals, and regular fasting, give the body time to switch from storing to burning.</p>
+      </div>
+      <div class="grule">
+        <div class="gn">3</div>
+        <h4>Commit to a health mindset and healthy social habits</h4>
+        <p>Lasting change is social and psychological, not just dietary. Accountability, environment, and the people around you decide whether the first two rules stick.</p>
+      </div>
+    </div>
+    <p class="grules-note">Read the rest of this guide as the "how" behind these three: rule one drives the ultra-processed-food section, rule two runs through timing and fasting, and rule three underpins the mindset and social-hunger material.</p>
+  </div>
+</section>
+
+<!-- ================= 3. THREE HUNGERS ================= -->
+<section id="hungers">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">03 &middot; The organizing idea</span>
+      <h2>Three hungers, three fixes</h2>
+      <p>The book's backbone: not all hunger is the same, so not all hunger has the same cure. Each type carries a scientific name and an everyday one. Name which is driving you, and the right response follows.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="role">Hunger 1 &middot; Physical / Homeostatic</div>
+        <h4>Physical hunger</h4>
+        <p>The true biological signal, run by hormones like ghrelin and leptin. When you diet, the body fights back by raising this hunger and slowing metabolism.</p>
+        <p class="fix" style="margin-top:10px"><b>Fix:</b> real food, protein, and fiber, with stable insulin, so the signal settles instead of spiking.</p>
+      </div>
+      <div class="card">
+        <div class="role">Hunger 2 &middot; Emotional / Hedonic</div>
+        <h4>Emotional (reward) hunger</h4>
+        <p>Eating for pleasure, comfort, or stress relief rather than need. Ultra-processed foods are engineered to trigger the brain's reward system on demand.</p>
+        <p class="fix" style="margin-top:10px"><b>Fix:</b> remove the cues and the hyper-palatable foods rather than relying on moderation in the moment.</p>
+      </div>
+      <div class="card">
+        <div class="role">Hunger 3 &middot; Social / Conditioned</div>
+        <h4>Social (habit) hunger</h4>
+        <p>Eating because it is noon, because everyone else is, because the movie is on. Driven by routine, environment, and social occasion, not appetite.</p>
+        <p class="fix" style="margin-top:10px"><b>Fix:</b> change the pattern, the timing, and the social defaults; break the cue-to-eat loop.</p>
+      </div>
+    </div>
+    <div class="pull" style="margin-top:24px">
+      <p>The diagnostic question the whole book turns on: before you eat, ask which hunger this is. Physical hunger deserves food. Emotional and social hunger deserve a different answer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. FAT THERMOSTAT ================= -->
+<section id="thermostat">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">04 &middot; The fat thermostat</span>
+      <h2>Your brain sets a target, and defends it</h2>
+      <p>Carried over from The Obesity Code and made central here: the hypothalamus behaves like a thermostat for body fat, defending a target level. Diets that only cut calories trip the defense, more hunger, slower metabolism. Resetting the target, Fung argues, means keeping insulin low and hunger quiet over time, not white-knuckling a deficit.</p>
+    </div>
+    <div class="figure">
+      <svg viewBox="0 0 700 210" role="img" aria-label="Two dials. Cutting calories alone leaves the fat set point high and the body defends it. Lowering insulin and hunger over time resets the set point downward.">
+        <defs><style>.ring{fill:none;stroke:var(--line);stroke-width:10}.arc-w{fill:none;stroke:var(--warn);stroke-width:10;stroke-linecap:round}.arc-g{fill:none;stroke:var(--green);stroke-width:10;stroke-linecap:round}.dl{font-family:'Fraunces';font-size:17px;fill:var(--ink);font-weight:600}.dm{font-family:'Inter';font-size:12.5px;fill:var(--muted)}.dn{font-family:'Space Mono';font-size:12px;font-weight:700}</style></defs>
+        <circle class="ring" cx="150" cy="95" r="60"/>
+        <path class="arc-w" d="M150 35 a60 60 0 0 1 42 102"/>
+        <text class="dn" x="150" y="90" text-anchor="middle" fill="var(--warn)">TARGET</text>
+        <text class="dn" x="150" y="110" text-anchor="middle" fill="var(--warn)">STILL HIGH</text>
+        <text class="dl" x="150" y="188" text-anchor="middle">Cut calories only</text>
+        <text class="dm" x="150" y="207" text-anchor="middle">body defends, hunger rises</text>
+        <circle class="ring" cx="530" cy="95" r="60"/>
+        <path class="arc-g" d="M530 155 a60 60 0 0 1 -42 -102"/>
+        <text class="dn" x="530" y="90" text-anchor="middle" fill="var(--green)">TARGET</text>
+        <text class="dn" x="530" y="110" text-anchor="middle" fill="var(--green)">RESET DOWN</text>
+        <text class="dl" x="530" y="188" text-anchor="middle">Lower insulin + hunger</text>
+        <text class="dm" x="530" y="207" text-anchor="middle">weight follows, stays off</text>
+        <path d="M245 95 h210" stroke="var(--gold)" stroke-width="2.5" fill="none" marker-end="url(#arw)"/>
+        <text class="dm" x="350" y="82" text-anchor="middle" font-weight="600" fill="var(--ink)">reset the target</text>
+      </svg>
+      <p class="figcap"><b>Why it reframes maintenance.</b> If the thermostat is defended, weight regain is the body doing its job, not the person failing. Whether insulin is truly the master control is where the evidence gets argued (section 09).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. SAME FOOD DIFFERENT HORMONES ================= -->
+<section id="hormones">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">05 &middot; The mechanism</span>
+      <h2>A calorie is not a calorie to your hormones</h2>
+      <p>Fung's core mechanistic claim: identical calories can send different hormonal messages depending on the food. One says "store fat." The other says "you're full." This is the hinge the practical program hangs on.</p>
+    </div>
+    <div class="grid g2">
+      <div class="figure">
+        <h4 style="margin-bottom:12px">The cookie</h4>
+        <svg viewBox="0 0 460 150" role="img" aria-label="A cookie drives insulin high and GLP-1 low, signaling fat storage.">
+          <defs><style>.bl{font-family:'Inter';font-size:13px;fill:var(--ink);font-weight:600}.bt{font-family:'Space Mono';font-size:11px;fill:var(--muted)}</style></defs>
+          <text class="bl" x="12" y="34">Insulin</text>
+          <rect x="120" y="20" width="320" height="20" rx="10" fill="var(--line-soft)"/>
+          <rect x="120" y="20" width="290" height="20" rx="10" fill="var(--gold)"/>
+          <text class="bt" x="120" y="58">high &middot; "store fat"</text>
+          <text class="bl" x="12" y="104">GLP-1</text>
+          <rect x="120" y="90" width="320" height="20" rx="10" fill="var(--line-soft)"/>
+          <rect x="120" y="90" width="70" height="20" rx="10" fill="var(--navy)"/>
+          <text class="bt" x="120" y="128">low &middot; little fullness signal</text>
+        </svg>
+      </div>
+      <div class="figure">
+        <h4 style="margin-bottom:12px">The eggs</h4>
+        <svg viewBox="0 0 460 150" role="img" aria-label="Eggs drive insulin low and GLP-1 high, signaling fullness.">
+          <defs><style>.bl2{font-family:'Inter';font-size:13px;fill:var(--ink);font-weight:600}.bt2{font-family:'Space Mono';font-size:11px;fill:var(--muted)}</style></defs>
+          <text class="bl2" x="12" y="34">Insulin</text>
+          <rect x="120" y="20" width="320" height="20" rx="10" fill="var(--line-soft)"/>
+          <rect x="120" y="20" width="90" height="20" rx="10" fill="var(--gold)"/>
+          <text class="bt2" x="120" y="58">low &middot; little storage push</text>
+          <text class="bl2" x="12" y="104">GLP-1</text>
+          <rect x="120" y="90" width="320" height="20" rx="10" fill="var(--line-soft)"/>
+          <rect x="120" y="90" width="280" height="20" rx="10" fill="var(--green)"/>
+          <text class="bt2" x="120" y="128">high &middot; "you're full"</text>
+        </svg>
+      </div>
+    </div>
+    <p class="figcap" style="border:none;padding-top:16px"><b>The takeaway Fung draws:</b> the same calorie count can leave you storing fat and still hungry, or satisfied and burning. Food quality is a hormonal lever, not just a calorie total. <span style="color:var(--faint)">(Illustrative of the mechanism the book describes, not measured values.)</span></p>
+  </div>
+</section>
+
+<!-- ================= 6. ULTRA-PROCESSED FOOD ================= -->
+<section id="upf">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">06 &middot; Golden Rule 1 in depth</span>
+      <h2>Ultra-processed food, engineered to override fullness</h2>
+      <p>The villain of the title, and the first Golden Rule. Ultra-processed foods are designed to digest fast, hit the fat-sugar-salt "bliss point," and slip past the body's satiety signals. Fung draws an explicit parallel to the tobacco industry's playbook.</p>
+    </div>
+    <div class="grid g2" style="margin-bottom:24px">
+      <div class="figure">
+        <h4 style="margin-bottom:4px">Share of daily calories from ultra-processed food</h4>
+        <p style="color:var(--muted);font-size:14px;margin-bottom:14px">Fung contrasts national diets to argue that the food environment, not national willpower, tracks with obesity. Figures are approximate and as reported.</p>
+        <svg viewBox="0 0 480 170" role="img" aria-label="Ultra-processed food as an approximate share of calories: United States roughly 58 percent, Italy roughly 18 percent.">
+          <defs><style>.ax{stroke:var(--line);stroke-width:1}.bl3{font-family:'Inter';font-size:12px;fill:var(--muted)}.bn3{font-family:'Fraunces';font-size:15px;fill:var(--ink);font-weight:600}.pc{font-family:'Fraunces';font-size:20px;font-weight:700}</style></defs>
+          <line class="ax" x1="60" y1="20" x2="60" y2="130"/>
+          <rect x="90" y="20" width="120" height="110" rx="4" fill="var(--gold)"/>
+          <rect x="290" y="96" width="120" height="34" rx="4" fill="var(--green)"/>
+          <text class="pc" x="150" y="14" text-anchor="middle" fill="var(--gold)">~58%</text>
+          <text class="pc" x="350" y="90" text-anchor="middle" fill="var(--green)">~18%</text>
+          <text class="bn3" x="150" y="150" text-anchor="middle">United States</text>
+          <text class="bn3" x="350" y="150" text-anchor="middle">Italy</text>
+        </svg>
+      </div>
+      <div class="figure">
+        <h4 style="margin-bottom:14px">Why UPFs beat your satiety system</h4>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--gold);font-family:'Space Mono';font-weight:700;font-size:13px">01</span><p style="font-size:14.5px;color:var(--muted)"><b style="color:var(--ink)">Engineered bliss point.</b> Fat, sugar, and salt tuned to the exact ratio that keeps you eating.</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--gold);font-family:'Space Mono';font-weight:700;font-size:13px">02</span><p style="font-size:14.5px;color:var(--muted)"><b style="color:var(--ink)">Digested too fast.</b> Low fiber and protein, light and soft, so fullness signals never catch up.</p></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><span style="color:var(--gold);font-family:'Space Mono';font-weight:700;font-size:13px">03</span><p style="font-size:14.5px;color:var(--muted)"><b style="color:var(--ink)">Built to be hard to resist.</b> Fung likens the design and marketing to Big Tobacco, and argues abstinence beats moderation for the most engineered foods.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="n">~58%</div><div class="l">Approximate share of US calories from ultra-processed food, versus roughly 18% in Italy (as reported)</div></div>
+      <div class="stat"><div class="n">~14%</div><div class="l">Adults estimated to meet criteria for food addiction (about 12% of children)</div></div>
+      <div class="stat"><div class="n">~1,000</div><div class="l">Fewer daily calories eaten on GLP-1 drugs, by cutting hunger rather than willpower</div></div>
+      <div class="stat"><div class="n">3 + 50</div><div class="l">The book's three Golden Rules plus fifty practical, hunger-lowering tips</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. GLP-1 BRIDGE ================= -->
+<section id="glp1">
+  <div class="wrap narrow">
+    <div class="kicker">
+      <span class="eyebrow">07 &middot; The GLP-1 argument</span>
+      <h2>Why Ozempic proves his point</h2>
+      <p>Fung turns the GLP-1 boom into evidence for the whole thesis. People on semaglutide or tirzepatide eat roughly a thousand fewer calories a day, and not because their willpower improved overnight. The drugs quiet hunger by mimicking satiety hormones. If reducing hunger is what makes the medications work, then hunger, not calorie arithmetic, was the lever all along.</p>
+    </div>
+    <div class="pull">
+      <p>The clinical bridge for your work: the medication and the method aim at the same target. GLP-1s lower hunger pharmacologically; the book's food, timing, and social changes lower it behaviorally. Used together, they complement rather than compete.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. THE PLAYBOOK ================= -->
+<section id="playbook">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">08 &middot; The practical playbook</span>
+      <h2>The levers that lower hunger and insulin</h2>
+      <p>A representative sample of the book's fifty tips, grouped by the hunger they act on. Effect sizes are as the book reports them from the studies it cites; treat them as direction and magnitude, not clinical promises.</p>
+    </div>
+    <div class="tbl-scroll">
+      <table>
+        <thead>
+          <tr><th style="min-width:190px">Lever</th><th style="min-width:150px">What to do</th><th style="min-width:200px">Reported effect</th><th style="min-width:150px">Acts on</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Eat carbs last</b></td><td>Vegetables and protein first, starch and sugar at the end of the meal</td><td>Blunts blood-sugar and insulin spikes by ~40 to 50%</td><td class="usecol">Physical hunger</td></tr>
+          <tr><td><b>Eat earlier in the day</b></td><td>Front-load calories; keep dinner lighter and earlier</td><td>Evening meals can trigger ~30% more insulin than the same meal at breakfast</td><td class="usecol">Physical &middot; timing</td></tr>
+          <tr><td><b>Choose amylose starches</b></td><td>Quinoa, lentils, beans over sticky, amylopectin-heavy options</td><td>Slower digestion, gentler glucose and insulin response</td><td class="usecol">Physical hunger</td></tr>
+          <tr><td><b>Add acid</b></td><td>Vinegar or fermented vegetables with starchy meals</td><td>Slows starch digestion; lowers insulin and hunger</td><td class="usecol">Physical hunger</td></tr>
+          <tr><td><b>Whole fruit, not juice</b></td><td>Eat the fruit; skip the juice</td><td>Fiber slows glucose absorption and improves fullness</td><td class="usecol">Physical hunger</td></tr>
+          <tr><td><b>Protect sleep</b></td><td>Prioritize adequate, regular sleep</td><td>Sleep deprivation can raise the hunger hormone ghrelin by ~22%</td><td class="usecol">Physical hunger</td></tr>
+          <tr><td><b>Eat to 80% full</b></td><td>The Okinawan "hara hachi bu" habit; stop before stuffed</td><td>Associated with lower intake and longevity</td><td class="usecol">Social / habit hunger</td></tr>
+          <tr><td><b>Eat mindfully</b></td><td>A step-by-step protocol: slow down, put the fork down between bites</td><td>More time for satiety signals to register before overeating</td><td class="usecol">Emotional &middot; habit hunger</td></tr>
+          <tr><td><b>Cut ultra-processed foods</b></td><td>Remove the most engineered, hyper-palatable items from the house</td><td>Fewer reward triggers; naturally higher fiber and protein</td><td class="usecol">Emotional hunger</td></tr>
+          <tr><td><b>Find accountability</b></td><td>A partner, group, or coach; build supportive social habits</td><td>Sustains the behavior changes that reset the thermostat</td><td class="usecol">Social hunger</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--faint);margin-top:12px;font-family:'Space Mono',monospace">Figures reflect the book's reporting of its cited studies; effect sizes vary by individual and study design.</p>
+  </div>
+</section>
+
+<!-- ================= 9. EVIDENCE VERDICT ================= -->
+<section id="verdict">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">09 &middot; Where the wider evidence lands</span>
+      <h2>What holds up, what's overstated, what's still argued</h2>
+      <p>The evidence-balanced core. The Hunger Code is on its strongest ground when it talks about ultra-processed food, appetite, timing, sleep, and satiety. It is on its most contested ground when it makes insulin the sole explanation and treats total calories as beside the point. All three columns are usable if you stay honest about which is which.</p>
+    </div>
+    <div class="verdict">
+      <div class="vcol v-good">
+        <div class="vhead"><span class="vdot"></span><h4>Well supported</h4></div>
+        <ul>
+          <li><b>Ultra-processed food drives overeating.</b> A growing consensus, backed by controlled feeding work showing people eat more on UPF diets.</li>
+          <li><b>Hunger, not willpower, governs intake.</b> GLP-1 drugs work precisely by lowering appetite, which supports the book's framing.</li>
+          <li><b>Food order and meal timing matter.</b> Eating carbs last and earlier does blunt glucose and insulin responses.</li>
+          <li><b>Sleep and stress shape hunger hormones.</b> Short sleep reliably raises ghrelin and appetite.</li>
+          <li><b>Protein and fiber increase satiety,</b> so whole foods genuinely make you fuller per calorie.</li>
+        </ul>
+      </div>
+      <div class="vcol v-warn">
+        <div class="vhead"><span class="vdot"></span><h4>Overstated / contested</h4></div>
+        <ul>
+          <li><b>Insulin as the sole master switch.</b> Metabolic-ward studies show calorie reduction produces fat loss regardless of insulin levels.</li>
+          <li><b>Total calories treated as beside the point.</b> Energy balance is still the ultimate ledger; hunger and hormones decide how easily you stay within it.</li>
+          <li><b>Food addiction as settled fact.</b> A useful lens, but the criteria and prevalence estimates are still debated.</li>
+          <li><b>Abstinence over moderation.</b> Intuitive, but supported by limited clinical-trial data so far.</li>
+        </ul>
+      </div>
+      <div class="vcol v-argue">
+        <div class="vhead"><span class="vdot"></span><h4>Still being argued</h4></div>
+        <ul>
+          <li><b>Is fasting superior, or just another way to eat less?</b> A 2023 RCT found alternate-day fasting no better than plain calorie reduction.</li>
+          <li><b>How big are the timing effects</b> over months, once total intake is held constant?</li>
+          <li><b>Individual variation.</b> The insulin-resistant may respond differently than the insulin-sensitive; the book generalizes.</li>
+          <li><b>Long-term sustainability</b> of strict abstinence and fasting remains thin in the research.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <b>The honest synthesis.</b> The Hunger Code is most persuasive where it overlaps with mainstream nutrition science: ultra-processed foods promote overconsumption, appetite is physiological rather than a character flaw, and food quality, timing, sleep, and protein all shape how full you feel. It overreaches when it elevates insulin to the sole cause and treats total calories as irrelevant; calories remain the ultimate energy ledger, even if hunger is what determines them. For coaching and content, plant your flag on the high-confidence overlap: <b>eat mostly whole food, cut the ultra-processed stuff, use food order and timing, protect sleep, build supportive social habits, and treat hunger as information rather than an enemy.</b>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. MYTH VS FACT ================= -->
+<section id="myths">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">10 &middot; Myth vs fact</span>
+      <h2>The careful version, ready for a segment</h2>
+      <p>How the book gets flattened into slogans, and what it more responsibly says.</p>
+    </div>
+    <div class="mf">
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"The Hunger Code says calories don't count."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Calories still balance the books and remain the ultimate energy ledger. The point is that hunger decides how many you eat, so lowering hunger is the practical lever, not sheer restraint.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Ultra-processed food is bad only because it's high in calories."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>The problem is how it is engineered: fast digestion, low fiber and protein, and a bliss point that overrides fullness, so you eat more before you feel satisfied.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Ozempic proves you can ignore diet entirely."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>GLP-1s prove hunger is the lever. They lower appetite; the same food and habits do too. The book pairs them rather than replacing one with the other.</p></div>
+      </div>
+      <div class="mfrow">
+        <div class="myth"><span class="tag">Common claim</span><p>"Just eat your carbs last and the weight falls off."</p></div>
+        <div class="fact"><span class="tag">More accurate</span><p>Food order genuinely blunts insulin spikes, but it is one small lever among many. Real change comes from the whole pattern and the three Golden Rules, not a single trick.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 11. COURSE TALKING POINTS ================= -->
+<section id="course-tp">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">11 &middot; Talking points, part one</span>
+      <h2>For the weight-loss &amp; health courses</h2>
+      <p>Framed for teaching members through GLP-1 Foundations, Restart, and the Wellness Transformation arc. Education and lifestyle coaching, with medical decisions left to each member's own prescriber.</p>
+    </div>
+    <div class="tp">
+      <div class="tp-head">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V5a1 1 0 011-1h11l4 4v11a1 1 0 01-1 1H5a1 1 0 01-1-1z" stroke="var(--green)" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h3>Teach hunger as a skill</h3><div class="sub">Anchor every lesson to the three Golden Rules</div></div>
+      </div>
+      <div class="tp-body">
+        <div class="tp-item"><div class="no">01</div><div><h4>Lead with the three Golden Rules</h4><p>Give members the whole program in one breath: avoid ultra-processed food, don't eat all the time, and commit to a health mindset and healthy social habits. Everything else is the "how."</p></div></div>
+        <div class="tp-item"><div class="no">02</div><div><h4>Open meals with the three-hunger check</h4><p>Teach one habit that reframes everything. <span class="say">Say: "Is this physical, emotional, or social hunger? Only the physical kind actually needs food."</span></p></div></div>
+        <div class="tp-item"><div class="no">03</div><div><h4>Match the fix to the hunger</h4><p>Physical hunger wants real food and protein. Emotional hunger wants the trigger removed. Social hunger wants the pattern and the social defaults changed. It stops members from throwing willpower at every craving.</p></div></div>
+        <div class="tp-item"><div class="no">04</div><div><h4>Make ultra-processed food the shared enemy</h4><p>Shift blame from the member to the food environment. The design of UPFs, not personal weakness, is why they overeat. This lands as relief and it is the book's best-supported claim.</p></div></div>
+        <div class="tp-item"><div class="no">05</div><div><h4>Hand them the quick levers</h4><p>Carbs last, eat earlier, add vinegar, whole fruit not juice, protect sleep, eat to 80% full. Small, teachable, and each one lowers hunger or insulin a little.</p></div></div>
+        <div class="tp-item"><div class="no">06</div><div><h4>Position it as the GLP-1 companion</h4><p>For medicated members, this is the "what do I actually eat and do" layer. The drug lowers hunger; these habits lower it too and carry the results after the dose changes.</p></div></div>
+        <div class="tp-item"><div class="no">07</div><div><h4>Stay on defensible ground</h4><p>Coach the overlap: whole food, less ultra-processed, food order, timing, sleep, and social support. Skip "calories don't count" and hard claims about food addiction. Credibility is the brand's asset.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 12. PODCAST TALKING POINTS ================= -->
+<section id="pod-tp">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">12 &middot; Talking points, part two</span>
+      <h2>For the podcast</h2>
+      <p>Angles, hooks, and discussion beats for a Healthier Ever After episode on The Hunger Code, built for conversation between you and Greg with room for the evidence-balanced turn your listeners trust.</p>
+    </div>
+    <div class="tp">
+      <div class="tp-head">
+        <div class="badge"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="9" y="3" width="6" height="12" rx="3" stroke="var(--green)" stroke-width="1.6"/><path d="M6 11a6 6 0 0012 0M12 17v4M9 21h6" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div><h3>Hook, tension, honest landing</h3><div class="sub">A full episode arc in ten beats</div></div>
+      </div>
+      <div class="tp-body">
+        <div class="tp-item"><div class="no">01</div><div><h4>Cold-open hook</h4><p><span class="say">"What if the problem was never how much you eat, but how hungry you are, and why?"</span> That reframe is the most shareable line in the book.</p></div></div>
+        <div class="tp-item"><div class="no">02</div><div><h4>The sequel angle</h4><p>Frame it against The Obesity Code, which you already covered. That book asked what and when; this one asks why. A natural two-parter.</p></div></div>
+        <div class="tp-item"><div class="no">03</div><div><h4>The three Golden Rules</h4><p>Give listeners the whole program up front, then spend the episode unpacking each rule. It gives the conversation a spine and something to take away.</p></div></div>
+        <div class="tp-item"><div class="no">04</div><div><h4>The three hungers, live</h4><p>Walk through physical, emotional, and social hunger with real examples. Have each of you confess which one trips you up. It is instantly relatable audio.</p></div></div>
+        <div class="tp-item"><div class="no">05</div><div><h4>The cookie vs eggs moment</h4><p>Same calories, opposite hormonal messages. It is the vivid, quotable image that makes "a calorie isn't a calorie" click for a listener.</p></div></div>
+        <div class="tp-item"><div class="no">06</div><div><h4>The Big Food villain</h4><p>The tobacco parallel and the roughly 58% versus 18% ultra-processed contrast make a strong, righteous segment. Keep it about the food design, not shaming eaters.</p></div></div>
+        <div class="tp-item"><div class="no">07</div><div><h4>The Ozempic tie-in</h4><p>Your wheelhouse. Explain how GLP-1 drugs quietly prove the hunger thesis, then bridge to your medication episodes and courses.</p></div></div>
+        <div class="tp-item"><div class="no">08</div><div><h4>The honest pushback and steelman</h4><p>The turn your audience expects: insulin is not the whole story and total calories still matter, said kindly. Then be fair: the practical advice is sound and the UPF case is strong.</p></div></div>
+        <div class="tp-item"><div class="no">09</div><div><h4>Listener discussion questions</h4><p><span class="say">"Which of the three hungers runs your evenings? What's the one ultra-processed food you can't keep in the house?"</span> Invite replies for a follow-up.</p></div></div>
+        <div class="tp-item"><div class="no">10</div><div><h4>The one-line takeaway</h4><p><span class="say">"Eat real food, ditch the engineered stuff, give your body real breaks from eating, and treat hunger as information instead of an enemy."</span> That is the book at its best, and it holds up.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REFERENCES ================= -->
+<section id="refs">
+  <div class="wrap">
+    <div class="kicker">
+      <span class="eyebrow">Sources &amp; further reading</span>
+      <h2>References &amp; a note on sourcing</h2>
+      <p>This review has been checked against the book, Fung's public discussions, publisher materials, Publishers Weekly, and independent reviews. Figures attributed to the book reflect that reporting and the studies it cites; consult the book and the primary sources for full context.</p>
+    </div>
+    <div class="refs">
+      <p><b>Fung J.</b> The Hunger Code: Resetting Your Body's Fat Thermostat in the Age of Ultra-Processed Food. Greystone Books, 2026.</p>
+      <p><b>Fung J.</b> The Obesity Code: Unlocking the Secrets of Weight Loss. Greystone Books, 2016.</p>
+      <p><b>Publishers Weekly.</b> Review of The Hunger Code, 2025–2026.</p>
+      <p><b>Hall KD, et al.</b> Ultra-processed diets cause excess calorie intake and weight gain: an inpatient randomized controlled trial. <i>Cell Metab</i>, 2019;30(1):67–77.</p>
+      <p><b>Shukla AP, et al.</b> Food order has a significant impact on postprandial glucose and insulin levels. <i>Diabetes Care</i>, 2015;38(7):e98–e99.</p>
+      <p><b>Spiegel K, et al.</b> Sleep curtailment raises ghrelin and lowers leptin, increasing appetite. <i>Ann Intern Med</i>, 2004;141(11):846–850.</p>
+      <p><b>Sutton EF, et al.</b> Early time-restricted feeding improves insulin sensitivity, blood pressure, and oxidative stress. <i>Cell Metab</i>, 2018;27(6):1212–1221.</p>
+      <p><b>Trepanowski JF, et al.</b> Alternate-day fasting vs daily calorie restriction (2017); and later RCTs finding no superiority for fasting. <i>JAMA Intern Med</i> and subsequent trials.</p>
+      <p><b>Gearhardt AN, et al.</b> The concept of food addiction and the Yale Food Addiction Scale. <i>Appetite</i> / <i>Nutrients</i>, 2009–2022.</p>
+      <p><b>Monteiro CA, et al.</b> NOVA classification of ultra-processed foods and population intake. <i>Public Health Nutr</i>, 2018–2019.</p>
+    </div>
+    <div class="disclaimer">
+      <b>Educational use only.</b> This review summarizes and critiques a published book for coaching and content purposes. It is general education, not medical advice. Individual decisions, especially fasting or major dietary change while on GLP-1 or other medications, belong in a conversation with the member's own prescribing clinician.
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Healthier Ever After &middot; Evidence Review Series &middot; Weight Loss &middot; Lifestyle &middot; Longevity
+</div>
+
+</div>
+
+</body>
+</html>
