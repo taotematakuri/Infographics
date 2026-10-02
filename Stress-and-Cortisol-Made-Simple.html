@@ -1,0 +1,394 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Stress and Cortisol Made Simple</title><meta name="description" content="A Healthier Ever After guide to stress and cortisol: the daily cortisol rhythm, seven habits to build a buffer, and claims and supplements checked against research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Stress and Cortisol Made Simple</h1>
+      <p>Cortisol is your main stress hormone. In short bursts it helps: it wakes you up and gives you energy to handle a hard moment. Trouble starts when stress <em>never lets up</em>, and your sleep, cravings, and mood start to pay for it.</p>
+      <div class="pillars"><span>Pillar: Move More, Stress Less</span><span>Sleep</span></div>
+    </div>
+    <div class="stat green"><b>1 hour</b><span>of sleep lost from coffee 6 hours before bed<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">~</div>
+    <div>
+      <strong>You can't delete stress. You can build a buffer.</strong>
+      <p>The seven habits below won't make life calm. They help your body bounce back faster after stress, and they protect the two things stress hits hardest: your sleep and your eating.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>Cortisol has a daily rhythm</h2>
+      <p class="lede">It peaks within an hour of waking, then drifts down all day to its lowest point around midnight. The habits below work with that rhythm.</p>
+    </div>
+    <div class="figure">
+      <svg viewBox="0 0 720 260" role="img" aria-label="Illustration of cortisol across a day: a sharp rise after waking around 7 am, then a steady fall to a low point near midnight, with habit markers along the day">
+        <line x1="40" y1="200" x2="700" y2="200" stroke="var(--line)" stroke-width="1"/>
+        <path d="M40 180 C80 175 100 160 110 110 C120 50 140 40 160 48 C230 70 300 110 380 135 C460 160 540 180 620 192 C660 197 690 198 700 196" fill="none" stroke="var(--navy)" stroke-width="4"/>
+        <path d="M40 180 C80 175 100 160 110 110 C120 50 140 40 160 48 C230 70 300 110 380 135 C460 160 540 180 620 192 C660 197 690 198 700 196 L700 200 L40 200 Z" fill="var(--sky-soft)" opacity=".8"/>
+        <g font-family="Atkinson Hyperlegible Mono, monospace" font-size="12" fill="var(--muted)" text-anchor="middle">
+          <text x="40" y="222">4a</text><text x="150" y="222">7a</text><text x="260" y="222">10a</text><text x="370" y="222">1p</text><text x="480" y="222">4p</text><text x="590" y="222">7p</text><text x="700" y="222">12a</text>
+        </g>
+        <g font-family="Atkinson Hyperlegible, sans-serif" font-size="13" fill="var(--fg)">
+          <circle cx="150" cy="44" r="7" fill="var(--leaf)"/><text x="162" y="30">Wake: light + intention</text>
+          <circle cx="370" cy="131" r="7" fill="var(--amber)"/><text x="380" y="116">Last caffeine by early afternoon</text>
+          <circle cx="600" cy="189" r="7" fill="var(--leaf)"/><text x="420" y="188">Screens down, journal, wind down</text>
+        </g>
+        <text x="40" y="250" font-family="Atkinson Hyperlegible, sans-serif" font-size="12" fill="var(--muted)">Illustration of a typical pattern, not to scale. Cortisol level ↑</text>
+      </svg>
+    </div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>On a GLP-1? Stress still needs a plan.</h2>
+    </div>
+    <p class="quote">Many people find GLP-1s quiet the constant "food noise." The stress that used to send you to the pantry is still there, though. Give it somewhere else to go.</p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><div><h3>Pick a non-food stress tool</h3><p>A short walk, a call to a friend, five slow breaths, a prayer. Decide on it now, before the hard day.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><div><h3>Guard your sleep</h3><p>Two short nights raised hunger hormones and appetite in a classic study.<sup><a href="#r2">2</a></sup> Good sleep makes your medicine's job easier.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 8h10v5a5 5 0 0 1-10 0zM16 9h2a2 2 0 0 1 0 4h-2"/></svg></div><div><h3>Watch the coffee</h3><p>Caffeine can make nausea and reflux worse. If your stomach is unsettled, try half-caf or tea.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 9v6M18 9v6M3 11v2M21 11v2M6 12h12"/></svg></div><div><h3>Move most days</h3><p>Exercise is one of the best stress relievers there is, and it protects muscle while you lose weight.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>Seven habits to build your buffer</h2>
+    </div>
+    <div class="flow">
+      <div class="flow-step"><div class="n">1</div><h3>Start the day on purpose</h3><p>Before you check your phone, take two minutes to plan your top tasks, write three things you're grateful for, pray or meditate, or breathe slowly while you picture your day.</p></div>
+      <div class="flow-step"><div class="n">2</div><h3>Get morning light</h3><p>Step outside within an hour of waking for 5 to 10 minutes. Even one or two minutes helps. Morning light sets your body clock, which helps you sleep that night. Outdoors beats a window, even on a cloudy day.</p></div>
+      <div class="flow-step"><div class="n">3</div><h3>Cut back on caffeine</h3><p>Keep it to one or two cups and stop by early afternoon. Caffeine's effects last for hours, and coffee six hours before bed cut sleep by about an hour in one study.<sup><a href="#r1">1</a></sup> Most adults should stay under 400 mg a day, about four cups of coffee.<sup><a href="#r3">3</a></sup></p></div>
+      <div class="flow-step"><div class="n">4</div><h3>Dim the screens at night</h3><p>Screens in the evening delay melatonin, your sleep hormone, and push your sleep later.<sup><a href="#r4">4</a></sup> Put devices down an hour or two before bed, or at least turn on night mode and dim the brightness.</p></div>
+      <div class="flow-step"><div class="n">5</div><h3>Protect your sleep</h3><p>Aim for 7 to 9 hours, at the same times every day, in a room that's dark, quiet, and cool. Short sleep raises cortisol the next evening.<sup><a href="#r5">5</a></sup></p></div>
+      <div class="flow-step"><div class="n">6</div><h3>Write it down at night</h3><p>Try a brain dump, a gratitude list, or tomorrow's to-do list. In one study, writing a to-do list before bed helped people fall asleep faster.<sup><a href="#r6">6</a></sup></p></div>
+      <div class="flow-step"><div class="n">7</div><h3>Use supplements carefully, if at all</h3><p>Habits come first. See the supplement check below before you buy anything.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Cortisol claims, checked</h2>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Poor sleep raises cortisol."</div><div class="real">Yes. After a short night, evening cortisol runs higher.<sup><a href="#r5">5</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"High cortisol causes weight gain."</div><div class="real">Very high cortisol from a medical condition does. Everyday stress works more through cravings, poor sleep, and less activity.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Caffeine raises cortisol."</div><div class="real">It does, but people who drink it every day mostly adapt.<sup><a href="#r7">7</a></sup> Its bigger stress cost is usually worse sleep.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Blue light raises cortisol."</div><div class="real">Evening screens clearly delay melatonin and sleep.<sup><a href="#r4">4</a></sup> A direct cortisol effect hasn't been shown well.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Hours of sleep before midnight count double."</div><div class="real">Your deepest sleep comes early in the night, whatever time you fall asleep. A steady schedule matters more than the clock.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Adrenal fatigue" and at-home cortisol tests</div><div class="real">A review of 58 studies found no proof that "adrenal fatigue" exists.<sup><a href="#r8">8</a></sup> Saliva and urine kits sold online don't guide treatment. If you're worried about your hormones, see your provider.</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 5</span>
+      <h2>Stress supplements, checked</h2>
+      <p class="lede">Supplements aren't checked by the FDA before they're sold. Ask your provider first, especially if you take other medicines, are pregnant, or have thyroid or liver problems.</p>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">Ashwagandha</div><div class="real">Some small trials found lower cortisol and stress scores.<sup><a href="#r9">9</a></sup> Rare cases of liver injury have been reported, and Denmark has banned it.<sup><a href="#r10">10</a></sup> Avoid it in pregnancy and with thyroid disease.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">Omega-3 fatty acids</div><div class="real">In one trial, fish oil lowered the cortisol spike during a stress test.<sup><a href="#r11">11</a></sup> Fatty fish twice a week is a good start.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">Rhodiola rosea</div><div class="real">Small, lower-quality studies suggest it may ease stress-related fatigue. More research is needed.<sup><a href="#r12">12</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">Magnesium</div><div class="real">Helpful if you're low. Proof that it lowers cortisol is weak. Too much causes diarrhea, and people with kidney disease should avoid extra.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">Vitamin C</div><div class="real">Your adrenal glands do use it, but extra vitamin C hasn't been shown to lower stress. Fruits and veggies cover your needs.</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="box alert">
+      <h3>See your provider if you notice</h3>
+      <ul>
+        <li>Fast weight gain in your face, upper back, or belly with wide purple stretch marks, easy bruising, or weak muscles</li>
+        <li>Anxiety or low mood that lasts more than two weeks or gets in the way of daily life</li>
+        <li>Trouble sleeping most nights for a month or more</li>
+      </ul>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Small steps that carry a lot of weight</h2>
+    <p>Stress care and sleep are two of our eight pillars because they make every other habit easier. Pick one habit from Step 3 and do it every day this week.</p>
+    <div class="chips"><span>The 25% Rule</span><span class="on">Move More, Stress Less</span><span>Hydrate for Health</span><span>Cut Back on Sugar</span><span>Power Up with Protein</span><span class="on">Sleep</span><span>The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Drake C, et al. Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed. <i>J Clin Sleep Med.</i> 2013;9(11):1195-1200. <a href="https://doi.org/10.5664/jcsm.3170">doi.org</a></li>
+      <li id="r2">Spiegel K, et al. Sleep curtailment in healthy young men is associated with decreased leptin levels, elevated ghrelin levels, and increased hunger and appetite. <i>Ann Intern Med.</i> 2004;141(11):846-850. <a href="https://doi.org/10.7326/0003-4819-141-11-200412070-00008">doi.org</a></li>
+      <li id="r3">U.S. Food and Drug Administration. Spilling the beans: how much caffeine is too much? <a href="https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much">fda.gov</a></li>
+      <li id="r4">Chang AM, et al. Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <i>Proc Natl Acad Sci USA.</i> 2015;112(4):1232-1237. <a href="https://doi.org/10.1073/pnas.1418490112">doi.org</a></li>
+      <li id="r5">Leproult R, et al. Sleep loss results in an elevation of cortisol levels the next evening. <i>Sleep.</i> 1997;20(10):865-870. <a href="https://pubmed.ncbi.nlm.nih.gov/9415946/">pubmed.gov</a></li>
+      <li id="r6">Scullin MK, et al. The effects of bedtime writing on difficulty falling asleep. <i>J Exp Psychol Gen.</i> 2018;147(1):139-146. <a href="https://doi.org/10.1037/xge0000374">doi.org</a></li>
+      <li id="r7">Lovallo WR, et al. Caffeine stimulation of cortisol secretion across the waking hours in relation to caffeine intake levels. <i>Psychosom Med.</i> 2005;67(5):734-739. <a href="https://doi.org/10.1097/01.psy.0000181270.20036.06">doi.org</a></li>
+      <li id="r8">Cadegiani FA, Kater CE. Adrenal fatigue does not exist: a systematic review. <i>BMC Endocr Disord.</i> 2016;16:48. <a href="https://doi.org/10.1186/s12902-016-0128-4">doi.org</a></li>
+      <li id="r9">Lopresti AL, et al. An investigation into the stress-relieving and pharmacological actions of an ashwagandha extract. <i>Medicine.</i> 2019;98(37):e17186. <a href="https://doi.org/10.1097/MD.0000000000017186">doi.org</a></li>
+      <li id="r10">National Center for Complementary and Integrative Health. Ashwagandha. <a href="https://www.nccih.nih.gov/health/ashwagandha">nccih.nih.gov</a>; Nutrition Insight. Regulatory update on ashwagandha safety concerns. <a href="https://www.nutritioninsight.com/news/regulatory-update-spotlight-on-international-authorities-response-to-ashwagandha-safety-concerns.html">nutritioninsight.com</a></li>
+      <li id="r11">Madison AA, et al. Omega-3 supplementation and stress reactivity of cellular aging biomarkers. <i>Mol Psychiatry.</i> 2021. <a href="https://doi.org/10.1038/s41380-021-01077-2">doi.org</a></li>
+      <li id="r12">National Center for Complementary and Integrative Health. Rhodiola. <a href="https://www.nccih.nih.gov/health/rhodiola">nccih.nih.gov</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+
+</body></html>

@@ -1,0 +1,442 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}[hidden]{display:none!important}</style>
+<title>Intermittent Fasting Made Simple</title><meta name="description" content="A Healthier Ever After guide to intermittent fasting: picking an eating window, GLP-1 tips, fasting claims checked against research, and what to eat and drink.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+</style>
+
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Intermittent Fasting, Made Simple</h1>
+      <p>Intermittent fasting is choosing <em>when</em> you eat. Your kitchen is open for part of the day and closed for the rest. That's it.</p>
+      <span class="pillar">Pillar: Time Your Meals Right</span>
+    </div>
+    <svg viewBox="0 0 150 150" aria-hidden="true">
+      <circle cx="75" cy="75" r="60" fill="none" stroke="#2c4a78" stroke-width="16"/>
+      <path id="mastArc" fill="none" stroke="#7cc471" stroke-width="16" stroke-linecap="round"/>
+      <text x="75" y="72" text-anchor="middle" fill="#ffffff" font-family="Young Serif, Georgia, serif" font-size="26">12:12</text>
+      <text x="75" y="94" text-anchor="middle" fill="#c8daf0" font-family="Atkinson Hyperlegible, sans-serif" font-size="11">start here</text>
+    </svg>
+  </header>
+
+  <div class="truth">
+    <div class="mark">!</div>
+    <div>
+      <strong>The clock is a helper, not magic.</strong>
+      <p>When two groups eat the same calories, people who fast lose about the same weight as people who don't.<sup><a href="#r1">1</a>,<a href="#r2">2</a></sup> Fasting works when a shorter window makes it easier for <em>you</em> to eat a little less. Pick it because it fits your life.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>Pick your window</h2>
+      <p class="lede">Each ring is one full day. Midnight is at the top. Green is when you eat. Start with the easiest one and stay there until it feels normal.</p>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--leaf)"></i>Kitchen open</span>
+      <span><i class="sw" style="background:var(--closed)"></i>Kitchen closed (water, black coffee, tea)</span>
+    </div>
+    <div class="rings" id="rings"></div>
+    <div class="note"><b>What about 5:2 or 24-hour fasts?</b> Some people fast two days a week or go a full day without food. These are harder, cause more side effects, and make it tough to get enough protein. If you take a GLP-1, skip them unless your prescriber says otherwise.</div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>On a GLP-1? Read this first.</h2>
+    </div>
+    <p class="quote">Your medicine already turns down your appetite. Fasting on top of it can push you from eating less to eating too little. Aim for a calorie deficit, not a nutrition deficit.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><h3>Start gentle</h3><p>Most people on a GLP-1 do great with a <span class="big">12:12</span> window. Closing the kitchen after dinner is often all you need.</p></div>
+      </div>
+      <div class="step">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 11h14l-1.5 8h-11z"/><path d="M8 11c0-3 2-5 4-5s4 2 4 5"/></svg></div>
+        <div><h3>Protein comes first</h3><p>Experts suggest about <span class="big">80 to 120 g</span> of protein a day while you're losing weight, split into <span class="big">20 to 40 g</span> per meal.<sup><a href="#r6">6</a></sup> If your window makes that hard, widen it.</p></div>
+      </div>
+      <div class="step">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M6 9v6M18 9v6M3 11v2M21 11v2M6 12h12"/></svg></div>
+        <div><h3>Lift something</h3><p>Strength training plus protein is the best way to keep your muscle while the scale drops.<sup><a href="#r6">6</a></sup> Try for at least two days a week.<sup><a href="#r8">8</a></sup></p></div>
+      </div>
+      <div class="step">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div>
+        <div><h3>Sip all day</h3><p>Fluids help with nausea and constipation, two common GLP-1 side effects. I hydrate today for tomorrow.</p></div>
+      </div>
+      <div class="step warn">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+        <div><h3>Take insulin or a sulfonylurea (like glipizide or glyburide)?</h3><p>Talk with your prescriber before you fast. These medicines plus fasting can drop your blood sugar too low. Your medicine plan may need to change first.<sup><a href="#r7">7</a></sup></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>Fasting claims, checked</h2>
+      <p class="lede">You'll hear a lot of big promises about fasting. Here's what the research supports today.</p>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Fasting lowers insulin, so your body uses stored fat."</div><div class="real">True. After several hours without food, insulin drops and your body shifts to burning stored fuel, including fat.<sup><a href="#r3">3</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Fasting burns more fat than other ways of cutting calories."</div><div class="real">In a year-long trial, fasting plus a calorie goal worked about the same as the calorie goal alone. Body fat, belly fat, and lab results matched too.<sup><a href="#r1">1</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Fasting makes it easier to eat less."</div><div class="real">For many people, yes. Closing the kitchen ends late-night snacking. In one 12-week study with no calorie goals, though, people ate about the same and lost little weight.<sup><a href="#r2">2</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"After 16 hours, autophagy (your cells' cleanup crew) kicks in."</div><div class="real">That timeline comes from animal studies. Scientists can't yet measure this well in people, and no one knows the hour it starts in humans.<sup><a href="#r4">4</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Fasting raises growth hormone, which protects your muscle."</div><div class="real">Growth hormone does rise during a fast.<sup><a href="#r5">5</a></sup> In one trial, though, the fasting group lost more muscle.<sup><a href="#r2">2</a></sup> Protein and strength training are what protect muscle.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Fasting improves cholesterol and blood sugar."</div><div class="real">These numbers often get better, mostly because of the weight you lose. Other ways of losing the same weight help about as much.<sup><a href="#r1">1</a>,<a href="#r3">3</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Fasting lowers your cancer risk."</div><div class="real">Animal studies look hopeful. There are no strong human studies that show this.<sup><a href="#r3">3</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Women should match their fasting window to their cycle."</div><div class="real">There's very little research on this. If one week of the month feels harder, it's fine to shorten your window that week.</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Break your fast with protein</h2>
+      <p class="lede">Your first meal sets up the rest of your day. Lead with protein, add color, and keep sugary carbs small.</p>
+    </div>
+    <div class="plate-row">
+      <svg viewBox="0 0 220 220" role="img" aria-label="Plate: half vegetables and fruit, a third protein, the rest healthy fat and fiber-rich carbs">
+        <circle cx="110" cy="110" r="104" fill="var(--surface)" stroke="var(--line)" stroke-width="3"/>
+        <circle cx="110" cy="110" r="88" fill="var(--closed)"/>
+        <path d="M110 110 L110 22 A88 88 0 0 1 110 198 Z" fill="var(--leaf)"/>
+        <path d="M110 110 L110 198 A88 88 0 0 1 33.8 66 Z" fill="var(--navy)"/>
+        <path d="M110 110 L33.8 66 A88 88 0 0 1 110 22 Z" fill="var(--sky)"/>
+        <text x="150" y="114" text-anchor="middle" fill="var(--bg)" font-family="Atkinson Hyperlegible, sans-serif" font-size="13" font-weight="700">Veggies</text>
+        <text x="72" y="140" text-anchor="middle" fill="var(--bg)" font-family="Atkinson Hyperlegible, sans-serif" font-size="13" font-weight="700">Protein</text>
+        <text x="84" y="66" text-anchor="middle" fill="#0f2343" font-family="Atkinson Hyperlegible, sans-serif" font-size="11" font-weight="700">Fat + fiber</text>
+      </svg>
+      <div class="plate-key">
+        <div><i class="sw" style="background:var(--navy)"></i><p><b>Protein (eat it first):</b> eggs, Greek yogurt, cottage cheese, fish, chicken, turkey, tofu.</p></div>
+        <div><i class="sw" style="background:var(--leaf)"></i><p><b>Vegetables and some fruit:</b> greens, peppers, broccoli, berries.</p></div>
+        <div><i class="sw" style="background:var(--sky)"></i><p><b>A little healthy fat and fiber:</b> avocado, olive oil, nuts, seeds, sweet potato.</p></div>
+      </div>
+    </div>
+    <div class="scale" aria-hidden="true"><span>Protein per meal: 0 g</span><span>Goal zone: 20 to 40 g</span><span>40 g</span></div>
+    <div class="meals" id="meals"></div>
+    <p class="fine" style="border:0;padding:0">Protein amounts are estimates from USDA food data and vary by brand and portion.<sup><a href="#r9">9</a></sup></p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 5</span>
+      <h2>What to sip while the kitchen is closed</h2>
+    </div>
+    <div class="lights">
+      <div class="light go">
+        <h3><i class="dot"></i>Go ahead</h3>
+        <ul>
+          <li>Water, plain or sparkling<span>Add lemon, ginger, or a pinch of salt.</span></li>
+          <li>Black coffee<span>Switch to decaf if you feel jittery. On a GLP-1, coffee can upset a queasy stomach.</span></li>
+          <li>Plain or herbal tea<span>Cinnamon, ginger, or turmeric are fine.</span></li>
+        </ul>
+      </div>
+      <div class="light slow">
+        <h3><i class="dot"></i>Small amounts</h3>
+        <ul>
+          <li>A splash of cream, or 1 tsp MCT or coconut oil<span>Each adds about 40 calories. Fine for weight loss. MCT oil doesn't boost metabolism in any way you'd notice.</span></li>
+          <li>Collagen (1 scoop, about 35 calories)<span>It's missing some building blocks, so don't count it toward your protein goal.</span></li>
+          <li>Broth (under 50 calories)<span>Helpful on longer fasts, especially for salt and fluids.</span></li>
+          <li>Apple cider vinegar, well diluted<span>Can bother your stomach and teeth. Skip it if you're nauseous.</span></li>
+          <li>Zero-calorie sweeteners<span>No calories. If they make you crave sweets, leave them out.</span></li>
+        </ul>
+      </div>
+      <div class="light stopc">
+        <h3><i class="dot"></i>Ends your fast</h3>
+        <ul>
+          <li>Juice, soda, and sweet tea</li>
+          <li>Sweet coffee drinks and lattes</li>
+          <li>Smoothies and protein shakes<span>Save these for your eating window. A shake is a great way to hit protein when food feels like too much.</span></li>
+          <li>Alcohol</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 6</span>
+      <h2>Listen to your body</h2>
+    </div>
+    <div class="two">
+      <div class="box">
+        <h3>Shorten your window if you notice:</h3>
+        <ul>
+          <li>Dizziness or feeling lightheaded</li>
+          <li>Shaky, sweaty, or suddenly very hungry</li>
+          <li>Headaches that don't go away</li>
+          <li>You can't reach your protein goal</li>
+          <li>Worse sleep, mood, or energy</li>
+          <li>Food is all you can think about</li>
+        </ul>
+        <p class="fine" style="border:0;padding:0">Moving your body while fasting? Walks and easy workouts are fine. Save hard lifting for after a meal.</p>
+      </div>
+      <div class="box alert">
+        <h3>Talk to your doctor before fasting if you:</h3>
+        <ul>
+          <li>Are pregnant or breastfeeding</li>
+          <li>Have had an eating disorder</li>
+          <li>Have type 1 diabetes, or take insulin or a sulfonylurea</li>
+          <li>Are under 18, underweight, or frail</li>
+          <li>Take medicines that need food</li>
+        </ul>
+        <p class="fine" style="border:0;padding:0">Sources: <a href="#r3">3</a>, <a href="#r7">7</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Small steps that carry a lot of weight</h2>
+    <p>Meal timing is one of our eight pillars. It works best alongside the others, especially protein and hydration. Pick one window, keep it for a couple of weeks, and let it become normal before you change anything else.</p>
+    <div class="chips">
+      <span>The 25% Rule</span><span>Move More, Stress Less</span><span>Hydrate for Health</span><span>Cut Back on Sugar</span><span>Power Up with Protein</span><span>Sleep</span><span>The Real Food Regimen</span><span class="on">Time Your Meals Right</span>
+    </div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Liu D, et al. Calorie restriction with or without time-restricted eating in weight loss. <i>N Engl J Med.</i> 2022;386:1495-1504. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2114833">nejm.org</a></li>
+      <li id="r2">Lowe DA, et al. Effects of time-restricted eating on weight loss and other metabolic parameters (TREAT trial). <i>JAMA Intern Med.</i> 2020;180(11):1491-1499. <a href="https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2771095">jamanetwork.com</a></li>
+      <li id="r3">de Cabo R, Mattson MP. Effects of intermittent fasting on health, aging, and disease. <i>N Engl J Med.</i> 2019;381:2541-2551. <a href="https://www.nejm.org/doi/full/10.1056/NEJMra1905136">nejm.org</a></li>
+      <li id="r4">Hein ZM, et al. Glycogen-depleting exercise combined with prolonged fasting on autophagy in humans: a randomised crossover trial. <i>Nutrients.</i> 2024;16(24):4297. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11677747/">ncbi.nlm.nih.gov</a></li>
+      <li id="r5">Ho KY, et al. Fasting enhances growth hormone secretion and amplifies the complex rhythms of growth hormone secretion in man. <i>J Clin Invest.</i> 1988;81(4):968-975. <a href="https://www.jci.org/articles/view/113450">jci.org</a></li>
+      <li id="r6">Mozaffarian D, et al. Nutritional priorities to support GLP-1 therapy for obesity: a joint advisory from ACLM, ASN, OMA, and TOS. <i>Am J Clin Nutr.</i> 2025;122:344-367. <a href="https://www.obesity.org/nutritional-priorities-to-support-glp-1-therapy-for-obesity/">obesity.org</a></li>
+      <li id="r7">Grajower MM, Horne BD. Clinical management of intermittent fasting in patients with diabetes mellitus. <i>Nutrients.</i> 2019;11(4):873. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6521152/">ncbi.nlm.nih.gov</a></li>
+      <li id="r8">U.S. Department of Health and Human Services. <i>Physical Activity Guidelines for Americans,</i> 2nd edition. 2018. <a href="https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines">health.gov</a></li>
+      <li id="r9">USDA Agricultural Research Service. FoodData Central. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat or how you take any medicine. © Healthier Ever After</p>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function pt(cx,cy,r,h){var a=(h/24)*2*Math.PI-Math.PI/2;return [cx+r*Math.cos(a),cy+r*Math.sin(a)];}
+  function arc(cx,cy,r,h1,h2){var s=pt(cx,cy,r,h1),e=pt(cx,cy,r,h2),large=((h2-h1+24)%24)>12?1:0;
+    return "M"+s[0].toFixed(2)+" "+s[1].toFixed(2)+" A"+r+" "+r+" 0 "+large+" 1 "+e[0].toFixed(2)+" "+e[1].toFixed(2);}
+  function el(n,a){var x=document.createElementNS(NS,n);for(var k in a)x.setAttribute(k,a[k]);return x;}
+  function fmt(h){var hh=h%12===0?12:h%12;return hh+(h<12||h===24?" am":" pm");}
+
+  var m=document.getElementById("mastArc"); if(m) m.setAttribute("d",arc(75,75,60,7,19));
+
+  var plans=[
+    {ratio:"12:12",tag:"Start here",open:7,close:19,why:"Breakfast at 7, done with dinner by 7. No snacks after dinner. Few side effects.",pick:true},
+    {ratio:"14:10",tag:"Next step",open:9,close:19,why:"Push breakfast a little later. Good if 12:12 feels easy and you still hit your protein.",pick:false},
+    {ratio:"16:8",tag:"Most popular",open:10,close:18,why:"The window people talk about most. Harder to fit enough protein into, especially on a GLP-1.",pick:false}
+  ];
+  var wrap=document.getElementById("rings");
+  plans.forEach(function(p){
+    var card=document.createElement("div");card.className="ring"+(p.pick?" pick":"");
+    var tag=document.createElement("span");tag.className="tag";tag.textContent=p.tag;card.appendChild(tag);
+    var svg=el("svg",{viewBox:"0 0 200 200",role:"img","aria-label":p.ratio+": eat from "+fmt(p.open)+" to "+fmt(p.close)});
+    var c=100,r=70;
+    svg.appendChild(el("circle",{cx:c,cy:c,r:r,fill:"none",stroke:"var(--closed)","stroke-width":22}));
+    svg.appendChild(el("path",{d:arc(c,c,r,p.open,p.close),fill:"none",stroke:"var(--leaf)","stroke-width":22}));
+    [0,6,12,18].forEach(function(h){var q=pt(c,c,r+30,h);
+      var t=el("text",{x:q[0].toFixed(1),y:(q[1]+4).toFixed(1),"text-anchor":"middle",fill:"var(--muted)","font-family":"Atkinson Hyperlegible Mono, monospace","font-size":"11"});
+      t.textContent=["12a","6a","12p","6p"][h/6];svg.appendChild(t);});
+    [0,6,12,18].forEach(function(h){var a=pt(c,c,r-14,h),b=pt(c,c,r+14,h);
+      svg.appendChild(el("line",{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:"var(--surface)","stroke-width":2}));});
+    var t1=el("text",{x:c,y:c-2,"text-anchor":"middle",fill:"var(--navy)","font-family":"Young Serif, Georgia, serif","font-size":"26"});t1.textContent=p.ratio;svg.appendChild(t1);
+    var t2=el("text",{x:c,y:c+18,"text-anchor":"middle",fill:"var(--muted)","font-family":"Atkinson Hyperlegible, sans-serif","font-size":"11"});t2.textContent=(p.close-p.open)+" hr to eat";svg.appendChild(t2);
+    card.appendChild(svg);
+    var w=document.createElement("div");w.className="when";w.textContent="Eat "+fmt(p.open)+" to "+fmt(p.close);card.appendChild(w);
+    var y=document.createElement("p");y.className="why";y.textContent=p.why;card.appendChild(y);
+    wrap.appendChild(card);
+  });
+
+  var meals=[
+    {n:"Tuna salad bowl",g:30,d:"One can of tuna with olive oil and dill over greens, avocado, tomato, and cucumber."},
+    {n:"Turkey lettuce wraps",g:28,d:"Sliced turkey, a slice of mozzarella, tomato, onion, and avocado wrapped in lettuce."},
+    {n:"Ground turkey skillet",g:27,d:"Ground turkey with peppers, spinach, and a little sweet potato, cooked in olive oil."},
+    {n:"Cottage cheese and berries",g:25,d:"One cup of cottage cheese with berries, pecans, and chia seeds."},
+    {n:"Greek yogurt bowl",g:23,d:"One cup of plain Greek yogurt with berries and sunflower seeds."},
+    {n:"Veggie omelet",g:22,d:"Three eggs with spinach, olives, basil, and a little goat cheese."}
+  ];
+  var mw=document.getElementById("meals");
+  meals.forEach(function(x){
+    var d=document.createElement("div");d.className="meal";
+    d.innerHTML='<div class="meal-top"><h3></h3><span class="g tabnum"></span></div><div class="bar" role="img"><span class="zone"></span><span class="fill"></span></div><p></p>';
+    d.querySelector("h3").textContent=x.n;
+    d.querySelector(".g").textContent="about "+x.g+" g";
+    d.querySelector(".bar").setAttribute("aria-label","About "+x.g+" grams of protein out of a 40 gram scale");
+    d.querySelector(".fill").style.width=Math.min(100,x.g/40*100)+"%";
+    d.querySelector("p").textContent=x.d;
+    mw.appendChild(d);
+  });
+})();
+</script>

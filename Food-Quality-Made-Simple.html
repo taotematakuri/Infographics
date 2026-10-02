@@ -1,0 +1,397 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Food Quality Made Simple</title><meta name="description" content="A Healthier Ever After guide to food quality: processing levels, organic food and additives checked against research, and a meat and egg label decoder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Food Quality Made Simple</h1>
+      <p>You don't need a perfect, all-organic kitchen. The biggest upgrade is eating <em>more real food</em> and fewer foods that come from a factory. Labels like organic and grass-fed are a smaller bonus.</p>
+      <div class="pillars"><span>Pillar: The Real Food Regimen</span></div>
+    </div>
+    <div class="stat green"><b>+500</b><span>calories a day people ate on an ultra-processed diet<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">1</div>
+    <div>
+      <strong>When you eat less, every bite counts more.</strong>
+      <p>In a carefully controlled study, people ate about 500 more calories a day on ultra-processed food than on whole food, even though both diets offered the same nutrients. They gained weight on one and lost it on the other.<sup><a href="#r1">1</a></sup> Aim for a calorie deficit, not a nutrition deficit.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>Know where your food falls</h2>
+      <p class="lede">Most of your cart should come from the left side of this line. The right side is fine sometimes, just not most of the time.</p>
+    </div>
+    <div class="cards">
+      <div class="card hl"><span class="kicker">Whole</span><h3>As it grew</h3><p>Fresh or frozen fruits and veggies, eggs, meat, fish, beans, nuts.</p></div>
+      <div class="card hl"><span class="kicker">Lightly processed</span><h3>Cut, cooked, or canned</h3><p>Plain Greek yogurt, canned tuna, frozen berries, oats, cheese, olive oil.</p></div>
+      <div class="card"><span class="kicker" style="color:var(--amber)">Processed</span><h3>A few added ingredients</h3><p>Fresh bread, smoked salmon, canned soup. Read the label.</p></div>
+      <div class="card"><span class="kicker" style="color:var(--stop)">Ultra-processed</span><h3>Made in a factory</h3><p>Chips, candy, soda, sugary cereal, most packaged snacks. Long ingredient lists you can't picture in a kitchen.</p></div>
+    </div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>On a GLP-1? Small plate, high quality.</h2>
+    </div>
+    <p class="quote">Your appetite is smaller now, so there's less room for empty calories. Fill the room you have with protein, produce, and foods that look like food.</p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 11h14l-1.5 8h-11z"/><path d="M8 11c0-3 2-5 4-5s4 2 4 5"/></svg></div><div><h3>Protein first</h3><p>Aim for about 80 to 120 g a day while you're losing weight.<sup><a href="#r2">2</a></sup> Eggs, canned fish, Greek yogurt, cottage cheese, and beans are budget-friendly.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div><div><h3>Greasy food can backfire</h3><p>Fried and heavy, fatty foods often make GLP-1 nausea worse. Grilled, baked, and steamed usually sit better.<sup><a href="#r2">2</a></sup></p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>Organic: what it means and what it doesn't</h2>
+      <p class="lede">The USDA Organic seal means at least 95% of ingredients are organic: grown without most synthetic pesticides or fertilizers, no GMOs, and animals raised without antibiotics or added hormones.<sup><a href="#r3">3</a></sup></p>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Organic food has less pesticide residue."</div><div class="real">Yes, consistently. Organic crops also tend to have less cadmium, a heavy metal.<sup><a href="#r4">4</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Organic food is more nutritious."</div><div class="real">Some organic crops have a bit more antioxidants. Vitamin and mineral levels are mostly the same.<sup><a href="#r4">4</a>,<a href="#r5">5</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Pesticides on food cause cancer, hormone problems, and more."</div><div class="real">Those links come mostly from heavy exposure, like farm work. On store produce, almost all samples test below the EPA's safety limits.<sup><a href="#r6">6</a></sup> Lower is still reasonable to aim for.</div></div></div>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>On a budget?</h3><ul><li>Regular produce is far better than skipping produce.</li><li>Frozen fruits and veggies are picked ripe and cost less.</li><li>Rinse produce under running water. Soap isn't needed.</li><li>If you buy some organic, choose the foods you eat most often.</li></ul></div>
+      <div class="card"><h3>The "Dirty Dozen" list</h3><p>The Environmental Working Group publishes a yearly list of produce with the most and least pesticide residue. It's an advocacy group, not a government agency, but the list can help you decide where to spend.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Additives: read the label, don't panic</h2>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Red No. 3 is a problem dye."</div><div class="real">The FDA revoked its use in food in January 2025. Food makers have until January 2027 to remove it.<sup><a href="#r7">7</a></sup> The FDA is also pushing companies to phase out other petroleum-based dyes.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Artificial colors cause hyperactivity."</div><div class="real">In one well-known trial, some children became more hyperactive after drinks with artificial colors.<sup><a href="#r8">8</a></sup> The effect varies from child to child.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Additives cause weight gain."</div><div class="real">The strongest evidence is about ultra-processed food as a whole, not one single additive.<sup><a href="#r1">1</a></sup> Choosing whole foods takes care of most additives anyway.</div></div></div>
+    </div>
+    <div class="note"><b>Simple rule:</b> pick packaged foods with short ingredient lists made of things you'd recognize in a kitchen.</div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 5</span>
+      <h2>Meat, egg, and fish labels decoded</h2>
+      <p class="lede">Definitions from the USDA unless noted.<sup><a href="#r9">9</a></sup></p>
+    </div>
+    <div class="table-wrap">
+      <table class="t">
+        <thead><tr><th>Label</th><th>What it actually means</th></tr></thead>
+        <tbody>
+          <tr><td>Natural</td><td>No artificial ingredients and minimally processed. Says nothing about how the animal was raised.</td></tr>
+          <tr><td>Organic</td><td>Organic feed, outdoor access, no antibiotics or added hormones.</td></tr>
+          <tr><td>Grass-fed</td><td>Mostly grass diet. Some may eat grain at the end. Look for a third-party seal to be sure.</td></tr>
+          <tr><td>Grass-finished</td><td>Grass for the animal's whole life.</td></tr>
+          <tr><td>No hormones added (chicken, pork)</td><td>Hormones are already banned in poultry and pork, so this is true of all of it.</td></tr>
+          <tr><td>Cage-free</td><td>Hens aren't in cages but may still be crowded indoors.</td></tr>
+          <tr><td>Free-range</td><td>Hens have some access to the outdoors.</td></tr>
+          <tr><td>Pasture-raised</td><td>More outdoor space. No USDA definition, so look for a third-party seal.</td></tr>
+          <tr><td>Wild-caught vs. farmed fish</td><td>Both are healthy choices. Farmed salmon often has as much omega-3 as wild. The FDA says the benefits of eating fish outweigh the risks for most people.<sup><a href="#r10">10</a></sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Grass-fed beef has more omega-3s."</div><div class="real">Yes, more than grain-fed.<sup><a href="#r11">11</a></sup> Beef is still a small source, though. Salmon and sardines give you far more.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">"Grass-fed beef's CLA helps you lose weight."</div><div class="real">Even high-dose CLA supplements led to less than 2 pounds of loss in studies, and the amount in beef is much smaller.<sup><a href="#r12">12</a></sup></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 6</span>
+      <h2>Upgrade in this order</h2>
+      <p class="lede">Start at the top. Move down only when the step above feels easy.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-step"><div class="n">1</div><h3>Swap one ultra-processed snack for a whole food</h3><p>Chips become an apple and cheese stick. Cookies become Greek yogurt and berries.</p></div>
+      <div class="flow-step"><div class="n">2</div><h3>Put protein and produce on every plate</h3><p>Fresh, frozen, or canned all count.</p></div>
+      <div class="flow-step"><div class="n">3</div><h3>Read ingredient lists on packaged foods</h3><p>Shorter is usually better.</p></div>
+      <div class="flow-step"><div class="n">4</div><h3>Upgrade labels where your budget allows</h3><p>Organic produce you eat most, pasture-raised eggs, grass-fed beef if you eat a lot of it.</p></div>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Real food, one swap at a time</h2>
+    <p>The Real Food Regimen is about eating food that looks like food. Pick one swap from Step 6 this week and make it a habit before adding the next.</p>
+    <div class="chips"><span>The 25% Rule</span><span>Move More, Stress Less</span><span>Hydrate for Health</span><span>Cut Back on Sugar</span><span>Power Up with Protein</span><span>Sleep</span><span class="on">The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Hall KD, et al. Ultra-processed diets cause excess calorie intake and weight gain: an inpatient randomized controlled trial. <i>Cell Metab.</i> 2019;30(1):67-77. <a href="https://doi.org/10.1016/j.cmet.2019.05.008">doi.org</a></li>
+      <li id="r2">Mozaffarian D, et al. Nutritional priorities to support GLP-1 therapy for obesity: a joint advisory. <i>Am J Clin Nutr.</i> 2025;122:344-367. <a href="https://www.obesity.org/nutritional-priorities-to-support-glp-1-therapy-for-obesity/">obesity.org</a></li>
+      <li id="r3">USDA Agricultural Marketing Service. Organic labeling standards. <a href="https://www.ams.usda.gov/grades-standards/organic-labeling-standards">ams.usda.gov</a></li>
+      <li id="r4">Barański M, et al. Higher antioxidant and lower cadmium concentrations and lower incidence of pesticide residues in organically grown crops. <i>Br J Nutr.</i> 2014;112(5):794-811. <a href="https://doi.org/10.1017/S0007114514001366">doi.org</a></li>
+      <li id="r5">Smith-Spangler C, et al. Are organic foods safer or healthier than conventional alternatives? <i>Ann Intern Med.</i> 2012;157(5):348-366. <a href="https://doi.org/10.7326/0003-4819-157-5-201209040-00007">doi.org</a></li>
+      <li id="r6">USDA Agricultural Marketing Service. Pesticide Data Program annual summaries. <a href="https://www.ams.usda.gov/datasets/pdp">ams.usda.gov</a></li>
+      <li id="r7">U.S. Food and Drug Administration. FD&amp;C Red No. 3. <a href="https://www.fda.gov/industry/color-additives/fdc-red-no-3">fda.gov</a></li>
+      <li id="r8">McCann D, et al. Food additives and hyperactive behaviour in 3-year-old and 8/9-year-old children. <i>Lancet.</i> 2007;370:1560-1567. <a href="https://doi.org/10.1016/S0140-6736(07)61306-3">doi.org</a></li>
+      <li id="r9">USDA Food Safety and Inspection Service. Meat and poultry labeling terms. <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/meat-and-poultry-labeling-terms">fsis.usda.gov</a></li>
+      <li id="r10">U.S. Food and Drug Administration. Advice about eating fish. <a href="https://www.fda.gov/food/consumers/advice-about-eating-fish">fda.gov</a></li>
+      <li id="r11">Daley CA, et al. A review of fatty acid profiles and antioxidant content in grass-fed and grain-fed beef. <i>Nutr J.</i> 2010;9:10. <a href="https://doi.org/10.1186/1475-2891-9-10">doi.org</a></li>
+      <li id="r12">Onakpoya IJ, et al. The efficacy of long-term conjugated linoleic acid supplementation on body composition in overweight and obese individuals. <i>Eur J Nutr.</i> 2012;51(2):127-134. <a href="https://doi.org/10.1007/s00394-011-0253-9">doi.org</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+
+</body></html>

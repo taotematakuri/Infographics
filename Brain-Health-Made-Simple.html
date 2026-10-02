@@ -1,0 +1,389 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Brain Health Made Simple</title><meta name="description" content="A Healthier Ever After guide to brain health: the 14 changeable dementia risks, what GLP-1 research shows, brain-friendly habits and foods, and supplements checked.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Brain Health Made Simple</h1>
+      <p>Genes and age matter, but your daily habits matter too. The same things that help your heart and your weight, like moving, sleeping, and eating real food, also <em>protect your brain</em>.</p>
+      <div class="pillars"><span>Pillar: Move More, Stress Less</span><span>Sleep</span></div>
+    </div>
+    <div class="stat green"><b>45%</b><span>of dementia cases are tied to 14 risks you can change<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">♥</div>
+    <div>
+      <strong>Your weight loss work is brain work too.</strong>
+      <p>A major 2024 report found that almost half of dementia cases are linked to risks people can change. Five of them are things our programs work on every week: extra weight, blood sugar, blood pressure, LDL cholesterol, and inactivity.<sup><a href="#r1">1</a></sup></p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>The 14 risks you can change</h2>
+      <p class="lede">Green ones are part of your plan with us.<sup><a href="#r1">1</a></sup></p>
+    </div>
+    <div class="chips2">
+      <span class="on">Obesity</span><span class="on">Type 2 diabetes</span><span class="on">High blood pressure</span><span class="on">High LDL cholesterol</span><span class="on">Not enough exercise</span>
+      <span>Hearing loss</span><span>Vision loss</span><span>Smoking</span><span>Too much alcohol</span><span>Depression</span><span>Social isolation</span><span>Head injury</span><span>Air pollution</span><span>Less education early in life</span>
+    </div>
+    <div class="note"><b>Easy wins:</b> get your hearing and eyes checked, and wear hearing aids or glasses if you need them. Wear a helmet when you ride.</div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>On a GLP-1? What we know about your brain.</h2>
+    </div>
+    <p class="quote">You may have heard GLP-1s could prevent Alzheimer's. In 2025, two large trials found that semaglutide pills did not slow Alzheimer's in people who already had early disease.<sup><a href="#r2">2</a></sup> The proven brain benefits still come from lowering your known risks.</p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div><div><h3>Foggy? Check the basics</h3><p>Eating very little and not drinking enough can leave you tired and foggy, especially early on. Steady fluids and enough protein help.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg></div><div><h3>Track the numbers that matter</h3><p>Weight, blood pressure, A1c, and LDL. As they improve, your brain risk goes down with them.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>Keep your brain growing</h2>
+      <p class="lede">Your brain can build new connections at any age. Scientists call it neuroplasticity.</p>
+    </div>
+    <div class="cards">
+      <div class="card hl"><span class="kicker">Best proof</span><h3>Exercise</h3><p>In one trial, a year of walking grew the memory center of the brain by about 2% in older adults.<sup><a href="#r3">3</a></sup> Aim for 150 minutes a week.<sup><a href="#r4">4</a></sup></p></div>
+      <div class="card"><h3>Learn something new</h3><p>A language, a dance class, an instrument. New and hard is the point.</p></div>
+      <div class="card"><h3>Read and play</h3><p>Books, puzzles, card games, chess. Brain games mostly make you better at that game, so mix it up.</p></div>
+      <div class="card"><h3>Change your routine</h3><p>A new route to work, brushing with your other hand. Small bits of novelty add up.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Let your brain recharge</h2>
+    </div>
+    <div class="cards">
+      <div class="card hl"><span class="kicker">Best proof</span><h3>Sleep seven or more hours</h3><p>Adults need at least seven hours.<sup><a href="#r5">5</a></sup> During deep sleep, the brain clears waste that builds up during the day (shown in animal studies).<sup><a href="#r6">6</a></sup></p></div>
+      <div class="card hl"><span class="kicker">Best proof</span><h3>Stay connected</h3><p>Social isolation is one of the 14 dementia risks. Game nights, shared meals, church, a weekly walk with a friend.</p></div>
+      <div class="card"><h3>Quiet your mind</h3><p>Meditation or prayer can ease stress and may help attention. Apps like Insight Timer, Calm, and Headspace can get you started.</p></div>
+      <div class="card"><h3>Get outside</h3><p>Time in nature lowers stress and lifts mood. Walk, garden, ride, camp.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 5</span>
+      <h2>Brain-friendly foods</h2>
+      <p class="lede">These foods form the MIND diet. In a 2023 trial, people on the MIND diet and people on a regular healthy diet both improved their thinking scores while losing a little weight, by about the same amount.<sup><a href="#r7">7</a></sup> Eating well and losing weight seemed to matter more than any one food.</p>
+    </div>
+    <div class="chips2">
+      <span class="on">Leafy greens</span><span class="on">Berries</span><span class="on">Salmon and fatty fish</span><span class="on">Extra virgin olive oil</span><span class="on">Nuts</span><span class="on">Beans</span><span class="on">Whole grains</span><span>Eggs</span><span>Broccoli</span><span>Avocados</span><span>Tomatoes</span><span>Beets</span><span>Seeds</span><span>Coffee or green tea</span><span>A little dark chocolate</span><span>Turmeric and rosemary</span>
+    </div>
+    <div class="note"><b>Limit:</b> fried food, pastries and sweets, processed meat, and too much alcohol.</div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 6</span>
+      <h2>Brain supplements, checked</h2>
+      <p class="lede">No supplement has been proven to prevent memory loss or dementia.<sup><a href="#r8">8</a></sup> Food first. If you want to try one, talk with your provider, since some interact with medicines.</p>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">Omega-3 (fish oil)</div><div class="real">Eating fish is linked to healthier brain aging. Fish oil pills haven't slowed memory decline in healthy adults in most trials.<sup><a href="#r8">8</a></sup> Two servings of fatty fish a week is a good goal.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">B vitamins</div><div class="real">They help if you're low. B12 runs low more often with age, a vegan diet, and the diabetes medicine metformin. In people with memory trouble and high homocysteine, B vitamins slowed brain shrinkage in one trial.<sup><a href="#r9">9</a></sup> Ask about a B12 check.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">Bacopa monnieri</div><div class="real">A small memory benefit showed up in some trials after 12 weeks.<sup><a href="#r10">10</a></sup> It can upset your stomach.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not proven</span><div><div class="said">Resveratrol</div><div class="real">Studies in people are small and mixed. Berries and grapes give you some anyway.<sup><a href="#r8">8</a></sup></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Fun facts</span>
+      <h2>Your brain by the numbers</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="kicker">Weight</span><h3>About 3 pounds</h3><p>With a texture like firm gelatin.</p></div>
+      <div class="card"><span class="kicker">Fat</span><h3>About 60% of its dry weight</h3><p>Most of your brain is water. Of what's left, much is fat, which is one reason healthy fats matter.</p></div>
+      <div class="card"><span class="kicker">Speed</span><h3>Up to 268 mph</h3><p>The fastest nerve signals travel at about 120 meters per second.</p></div>
+      <div class="card"><span class="kicker">Power</span><h3>About 20 watts</h3><p>Roughly a dim light bulb, running all day and night.<sup><a href="#r11">11</a></sup></p></div>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Good for your waist, good for your brain</h2>
+    <p>Movement and sleep are two of our eight pillars, and they're two of the best-proven things you can do for your brain. Add a 10-minute walk after one meal a day this week.</p>
+    <div class="chips"><span>The 25% Rule</span><span class="on">Move More, Stress Less</span><span>Hydrate for Health</span><span>Cut Back on Sugar</span><span>Power Up with Protein</span><span class="on">Sleep</span><span>The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Livingston G, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. <i>Lancet.</i> 2024;404:572-628. <a href="https://doi.org/10.1016/S0140-6736(24)01296-0">doi.org</a></li>
+      <li id="r2">Alzheimer's Association. Statement on oral semaglutide phase 3 topline data release (evoke and evoke+). November 2025. <a href="https://www.alz.org/news/2025/alzheimers-association-statement-oral-semaglutide-phase-3-topline-data-release">alz.org</a></li>
+      <li id="r3">Erickson KI, et al. Exercise training increases size of hippocampus and improves memory. <i>Proc Natl Acad Sci USA.</i> 2011;108(7):3017-3022. <a href="https://doi.org/10.1073/pnas.1015950108">doi.org</a></li>
+      <li id="r4">U.S. Department of Health and Human Services. <i>Physical Activity Guidelines for Americans,</i> 2nd edition. 2018. <a href="https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines">health.gov</a></li>
+      <li id="r5">Watson NF, et al. Recommended amount of sleep for a healthy adult: a joint consensus statement of the AASM and SRS. <i>Sleep.</i> 2015;38(6):843-844. <a href="https://doi.org/10.5665/sleep.4716">doi.org</a></li>
+      <li id="r6">Xie L, et al. Sleep drives metabolite clearance from the adult brain. <i>Science.</i> 2013;342:373-377. <a href="https://doi.org/10.1126/science.1241224">doi.org</a></li>
+      <li id="r7">Barnes LL, et al. Trial of the MIND diet for prevention of cognitive decline in older persons. <i>N Engl J Med.</i> 2023;389:602-611. <a href="https://doi.org/10.1056/NEJMoa2302368">doi.org</a></li>
+      <li id="r8">National Center for Complementary and Integrative Health. Cognitive decline, dementia, and dietary supplements. <a href="https://www.nccih.nih.gov/health/providers/digest/dietary-supplements-and-cognitive-function-dementia-and-alzheimers-disease">nccih.nih.gov</a></li>
+      <li id="r9">Smith AD, et al. Homocysteine-lowering by B vitamins slows the rate of accelerated brain atrophy in mild cognitive impairment. <i>PLoS One.</i> 2010;5(9):e12244. <a href="https://doi.org/10.1371/journal.pone.0012244">doi.org</a></li>
+      <li id="r10">Kongkeaw C, et al. Meta-analysis of randomized controlled trials on cognitive effects of Bacopa monnieri extract. <i>J Ethnopharmacol.</i> 2014;151(1):528-535. <a href="https://doi.org/10.1016/j.jep.2013.11.008">doi.org</a></li>
+      <li id="r11">Raichle ME, Gusnard DA. Appraising the brain's energy budget. <i>Proc Natl Acad Sci USA.</i> 2002;99(16):10237-10239. <a href="https://doi.org/10.1073/pnas.172399499">doi.org</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+
+</body></html>

@@ -1,0 +1,404 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Fiber Made Simple</title><meta name="description" content="A Healthier Ever After guide to fiber: daily goals, the best high-fiber foods, GLP-1 constipation tips, and fiber claims checked against research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Fiber Made Simple</h1>
+      <p>Fiber is the part of plant food your body can't digest. It passes through you mostly whole, and it does a lot of good on the way: it keeps you <em>full</em>, <em>regular</em>, and steadier after meals.</p>
+      <div class="pillars"><span>Pillar: The Real Food Regimen</span><span>Cut Back on Sugar</span></div>
+    </div>
+    <div class="stat green"><b>1 in 20</b><span>American adults eat enough fiber<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">+</div>
+    <div>
+      <strong>Add it slowly, and drink more water as you go.</strong>
+      <p>Your gut bacteria need time to adjust. Raise your fiber by about 2 to 3 grams a day. Fiber soaks up water, so sip more as you add it, or it can make constipation worse instead of better.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>How much do you need?</h2>
+      <p class="lede">Daily goals from the National Academies.<sup><a href="#r2">2</a></sup> Most adults get about half of this.</p>
+    </div>
+    <div class="hbars" id="goals"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>Two kinds, two jobs</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="kicker">Soluble fiber</span><h3>Turns into a gel</h3><p>Slows how fast sugar enters your blood and helps lower LDL cholesterol.</p><p><b style="color:var(--fg)">Find it in:</b> oats, beans, lentils, apples, citrus, chia seeds.</p></div>
+      <div class="card"><span class="kicker">Insoluble fiber</span><h3>Adds bulk</h3><p>Helps food move through your gut and keeps you regular.</p><p><b style="color:var(--fg)">Find it in:</b> whole grains, nuts, seeds, vegetable and fruit skins.</p></div>
+      <div class="card hl"><span class="kicker">Both</span><h3>Feeds your gut bacteria</h3><p>Many fibers are food for your good gut bacteria. Most plants have some of each kind, so variety covers you.</p></div>
+    </div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>On a GLP-1? Fiber needs a gentle hand.</h2>
+    </div>
+    <p class="quote">GLP-1 medicines slow how fast your stomach empties. That helps you feel full, but it also makes constipation one of the most common side effects. Fiber and fluids help, as long as you go slowly.<sup><a href="#r3">3</a></sup></p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 18h4V12h4V8h4V4h4"/></svg></div><div><h3>Build up a little at a time</h3><p>A huge salad on a slow stomach can mean bloating and nausea. Add one fiber food at a time.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div><div><h3>Pair fiber with fluids</h3><p>Sip through the day, not all at once. I hydrate today for tomorrow.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 14h16a8 8 0 0 1-16 0zM8 10c0-2 1-3 2-4M12 10c0-2 1-3 2-4"/></svg></div><div><h3>Cooked beats raw when you're queasy</h3><p>Soft cooked veggies, oatmeal, soaked chia, and canned pumpkin are easier on a slow stomach than raw greens.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 11h14l-1.5 8h-11z"/><path d="M8 11c0-3 2-5 4-5s4 2 4 5"/></svg></div><div><h3>Protein still comes first</h3><p>Small stomach, small plate. Eat your protein first, then your fiber foods. Beans and lentils give you both.</p></div></div>
+      <div class="step warn"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div><div><h3>Call your provider if…</h3><p>You haven't had a bowel movement in several days, or you have bad belly pain, swelling, or vomiting. A fiber supplement like psyllium can help some people, but ask first if you take other medicines, since it can change how they absorb.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Best high-fiber foods</h2>
+      <p class="lede">Grams of fiber per serving. Bars are drawn on one scale, so you can compare across groups.<sup><a href="#r4">4</a></sup></p>
+    </div>
+    <div class="hbars" id="foods"></div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 5</span>
+      <h2>What a 30-gram day looks like</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="kicker">Breakfast · about 10 g</span><p>1 cup cooked oatmeal, ½ cup raspberries, 1 tbsp ground flax. Stir in Greek yogurt or protein powder for protein.</p></div>
+      <div class="card"><span class="kicker">Snack · about 3.5 g</span><p>1 oz almonds (about 23).</p></div>
+      <div class="card"><span class="kicker">Lunch · about 10 g</span><p>Lentil soup made with ½ cup lentils plus carrots and celery.</p></div>
+      <div class="card"><span class="kicker">Dinner · about 9 g</span><p>Salmon (0 g fiber, lots of protein), a medium baked sweet potato with skin, 1 cup roasted broccoli.</p></div>
+    </div>
+    <p class="figcap">Total: about 32 grams. Spread it across the day so your gut doesn't get it all at once.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 6</span>
+      <h2>Fiber claims, checked</h2>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Fiber lowers your risk of heart disease, type 2 diabetes, and colon cancer."</div><div class="real">A large review found people eating 25 to 29 grams a day had lower risk of all three, compared with people eating little fiber.<sup><a href="#r5">5</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Fiber helps with weight loss."</div><div class="real">In one diet study, eating more fiber was one of the strongest predictors of who lost weight, no matter which diet they followed.<sup><a href="#r6">6</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Fiber prevents blood sugar spikes."</div><div class="real">It slows the rise, especially soluble fiber. A big bowl of sugar is still a big bowl of sugar, even with fiber on the side.</div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Fiber lowers blood pressure and balances cholesterol."</div><div class="real">Soluble fiber lowers LDL cholesterol a bit, and blood pressure drops a little in studies. The effects are real but modest.<sup><a href="#r5">5</a></sup></div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 7</span>
+      <h2>Easy ways to fit in more</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Eat the peel</h3><p>Apples, pears, potatoes, and carrots keep much of their fiber in the skin.</p></div>
+      <div class="card"><h3>Lean on beans</h3><p>Beans and lentils bring fiber and protein together. Toss them into soups, salads, and chili.</p></div>
+      <div class="card"><h3>Swap your grains</h3><p>Brown rice, quinoa, barley, or oats in place of white rice and white bread.</p></div>
+      <div class="card"><h3>Snack on plants</h3><p>Fruit, raw veggies with hummus, nuts, or air-popped popcorn instead of chips.</p></div>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Small steps that carry a lot of weight</h2>
+    <p>Fiber is part of eating real food, and it makes cutting back on sugar easier because you stay full longer. Add one high-fiber food this week. Next week, add another.</p>
+    <div class="chips"><span>The 25% Rule</span><span>Move More, Stress Less</span><span>Hydrate for Health</span><span class="on">Cut Back on Sugar</span><span>Power Up with Protein</span><span>Sleep</span><span class="on">The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Quagliani D, Felt-Gunderson P. Closing America's fiber intake gap. <i>Am J Lifestyle Med.</i> 2017;11(1):80-85. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6124841/">ncbi.nlm.nih.gov</a></li>
+      <li id="r2">Institute of Medicine. <i>Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids.</i> National Academies Press; 2005. <a href="https://nap.nationalacademies.org/catalog/10490">nap.edu</a></li>
+      <li id="r3">Mozaffarian D, et al. Nutritional priorities to support GLP-1 therapy for obesity: a joint advisory. <i>Am J Clin Nutr.</i> 2025;122:344-367. <a href="https://www.obesity.org/nutritional-priorities-to-support-glp-1-therapy-for-obesity/">obesity.org</a></li>
+      <li id="r4">USDA Agricultural Research Service. FoodData Central. Values rounded. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a></li>
+      <li id="r5">Reynolds A, et al. Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <i>Lancet.</i> 2019;393:434-445. <a href="https://doi.org/10.1016/S0140-6736(18)31809-9">doi.org</a></li>
+      <li id="r6">Miketinas DC, et al. Fiber intake predicts weight loss and dietary adherence in adults consuming calorie-restricted diets (POUNDS Lost). <i>J Nutr.</i> 2019;149(10):1742-1748. <a href="https://doi.org/10.1093/jn/nxz117">doi.org</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+<script>
+(function(){
+  function rows(el,data,max,unit){
+    data.forEach(function(d){
+      if(d.g){var h=document.createElement('div');h.className='hgroup';h.textContent=d.g;el.appendChild(h);return;}
+      var r=document.createElement('div');r.className='hrow';
+      r.innerHTML='<div class="lab"></div><div class="track" role="img"><i></i></div><div class="val"></div>';
+      r.querySelector('.lab').innerHTML=d.n+(d.s?'<small>'+d.s+'</small>':'');
+      r.querySelector('i').style.width=Math.min(100,d.v/max*100)+'%';
+      r.querySelector('.track').setAttribute('aria-label',d.n+': '+d.v+' '+unit);
+      r.querySelector('.val').textContent=d.v+' '+unit;
+      el.appendChild(r);
+    });
+  }
+  rows(document.getElementById('goals'),[
+    {n:'Men, 50 and under',v:38},{n:'Men, 51 and older',v:30},{n:'Women, 50 and under',v:25},{n:'Women, 51 and older',v:21},{n:'Typical American adult',s:'what most people actually eat',v:16}
+  ],40,'g');
+  rows(document.getElementById('foods'),[
+    {g:'Beans and legumes'},{n:'Split peas',s:'½ cup cooked',v:8},{n:'Lentils',s:'½ cup cooked',v:8},{n:'Black beans',s:'½ cup cooked',v:7.5},{n:'Kidney beans',s:'½ cup cooked',v:6.5},{n:'Chickpeas',s:'½ cup cooked',v:6},
+    {g:'Vegetables'},{n:'Green peas',s:'1 cup cooked',v:9},{n:'Canned pumpkin',s:'1 cup',v:7},{n:'Sweet potato',s:'1 cup cooked',v:6},{n:'Broccoli',s:'1 cup cooked',v:5},{n:'Carrots',s:'1 cup cooked',v:5},{n:'Brussels sprouts',s:'1 cup cooked',v:4},{n:'Potato with skin',s:'1 medium',v:4},
+    {g:'Fruit'},{n:'Raspberries',s:'1 cup',v:8},{n:'Pear',s:'1 medium',v:5.5},{n:'Apple with skin',s:'1 medium',v:4.5},{n:'Blueberries',s:'1 cup',v:3.5},{n:'Orange',s:'1 medium',v:3},{n:'Avocado',s:'⅓ medium',v:3},
+    {g:'Whole grains'},{n:'Barley',s:'1 cup cooked',v:6},{n:'Quinoa',s:'1 cup cooked',v:5},{n:'Oatmeal',s:'1 cup cooked',v:4},{n:'Popcorn, air-popped',s:'3 cups',v:3.5},{n:'Brown rice',s:'1 cup cooked',v:3.5},
+    {g:'Nuts and seeds'},{n:'Chia seeds',s:'2 tbsp',v:8},{n:'Almonds',s:'1 oz',v:3.5},{n:'Pistachios',s:'1 oz',v:3},{n:'Ground flaxseed',s:'1 tbsp',v:2},{n:'Pumpkin seeds, shelled',s:'1 oz',v:2}
+  ],10,'g');
+})();
+</script>
+
+</body></html>

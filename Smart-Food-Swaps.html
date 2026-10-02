@@ -1,0 +1,412 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Smart Food Swaps</title><meta name="description" content="A Healthier Ever After guide to food swaps: cooking and baking substitutions, protein swaps for GLP-1 users, and popular swap claims checked.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>Smart Food Swaps</h1>
+      <p>Food allergies, intolerances, diabetes, or just trying to eat better? Simple swaps let you keep <em>the meals you love</em>. This guide also shows which "healthy" swaps are better and which only sound better.</p>
+      <div class="pillars"><span>Pillar: Power Up with Protein</span><span>Cut Back on Sugar</span></div>
+    </div>
+    <div class="stat green"><b>+9 g</b><span>protein when ½ cup sour cream becomes plain Greek yogurt<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">⇄</div>
+    <div>
+      <strong>A swap is only better if it fits your goal.</strong>
+      <p>Honey is still sugar. Coconut oil is still fat. Ask what the swap is for: avoiding an allergen, adding protein, or cutting sugar or calories. Then pick the swap that does that job.</p>
+    </div>
+  </div>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>On a GLP-1? Swap for protein.</h2>
+    </div>
+    <p class="quote">With a smaller appetite, the best swaps add protein without adding volume. Experts suggest about 80 to 120 g of protein a day while you're losing weight.<sup><a href="#r2">2</a></sup></p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 7h10l-1 13H8z"/><path d="M9 4h6v3H9z"/></svg></div><div><h3>Sour cream or mayo → plain Greek yogurt</h3><p>On tacos, potatoes, dips, chicken salad. About 9 more grams of protein per half cup.<sup><a href="#r1">1</a></sup></p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12c4-6 12-6 16 0-4 6-12 6-16 0z"/></svg></div><div><h3>Regular pasta → chickpea or lentil pasta</h3><p>About double the protein and two to three times the fiber.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 3h8l-1 4v13H9V7z"/></svg></div><div><h3>Milk → ultra-filtered milk</h3><p>About 50% more protein, less sugar, and lactose-free.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8 12h8"/></svg></div><div><h3>Cream sauces → blended cottage cheese</h3><p>Blend until smooth for creamy pasta sauce, dips, or "ice cream" with frozen fruit.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>Swaps for cooking</h2>
+    </div>
+    <div class="swaps">
+      <div class="swap"><div class="from">Butter</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Olive oil</b><span>Heart-healthy fats. Use 1:1 for sautéing. Same or slightly more calories than butter, so measure it.</span></div>
+        <div class="opt"><b>Avocado oil</b><span>Mild flavor and good for high heat. Same calories as other oils.</span></div>
+        <div class="opt"><b>Ghee</b><span>Butter with the milk solids removed, so almost no lactose. Still mostly saturated fat.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Soy sauce</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Coconut aminos</b><span>Free of gluten and soy, with much less sodium. Slightly sweeter.</span></div>
+        <div class="opt"><b>Tamari</b><span>Often gluten-free (check the label). About as salty as soy sauce.</span></div>
+        <div class="opt"><b>Fish sauce</b><span>Very salty and strong. Use a little and taste as you go.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Cornstarch</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Arrowroot or tapioca starch</b><span>Both thicken sauces. You'll usually need a bit more than cornstarch, so follow the package. Add arrowroot near the end of cooking.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Heavy cream</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Full-fat canned coconut milk</b><span>Dairy-free, 1:1. Similar saturated fat to cream.</span></div>
+        <div class="opt"><b>Evaporated skim milk or blended cottage cheese</b><span>Lighter and higher in protein. Best in sauces and soups.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Yogurt</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Plain Greek yogurt</b><span>About twice the protein of regular yogurt.</span></div>
+        <div class="opt"><b>Soy yogurt</b><span>The plant yogurt closest to dairy in protein.</span></div>
+        <div class="opt"><b>Almond or coconut yogurt</b><span>Dairy-free, but much less protein, and calcium varies. Check for added sugar.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Wheat pasta</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Chickpea or lentil pasta</b><span>More protein and fiber, somewhat fewer carbs.</span></div>
+        <div class="opt"><b>Zucchini noodles or spaghetti squash</b><span>Far fewer calories and carbs. Add a protein on top.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Peanut butter</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Sunflower seed butter</b><span>Nut-free. More vitamin E and magnesium.</span></div>
+        <div class="opt"><b>Almond butter</b><span>More vitamin E, calcium, and fiber. Slightly less protein.</span></div>
+        <div class="opt"><b>Tahini (sesame)</b><span>Nut-free, but sesame is a major allergen too.</span></div>
+        <div class="opt"><b>Powdered peanut butter</b><span>No allergy? This cuts calories by about two-thirds and keeps most of the protein.</span></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>Swaps for baking</h2>
+    </div>
+    <div class="swaps">
+      <div class="swap"><div class="from">Wheat flour</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Gluten-free all-purpose flour</b><span>Use 1:1. Look for "cup-for-cup" on the bag.</span></div>
+        <div class="opt"><b>Oat flour</b><span>Use about 1⅓ to 1½ cups for each cup of wheat flour. Choose certified gluten-free oats if needed.</span></div>
+        <div class="opt"><b>Almond flour</b><span>Higher in protein and fat. Often 1:1, but baked goods turn out denser.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Butter</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Vegan butter or coconut oil</b><span>Use 1:1 for dairy-free baking.</span></div>
+        <div class="opt"><b>Unsweetened applesauce</b><span>Replace up to half the butter to cut calories and keep a good texture.</span></div>
+        <div class="opt"><b>Pumpkin purée</b><span>Use ¾ cup for each cup of butter.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">One egg</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Flax egg</b><span>1 tbsp ground flax + 2½ tbsp water. Let sit 5 minutes.</span></div>
+        <div class="opt"><b>Chia egg</b><span>1 tbsp chia seeds + 3 tbsp water. Let sit 5 minutes.</span></div>
+        <div class="opt"><b>Mashed banana or applesauce</b><span>¼ cup per egg. With applesauce, add ½ tsp baking powder. Best in recipes with one or two eggs.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">Milk</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Soy milk</b><span>The plant milk closest to dairy in protein. Use 1:1.</span></div>
+        <div class="opt"><b>Unsweetened almond milk</b><span>Fewest calories, but very little protein.</span></div>
+        <div class="opt"><b>Oat milk</b><span>Creamy, but more carbs and calories than other plant milks.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">1 cup buttermilk</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Homemade "buttermilk"</b><span>1 cup milk or unsweetened plant milk + 1 tbsp lemon juice or vinegar. Let sit 5 minutes.</span></div>
+      </div></div>
+      <div class="swap"><div class="from">1 cup sugar</div><div class="arrow">→</div><div class="to">
+        <div class="opt"><b>Monk fruit or stevia</b><span>Zero calories and don't raise blood sugar. Store blends vary a lot in sweetness, so follow the package.<sup><a href="#r3">3</a></sup></span></div>
+        <div class="opt"><b>Honey</b><span>Use ½ to ⅔ cup. Cut other liquid by about ¼ cup and lower the oven 25°F.</span></div>
+        <div class="opt"><b>Maple syrup</b><span>Use ¾ cup and cut other liquid by about 3 tbsp.</span></div>
+        <div class="opt"><b>Coconut sugar</b><span>Use 1:1. Same calories as sugar.</span></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>Swap claims, checked</h2>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-no">Not true</span><div><div class="said">"Coconut oil boosts your metabolism."</div><div class="real">Coconut oil is mostly saturated fat, and it raised LDL cholesterol compared with plant oils in a large review.<sup><a href="#r4">4</a></sup> Use it for flavor, not for health.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not true</span><div><div class="said">"Avocado oil has fewer calories than butter."</div><div class="real">A tablespoon of any oil has about 120 calories. Butter has about 100, because part of butter is water.<sup><a href="#r1">1</a></sup> Swap oil for its healthier fats, not for calories.</div></div></div>
+      <div class="claim"><span class="verdict v-no">Not true</span><div><div class="said">"Almond yogurt is more nutritious than dairy yogurt."</div><div class="real">Most almond yogurts have far less protein, and their calcium varies. Choose them for a dairy allergy, not for nutrition.<sup><a href="#r1">1</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Honey, maple syrup, and coconut sugar are healthier than sugar."</div><div class="real">They have tiny amounts of minerals, but your body treats them all as added sugar. Health guidelines count them the same.<sup><a href="#r5">5</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Monk fruit is safe for diabetes."</div><div class="real">Pure monk fruit doesn't raise blood sugar. Many blends add erythritol, which a 2023 study linked to blood clotting and heart events.<sup><a href="#r6">6</a></sup> That link isn't proven to cause harm, but check the label.</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Know the label</span>
+      <h2>The nine major food allergens</h2>
+      <p class="lede">U.S. food labels must name these.<sup><a href="#r7">7</a></sup></p>
+    </div>
+    <div class="chips2">
+      <span class="on">Milk</span><span class="on">Eggs</span><span class="on">Fish</span><span class="on">Shellfish</span><span class="on">Tree nuts</span><span class="on">Peanuts</span><span class="on">Wheat</span><span class="on">Soy</span><span class="on">Sesame</span>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Keep the foods you love</h2>
+    <p>You don't have to give up your favorite meals. Swap one ingredient to add protein or cut sugar, and keep the rest of the recipe the same.</p>
+    <div class="chips"><span>The 25% Rule</span><span>Move More, Stress Less</span><span>Hydrate for Health</span><span class="on">Cut Back on Sugar</span><span class="on">Power Up with Protein</span><span>Sleep</span><span>The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">USDA Agricultural Research Service. FoodData Central. Values rounded and vary by brand. <a href="https://fdc.nal.usda.gov/">fdc.nal.usda.gov</a></li>
+      <li id="r2">Mozaffarian D, et al. Nutritional priorities to support GLP-1 therapy for obesity: a joint advisory. <i>Am J Clin Nutr.</i> 2025;122:344-367. <a href="https://www.obesity.org/nutritional-priorities-to-support-glp-1-therapy-for-obesity/">obesity.org</a></li>
+      <li id="r3">U.S. Food and Drug Administration. Aspartame and other sweeteners in food. <a href="https://www.fda.gov/food/food-additives-petitions/aspartame-and-other-sweeteners-food">fda.gov</a></li>
+      <li id="r4">Neelakantan N, Seah JYH, van Dam RM. The effect of coconut oil consumption on cardiovascular risk factors. <i>Circulation.</i> 2020;141(10):803-814. <a href="https://doi.org/10.1161/CIRCULATIONAHA.119.043052">doi.org</a></li>
+      <li id="r5">U.S. Department of Agriculture and HHS. <i>Dietary Guidelines for Americans.</i> Added sugars guidance. <a href="https://www.dietaryguidelines.gov/">dietaryguidelines.gov</a></li>
+      <li id="r6">Witkowski M, et al. The artificial sweetener erythritol and cardiovascular event risk. <i>Nat Med.</i> 2023;29:710-718. <a href="https://doi.org/10.1038/s41591-023-02223-9">doi.org</a></li>
+      <li id="r7">U.S. Food and Drug Administration. Food allergies: what you need to know. <a href="https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know">fda.gov</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+
+</body></html>

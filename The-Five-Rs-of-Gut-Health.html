@@ -1,0 +1,394 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>The Five Rs of Gut Health</title><meta name="description" content="A Healthier Ever After guide to gut health: the five Rs with evidence verdicts, GLP-1 digestive tips, and when to see a doctor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Atkinson+Hyperlegible+Mono:wght@500&display=swap">
+<style>
+/* Layout: one tall handout column, a navy masthead, then stacked "panels" a reader can scan top to bottom. Signature visual = 24-hour clock rings. */
+:root{
+  --navy:#16305a; --navy-ink:#0f2343;
+  --leaf:#3f8a3a; --leaf-soft:#e3f0dc;
+  --sky:#5fa8dc; --sky-soft:#e2f0fa;
+  --amber:#b8781a; --amber-soft:#f8ecd6;
+  --stop:#b5473a; --stop-soft:#f6e1dd;
+  --bg:#f5f7f9; --surface:#ffffff; --line:#d7dee6;
+  --fg:#1b2533; --muted:#556275;
+  --closed:#c9d6e3;
+  --mast-fg:#ffffff; --mast-sub:#c8daf0;
+  --f-display:"Young Serif", Georgia, "Times New Roman", serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-data:"Atkinson Hyperlegible Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --navy:#9fc2ef; --navy-ink:#0c1a30;
+  --leaf:#7cc471; --leaf-soft:#1c3320;
+  --sky:#7dbbe8; --sky-soft:#15283b;
+  --amber:#e0a94f; --amber-soft:#382a14;
+  --stop:#e48474; --stop-soft:#3a1f1b;
+  --bg:#0f1622; --surface:#172131; --line:#2a374b;
+  --fg:#e6ebf2; --muted:#9fadc0;
+  --closed:#2e3e55;
+  --mast-fg:#ffffff; --mast-sub:#a9c3e3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.55;padding-inline:16px;padding-block:24px 48px}
+.page{max-width:880px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.6vw,2rem);color:var(--navy)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-family:var(--f-data);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:62ch;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.sec-head{display:flex;flex-direction:column;gap:6px}
+
+/* Masthead */
+.mast{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(24px,5vw,44px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;overflow:hidden;position:relative}
+.mast .brand{font-family:var(--f-display);font-size:.95rem;color:var(--mast-sub)}
+.mast .brand i{font-style:italic}
+.mast h1{font-size:clamp(2.1rem,6vw,3.4rem);margin-block:10px 14px}
+.mast p{color:var(--mast-sub);max-width:46ch;font-size:1.05rem}
+.mast p em{color:var(--mast-fg);font-style:normal;font-weight:700}
+.mast .pillar{display:inline-block;margin-top:18px;font-family:var(--f-data);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+.mast svg{width:150px;height:150px}
+@media (max-width:620px){.mast{grid-template-columns:1fr}.mast svg{display:none}}
+
+/* Big truth */
+.truth{background:var(--surface);border:2px solid var(--leaf);border-radius:16px;padding:20px 22px;display:flex;gap:18px;align-items:center}
+.truth .mark{flex:none;width:52px;height:52px;border-radius:50%;background:var(--leaf-soft);color:var(--leaf);display:grid;place-items:center;font-family:var(--f-display);font-size:1.7rem}
+.truth strong{font-family:var(--f-display);font-weight:400;font-size:1.3rem;display:block;color:var(--fg);margin-bottom:4px}
+.truth p{color:var(--muted)}
+
+/* Clock rings */
+.rings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:700px){.rings{grid-template-columns:1fr}}
+.ring{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ring.pick{border:2px solid var(--leaf)}
+.tag{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;background:var(--sky-soft);color:var(--navy)}
+.ring.pick .tag{background:var(--leaf);color:var(--bg)}
+.ring svg{width:100%;max-width:200px;height:auto}
+.ring .ratio{font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1}
+.ring .when{font-weight:700}
+.ring .why{color:var(--muted);font-size:.95rem}
+.legend{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:14px;height:14px;border-radius:4px;display:inline-block}
+.note{background:var(--sky-soft);border-radius:12px;padding:14px 16px;font-size:.95rem}
+.note b{color:var(--navy)}
+
+/* GLP-1 panel */
+.glp{background:var(--leaf-soft);border-radius:20px;padding:clamp(20px,4vw,32px);display:flex;flex-direction:column;gap:18px}
+.glp h2{color:var(--leaf)}
+.glp .quote{font-family:var(--f-display);font-size:1.25rem;color:var(--fg)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{background:var(--surface);border-radius:14px;padding:16px;display:flex;gap:14px;min-width:0}
+.step .ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--leaf-soft);display:grid;place-items:center}
+.step .ic svg{width:24px;height:24px;stroke:var(--leaf);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin-bottom:4px}
+.step p{font-size:.95rem;color:var(--muted)}
+.step.warn{grid-column:1/-1;border:2px solid var(--amber)}
+.step.warn .ic{background:var(--amber-soft)}
+.step.warn .ic svg{stroke:var(--amber)}
+.big{font-family:var(--f-data);color:var(--fg);font-weight:500}
+
+/* Claim check */
+.claims{display:flex;flex-direction:column;gap:10px}
+.claim{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 18px;align-items:start}
+@media (max-width:600px){.claim{grid-template-columns:1fr}}
+.verdict{font-family:var(--f-data);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;justify-self:start;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.verdict::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v-yes{background:var(--leaf-soft);color:var(--leaf)}
+.v-part{background:var(--amber-soft);color:var(--amber)}
+.v-no{background:var(--stop-soft);color:var(--stop)}
+.claim .said{font-weight:700}
+.claim .real{color:var(--muted);font-size:.95rem}
+sup a{color:var(--sky);text-decoration:none;font-family:var(--f-data);font-size:.75em}
+sup a:hover{text-decoration:underline}
+
+/* Plate + meals */
+.plate-row{display:grid;grid-template-columns:220px minmax(0,1fr);gap:24px;align-items:center}
+@media (max-width:640px){.plate-row{grid-template-columns:1fr;justify-items:center}}
+.plate-row svg{width:100%;max-width:220px;height:auto}
+.plate-key{display:flex;flex-direction:column;gap:10px}
+.plate-key div{display:flex;gap:10px;align-items:baseline}
+.plate-key .sw{flex:none;transform:translateY(2px)}
+.meals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.meals{grid-template-columns:1fr}}
+.meal{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.meal-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.meal h3{font-size:1.05rem}
+.meal .g{font-family:var(--f-data);color:var(--leaf);white-space:nowrap}
+.meal p{font-size:.92rem;color:var(--muted)}
+.bar{position:relative;height:10px;border-radius:99px;background:var(--closed);overflow:hidden}
+.bar .zone{position:absolute;inset-block:0;left:50%;width:50%;background:var(--leaf-soft);opacity:.9}
+.bar .fill{position:absolute;inset-block:0;left:0;background:var(--leaf);border-radius:99px}
+.scale{display:flex;justify-content:space-between;font-family:var(--f-data);font-size:.7rem;color:var(--muted)}
+.tabnum{font-variant-numeric:tabular-nums}
+
+/* Drinks */
+.lights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.lights{grid-template-columns:1fr}}
+.light{border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.light.go{background:var(--leaf-soft)} .light.slow{background:var(--amber-soft)} .light.stopc{background:var(--stop-soft)}
+.light h3{display:flex;align-items:center;gap:10px}
+.dot{width:16px;height:16px;border-radius:50%;flex:none}
+.go .dot{background:var(--leaf)} .slow .dot{background:var(--amber)} .stopc .dot{background:var(--stop)}
+.light ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:.95rem}
+.light li span{color:var(--muted);display:block;font-size:.88rem}
+
+/* Body check */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:640px){.two{grid-template-columns:1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.box ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.box.alert{border:2px solid var(--stop)}
+.box.alert h3{color:var(--stop)}
+
+/* Footer */
+.tie{background:var(--navy-ink);color:var(--mast-fg);border-radius:20px;padding:clamp(20px,4vw,30px);display:flex;flex-direction:column;gap:10px}
+.tie h2{color:var(--mast-fg)}
+.tie p{color:var(--mast-sub);max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-family:var(--f-data);font-size:.78rem;padding:6px 12px;border-radius:99px;border:1px solid var(--mast-sub);color:var(--mast-fg)}
+.chips span.on{background:#3f8a3a;border-color:#3f8a3a}
+.refs{font-size:.85rem;color:var(--muted)}
+.refs ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.refs a{color:var(--navy);word-break:break-word}
+.fine{font-size:.85rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+a:focus-visible{outline:3px solid var(--sky);outline-offset:2px;border-radius:4px}
+
+/* Shared components for the pillar infographic series */
+.mast .stat{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:170px;aspect-ratio:1;max-width:100%;border-radius:50%;border:10px solid #2c4a78;padding:14px}
+.mast .stat b{font-family:var(--f-display);font-weight:400;font-size:2.1rem;line-height:1;color:#ffffff}
+.mast .stat span{font-size:.8rem;line-height:1.3;color:var(--mast-sub);margin-top:6px}
+.mast .stat.green{border-color:#3f8a3a}
+@media (max-width:620px){.mast .stat{width:150px;justify-self:start}}
+.mast .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.mast .pillars span{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;background:#3f8a3a;color:#fff;padding:6px 12px;border-radius:99px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card h3{font-size:1.08rem}
+.card p,.card li{font-size:.95rem;color:var(--muted)}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.card .kicker{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--leaf)}
+.card.hl{border:2px solid var(--leaf)}
+
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:.95rem}
+.hrow .lab{min-width:0}
+.hrow .lab small{display:block;color:var(--muted);font-size:.8rem}
+.hrow .track{height:14px;border-radius:99px;background:var(--closed);overflow:hidden}
+.hrow .track i{display:block;height:100%;background:var(--leaf);border-radius:99px}
+.hrow .val{font-family:var(--f-data);text-align:right;font-variant-numeric:tabular-nums}
+.hgroup{font-family:var(--f-data);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+@media (max-width:520px){.hrow{grid-template-columns:minmax(0,1fr) 56px}.hrow .track{grid-column:1/-1;grid-row:2}}
+
+.swaps{display:flex;flex-direction:column;gap:10px}
+.swap{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:minmax(0,150px) 28px minmax(0,1fr);gap:6px 12px;align-items:start}
+.swap .from{font-family:var(--f-display);font-size:1.1rem;color:var(--navy)}
+.swap .arrow{color:var(--leaf);font-size:1.3rem;line-height:1.2;text-align:center}
+.swap .to{display:flex;flex-direction:column;gap:8px;min-width:0}
+.swap .opt b{display:block}
+.swap .opt span{color:var(--muted);font-size:.92rem}
+@media (max-width:560px){.swap{grid-template-columns:1fr}.swap .arrow{display:none}}
+
+.flow{display:flex;flex-direction:column;gap:12px;counter-reset:flow}
+.flow-step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:4px 16px}
+.flow-step .n{grid-row:1/span 3;width:56px;height:56px;border-radius:50%;background:var(--navy-ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.4rem}
+.flow-step h3{color:var(--navy)}
+.flow-step p,.flow-step li{color:var(--muted);font-size:.95rem}
+.flow-step ul{margin:6px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.flow-step .verdict{margin-top:4px}
+@media (max-width:520px){.flow-step{grid-template-columns:1fr}.flow-step .n{grid-row:auto;width:44px;height:44px;font-size:1.1rem}}
+
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pair{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pair .eq{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pair .eq span{background:var(--sky-soft);color:var(--navy);border-radius:10px;padding:6px 10px;font-weight:700;font-size:.95rem}
+.pair .eq em{font-style:normal;color:var(--leaf);font-family:var(--f-display);font-size:1.3rem}
+.pair p{color:var(--muted);font-size:.95rem}
+.pair .ex{font-size:.9rem;color:var(--fg)}
+
+.chips2{display:flex;flex-wrap:wrap;gap:8px}
+.chips2 span{font-size:.9rem;padding:6px 12px;border-radius:99px;background:var(--surface);border:1px solid var(--line)}
+.chips2 span.on{background:var(--leaf-soft);border-color:var(--leaf);color:var(--fg);font-weight:700}
+
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 8px;display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;min-width:0}
+.day b{font-family:var(--f-data);font-size:.75rem;letter-spacing:.08em;color:var(--muted)}
+.day span{font-size:.85rem;line-height:1.3}
+.day.lift{background:var(--navy-ink);border-color:var(--navy-ink)}
+.day.lift b{color:var(--mast-sub)} .day.lift span{color:#fff}
+.day.move{background:var(--leaf-soft);border-color:var(--leaf-soft)}
+@media (max-width:640px){.week{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.figure{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;overflow-x:auto}
+.figure svg{display:block;width:100%;min-width:520px;height:auto}
+.figcap{font-size:.85rem;color:var(--muted)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:.95rem;min-width:520px}
+table.t th,table.t td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.t th{font-family:var(--f-data);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500}
+table.t tr:last-child td{border-bottom:0}
+table.t td:first-child{font-weight:700}
+
+@media (max-width:520px){.truth{flex-direction:column;align-items:flex-start}}
+</style>
+<div class="page">
+
+  <header class="mast"><span class="eyebrow" hidden>Pillar Guide</span>
+    <div>
+      <div class="brand">Healthier <i>Ever After</i></div>
+      <h1>The Five Rs of Gut Health</h1>
+      <p>Your gut is home to trillions of bacteria that help digest food, make some vitamins, and train your immune system. You can help them with <em>everyday habits</em> more than with special products.</p>
+      <div class="pillars"><span>Pillar: The Real Food Regimen</span><span>Hydrate for Health</span></div>
+    </div>
+    <div class="stat green"><b>38 trillion</b><span>bacteria in your gut, about as many as your own cells<sup><a href="#r1" style="color:#c8daf0">1</a></sup></span></div>
+  </header>
+
+  <div class="truth">
+    <div class="mark">✓</div>
+    <div>
+      <strong>The habits with the best proof are the simple ones.</strong>
+      <p>Fiber, fermented foods, movement, sleep, and stress care all have good research behind them. Many "gut healing" supplements and tests have much less. This guide shows which is which.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 1</span>
+      <h2>Gut facts, checked</h2>
+    </div>
+    <div class="claims">
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"80% of your immune system lives in your gut."</div><div class="real">A large share of your immune cells, roughly 70%, sit in and around your gut lining.<sup><a href="#r2">2</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-part">Partly true</span><div><div class="said">"Your gut makes 95% of your feel-good serotonin."</div><div class="real">Your gut makes about 90% of your body's serotonin, but that serotonin works in your gut and blood. It doesn't travel to your brain, which makes its own.<sup><a href="#r3">3</a></sup></div></div></div>
+      <div class="claim"><span class="verdict v-yes">Supported</span><div><div class="said">"Around 70 million Americans have digestive problems."</div><div class="real">Federal estimates put it at 60 to 70 million people. You're far from alone.<sup><a href="#r4">4</a></sup></div></div></div>
+    </div>
+  </section>
+
+  <section class="glp">
+    <div class="sec-head">
+      <span class="eyebrow">Step 2</span>
+      <h2>On a GLP-1? Your gut is adjusting too.</h2>
+    </div>
+    <p class="quote">Nausea, constipation, diarrhea, reflux, and bloating are common, especially after a dose increase. Most of it gets better as your body adjusts. A few habits help a lot.<sup><a href="#r5">5</a></sup></p>
+    <div class="steps">
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><div><h3>Smaller meals, slower bites</h3><p>Stop at the first sign of full. Your stomach empties more slowly now.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></div><div><h3>Steady fluids</h3><p>Sip through the day. It helps with constipation and keeps you from getting dehydrated if you have diarrhea.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></div><div><h3>Go easy on greasy</h3><p>Fried and very fatty meals are the most common nausea triggers.</p></div></div>
+      <div class="step"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 4h6M10 4v6l-4 8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l-4-8V4"/></svg></div><div><h3>Skip big experiments for now</h3><p>Starting a strict elimination diet while starting a GLP-1 makes it hard to tell what's causing what.</p></div></div>
+      <div class="step warn"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div><div><h3>Call your provider right away for</h3><p>Severe belly pain that won't let up (especially if it spreads to your back), vomiting so you can't keep fluids down, black or bloody stools, or yellowing skin or eyes.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 3</span>
+      <h2>The five Rs, with what the research says</h2>
+      <p class="lede">The five Rs come from functional medicine. Some steps are well supported. Others rely on supplements with little proof. Each step shows its verdict.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-step"><div class="n">1</div><h3>Remove what bothers your gut</h3>
+        <span class="verdict v-part">Partly supported</span>
+        <ul>
+          <li><b>Good bets:</b> cut back on alcohol and ultra-processed food. Ask your provider about NSAIDs like ibuprofen, which can irritate the gut lining.</li>
+          <li><b>Elimination diets</b> can help with specific problems. The low-FODMAP diet has good evidence for IBS.<sup><a href="#r6">6</a></sup> Keep them short (a few weeks) and guided, then add foods back one at a time.</li>
+          <li><b>Skip</b> at-home IgG "food sensitivity" tests. Allergy experts say they don't diagnose sensitivities.<sup><a href="#r7">7</a></sup></li>
+          <li><b>Yeast or bacterial overgrowth</b> (like SIBO) needs real testing and treatment from a doctor, not guesswork with herbs.</li>
+        </ul>
+      </div>
+      <div class="flow-step"><div class="n">2</div><h3>Replace digestive helpers</h3>
+        <span class="verdict v-no">Mostly not proven</span>
+        <ul>
+          <li><b>Lactase enzyme</b> (for lactose intolerance) works. General digestive enzyme blends haven't been shown to help most people.</li>
+          <li><b>Apple cider vinegar and HCl (stomach acid) pills</b> have no good evidence for raising stomach acid. Most reflux isn't caused by low acid, and acid pills can hurt if you have an ulcer. Don't take them without your provider.</li>
+          <li><b>Bile-support herbs</b> like milk thistle and dandelion haven't been shown to improve digestion.</li>
+        </ul>
+      </div>
+      <div class="flow-step"><div class="n">3</div><h3>Reinoculate with good bacteria</h3>
+        <span class="verdict v-yes">Supported (food)</span>
+        <ul>
+          <li><b>Fermented foods</b> like yogurt, kefir, sauerkraut, and kimchi raised gut bacteria variety and lowered inflammation markers in a Stanford study.<sup><a href="#r8">8</a></sup> Try one or two servings a day.</li>
+          <li><b>Prebiotic foods</b> feed your good bacteria: oats, onions, garlic, leeks, asparagus, bananas, apples, flaxseed, beans.</li>
+          <li><b>Probiotic pills</b> help in a few specific cases, like diarrhea from antibiotics. For general gut health, the evidence is weak, and gut doctors don't recommend them for most conditions.<sup><a href="#r9">9</a></sup></li>
+        </ul>
+      </div>
+      <div class="flow-step"><div class="n">4</div><h3>Repair the gut lining</h3>
+        <span class="verdict v-no">Not proven</span>
+        <ul>
+          <li><b>"Leaky gut"</b> is real in some diseases, like celiac and Crohn's. As a cause of general symptoms, it isn't an established diagnosis, and home tests can't measure it well.<sup><a href="#r10">10</a></sup></li>
+          <li><b>Bone broth, collagen, L-glutamine, aloe, slippery elm, marshmallow root, and DGL</b> haven't been shown in good studies to repair the gut. Aloe latex is a strong laxative and can be harmful.<sup><a href="#r11">11</a></sup></li>
+          <li><b>Best bet:</b> a varied diet with enough protein, fiber, and fish or other omega-3 foods.</li>
+        </ul>
+      </div>
+      <div class="flow-step"><div class="n">5</div><h3>Rebalance your lifestyle</h3>
+        <span class="verdict v-yes">Supported</span>
+        <ul>
+          <li><b>Move</b> at least 150 minutes a week.<sup><a href="#r12">12</a></sup> Exercise is linked to a more varied gut microbiome.</li>
+          <li><b>Sleep</b> on a regular schedule and dim screens before bed.</li>
+          <li><b>Manage stress.</b> Your gut and brain talk both ways. Walks, prayer or meditation, breathing, music, and time outside all count.</li>
+          <li><b>Eat plants</b> in variety: fruits, veggies, whole grains, beans, nuts.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Step 4</span>
+      <h2>See a doctor, not a supplement aisle, if you have</h2>
+    </div>
+    <div class="box alert">
+      <ul>
+        <li>Blood in your stool, or black, tarry stools</li>
+        <li>Trouble swallowing or vomiting that keeps coming back</li>
+        <li>Weight loss you can't explain, or faster than your plan expects</li>
+        <li>Diarrhea that wakes you up at night</li>
+        <li>Belly symptoms and you're 45 or older and haven't had colon cancer screening</li>
+      </ul>
+    </div>
+  </section>
+
+    <section class="tie">
+    <span class="eyebrow" style="color:var(--mast-sub)">How this fits your plan</span>
+    <h2>Feed the good guys</h2>
+    <p>The two habits that do the most for your gut are already in our pillars: real food with plenty of fiber, and steady hydration. Add one fermented food this week.</p>
+    <div class="chips"><span>The 25% Rule</span><span>Move More, Stress Less</span><span class="on">Hydrate for Health</span><span>Cut Back on Sugar</span><span>Power Up with Protein</span><span>Sleep</span><span class="on">The Real Food Regimen</span><span>Time Your Meals Right</span></div>
+  </section>
+
+  <section class="refs">
+    <h3 style="color:var(--fg)">References</h3>
+    <ol>
+      <li id="r1">Sender R, Fuchs S, Milo R. Revised estimates for the number of human and bacteria cells in the body. <i>PLoS Biol.</i> 2016;14(8):e1002533. <a href="https://doi.org/10.1371/journal.pbio.1002533">doi.org</a></li>
+      <li id="r2">Vighi G, et al. Allergy and the gastrointestinal system. <i>Clin Exp Immunol.</i> 2008;153(Suppl 1):3-6. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2515351/">ncbi.nlm.nih.gov</a></li>
+      <li id="r3">Yano JM, et al. Indigenous bacteria from the gut microbiota regulate host serotonin biosynthesis. <i>Cell.</i> 2015;161(2):264-276. <a href="https://doi.org/10.1016/j.cell.2015.02.047">doi.org</a></li>
+      <li id="r4">National Institute of Diabetes and Digestive and Kidney Diseases. Digestive diseases statistics for the United States. <a href="https://www.niddk.nih.gov/health-information/health-statistics/digestive-diseases">niddk.nih.gov</a></li>
+      <li id="r5">Mozaffarian D, et al. Nutritional priorities to support GLP-1 therapy for obesity: a joint advisory. <i>Am J Clin Nutr.</i> 2025;122:344-367. <a href="https://www.obesity.org/nutritional-priorities-to-support-glp-1-therapy-for-obesity/">obesity.org</a></li>
+      <li id="r6">Halmos EP, et al. A diet low in FODMAPs reduces symptoms of irritable bowel syndrome. <i>Gastroenterology.</i> 2014;146(1):67-75. <a href="https://doi.org/10.1053/j.gastro.2013.09.046">doi.org</a></li>
+      <li id="r7">Bock SA. AAAAI support of the EAACI position paper on IgG4. <i>J Allergy Clin Immunol.</i> 2010;125(6):1410. <a href="https://doi.org/10.1016/j.jaci.2010.03.013">doi.org</a></li>
+      <li id="r8">Wastyk HC, et al. Gut-microbiota-targeted diets modulate human immune status. <i>Cell.</i> 2021;184(16):4137-4153. <a href="https://doi.org/10.1016/j.cell.2021.06.019">doi.org</a></li>
+      <li id="r9">Su GL, et al. AGA clinical practice guidelines on the role of probiotics in the management of gastrointestinal disorders. <i>Gastroenterology.</i> 2020;159(2):697-705. <a href="https://doi.org/10.1053/j.gastro.2020.05.059">doi.org</a></li>
+      <li id="r10">Camilleri M. Leaky gut: mechanisms, measurement and clinical implications in humans. <i>Gut.</i> 2019;68(8):1516-1526. <a href="https://doi.org/10.1136/gutjnl-2019-318427">doi.org</a></li>
+      <li id="r11">National Center for Complementary and Integrative Health. Aloe vera and probiotics fact sheets. <a href="https://www.nccih.nih.gov/health/aloe-vera">nccih.nih.gov</a></li>
+      <li id="r12">U.S. Department of Health and Human Services. <i>Physical Activity Guidelines for Americans,</i> 2nd edition. 2018. <a href="https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines">health.gov</a></li>
+    </ol>
+    <p class="fine">This guide is for education only and isn't medical advice. Talk with your own healthcare provider before changing how you eat, exercise, or take any medicine or supplement. &copy; Healthier Ever After</p>
+  </section>
+</div>
+
+</body></html>
