@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Infographics | Healthier Ever After</title>
-<meta name="description" content="Free, evidence-balanced infographics from Healthier Ever After on weight loss, lifestyle, and longevity.">
-<meta property="og:title" content="Healthier Ever After Infographics">
+<title>Infographics | Well on Your Way</title>
+<meta name="description" content="Free, evidence-balanced infographics from Well on Your Way on weight loss, lifestyle, and longevity.">
+<meta property="og:title" content="Well on Your Way Infographics">
 <meta property="og:description" content="Free, evidence-balanced infographics on weight loss, lifestyle, and longevity.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,10 +83,10 @@ footer p+p{margin-top:8px}
 <body>
 <header class="hero">
   <div class="wrap">
-    <a class="logo" href="https://healthiereverafter.org" aria-label="Healthier Ever After home">
+    <a class="logo" href="https://wellonyourway.health" aria-label="Well on Your Way home">
       <picture>
         <source srcset="assets/logo-dark.png" media="(prefers-color-scheme: dark)">
-        <img src="assets/logo-light.png" width="560" height="505" alt="Healthier Ever After: Weight Loss, Lifestyle, Longevity">
+        <img src="assets/logo-light.png" width="720" height="528" alt="Well on Your Way: Weight Loss, Lifestyle, Longevity">
       </picture>
     </a>
     <div class="eyebrow">Free Resource Library</div>
@@ -118,7 +118,7 @@ footer p+p{margin-top:8px}
 </main>
 
 <footer class="wrap">
-  <p>&copy; <span id="yr">2026</span> Healthier Ever After &middot; <a href="https://healthiereverafter.org">healthiereverafter.org</a></p>
+  <p>&copy; <span id="yr">2026</span> Well on Your Way &middot; <a href="https://wellonyourway.health">wellonyourway.health</a></p>
   <p>Weight Loss &middot; Lifestyle &middot; Longevity</p>
 </footer>
 
@@ -182,7 +182,7 @@ footer p+p{margin-top:8px}
       var title = (doc.querySelector('title') || {}).textContent;
       return {
         url: url,
-        title: (title && title.replace(/\s*\|\s*Healthier Ever After\s*$/i,'').trim()) || prettyName(file),
+        title: (title && title.replace(/\s*\|\s*Well on Your Way\s*$/i,'').trim()) || prettyName(file),
         desc: meta ? meta.getAttribute('content') : '',
         tag: eyebrow ? eyebrow.textContent.replace(/\s+/g,' ').trim() : 'Infographic'
       };
