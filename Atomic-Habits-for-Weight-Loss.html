@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atomic Habits for Weight Loss | Well on Your Way</title>
+<meta name="description" content="An interactive guide to the ideas in James Clear's Atomic Habits, applied to the Eight Steps to Wellness: the 1% idea, identity, the habit loop, the Four Laws, and hands-on tools to build habits that make weight loss last.">
+<meta property="og:title" content="Atomic Habits for Weight Loss">
+<meta property="og:description" content="The ideas in Atomic Habits, applied step by step to the Eight Steps to Wellness, with hands-on habit tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='19' fill='%23143050'/%3E%3Cpath d='M20 30c-6-3-10-7-10-13a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 6-4 10-10 13z' fill='%232e7d57'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#f4f1e9;--surface:#fffdf8;--surface-2:#f0ece1;--ink:#17293a;--muted:#5d6b78;--faint:#8a97a1;
+  --navy:#143050;--green:#2e7d57;--green-deep:#1f5c40;--green-tint:rgba(46,125,87,0.10);
+  --gold:#cf9440;--gold-soft:#e7c489;--gold-tint:rgba(207,148,64,0.14);
+  --red:#b5482f;--red-tint:rgba(181,72,47,0.10);--blue:#3f6ea5;
+  --line:rgba(20,48,80,0.14);--line-soft:rgba(20,48,80,0.08);
+  --shadow:0 1px 2px rgba(20,48,80,0.05),0 8px 26px rgba(20,48,80,0.07);
+  --shadow-lg:0 10px 34px rgba(20,48,80,0.14),0 2px 8px rgba(20,48,80,0.08);
+  --on-navy:#eaf1f6;--on-navy-muted:#a9c2cf;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+    --navy:#163a5e;--green:#5cc493;--green-deep:#7ad3a9;--green-tint:rgba(92,196,147,0.14);
+    --gold:#e6b567;--gold-soft:#e7c489;--gold-tint:rgba(230,181,103,0.14);
+    --red:#e38a6f;--red-tint:rgba(227,138,111,0.14);--blue:#7aa8dc;
+    --line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+    --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+    --shadow-lg:0 14px 40px rgba(0,0,0,0.45),0 2px 10px rgba(0,0,0,0.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0c1826;--surface:#12243a;--surface-2:#0f1f31;--ink:#e9f0f5;--muted:#a6b6c3;--faint:#71828f;
+  --navy:#163a5e;--green:#5cc493;--green-deep:#7ad3a9;--green-tint:rgba(92,196,147,0.14);
+  --gold:#e6b567;--gold-soft:#e7c489;--gold-tint:rgba(230,181,103,0.14);
+  --red:#e38a6f;--red-tint:rgba(227,138,111,0.14);--blue:#7aa8dc;
+  --line:rgba(255,255,255,0.14);--line-soft:rgba(255,255,255,0.07);
+  --shadow:0 1px 2px rgba(0,0,0,0.3),0 10px 30px rgba(0,0,0,0.35);
+  --shadow-lg:0 14px 40px rgba(0,0,0,0.45),0 2px 10px rgba(0,0,0,0.3);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;font-size:17px;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+.eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);font-weight:700}
+.mono{font-family:'Space Mono',monospace}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;color:var(--ink);text-wrap:balance;line-height:1.12}
+h2{font-size:clamp(28px,4.2vw,42px);font-weight:600;letter-spacing:-0.01em}
+h3{font-size:clamp(21px,2.6vw,26px);font-weight:600}
+h4{font-size:19px;font-weight:600}
+p{text-wrap:pretty}
+strong{font-weight:600}
+a{color:var(--green);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{border-color:var(--green)}
+button,select,input{font-family:inherit;font-size:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+section{padding:76px 0;position:relative}
+section+section{border-top:1px solid var(--line-soft)}
+.kicker{max-width:760px;margin-bottom:36px}
+.kicker .eyebrow{display:block;margin-bottom:12px}
+.kicker h2{margin-bottom:14px}
+.kicker p{color:var(--muted);font-size:18px}
+.num-badge{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-family:'Space Mono',monospace;font-size:13px;font-weight:700;margin-right:10px;vertical-align:middle}
+
+/* motion */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,.8,.3,1),transform .7s cubic-bezier(.22,.8,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.no-io .reveal{opacity:1;transform:none}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,-14px)}}
+@keyframes pop{0%{transform:scale(.6);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@keyframes spinring{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
+
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));width:0;z-index:999}
+
+/* hero */
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:70px 0 60px;position:relative;overflow:hidden;border-top:none}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.32;animation:drift 18s ease-in-out infinite}
+.b1{width:520px;height:520px;top:-180px;right:-140px;background:radial-gradient(circle,var(--green),transparent 70%)}
+.b2{width:420px;height:420px;bottom:-160px;left:-120px;background:radial-gradient(circle,var(--navy),transparent 70%);animation-duration:23s}
+.b3{width:280px;height:280px;top:35%;left:58%;background:radial-gradient(circle,var(--gold),transparent 70%);animation-duration:20s}
+.hero .wrap{position:relative;z-index:1}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:44px}
+.brandleft{display:flex;align-items:center;gap:12px;border:none;color:var(--ink)}
+.brandmark{width:34px;height:34px;flex:0 0 auto;animation:floaty 5s ease-in-out infinite}
+.brandname{font-family:'Fraunces',serif;font-weight:600;font-size:17px}
+.brandname i{color:var(--green)}
+.themebtn{font-family:'Space Mono',monospace;font-size:11px;border:1px solid var(--line);background:var(--surface);color:var(--muted);padding:7px 12px;border-radius:999px}
+.themebtn:hover{border-color:var(--green);color:var(--green)}
+.hero h1{font-size:clamp(40px,7.4vw,80px);font-weight:600;letter-spacing:-0.02em;margin-top:14px}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero .sub{font-size:clamp(18px,2.3vw,22px);color:var(--muted);max-width:740px;margin-top:22px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{font-family:'Space Mono',monospace;font-size:12px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:7px 14px;color:var(--muted)}
+.chip b{color:var(--ink)}
+.thesis{margin-top:40px;background:var(--navy);border-radius:18px;padding:30px 32px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;max-width:900px}
+.thesis:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,125,87,0.42),transparent 58%);pointer-events:none}
+.thesis .k{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;position:relative}
+.thesis p{color:var(--on-navy);font-family:'Fraunces',serif;font-size:clamp(19px,2.5vw,24px);line-height:1.36;margin-top:12px;position:relative}
+.thesis .cite{font-family:'Inter';font-size:14px;color:var(--on-navy-muted);margin-top:14px}
+
+/* toc */
+.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft)}
+.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+.toc .wrap::-webkit-scrollbar{display:none}
+.toc a{flex:0 0 auto;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.04em;color:var(--muted);border:1px solid transparent;border-radius:999px;padding:6px 12px;white-space:nowrap}
+.toc a:hover{color:var(--green)}
+.toc a.on{color:var(--green);border-color:var(--line);background:var(--surface)}
+
+/* generic */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.muted{color:var(--muted)}
+.small{font-size:14.5px}
+.tag{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.callout{border-left:4px solid var(--gold);background:var(--gold-tint);border-radius:0 12px 12px 0;padding:16px 20px;margin-top:22px;font-size:16px}
+.callout b{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+.seg{display:inline-flex;background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:4px;gap:4px;flex-wrap:wrap}
+.seg button{border:none;background:transparent;padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;color:var(--muted);transition:background .2s,color .2s}
+.seg button[aria-pressed="true"],.seg button[aria-selected="true"]{background:var(--surface);color:var(--green);box-shadow:var(--shadow)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--green);background:var(--green);color:#fff;border-radius:999px;padding:10px 18px;font-size:14.5px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--green)}
+.btn:hover{filter:brightness(1.06)}
+:root[data-theme="dark"] .btn:not(.ghost){color:#0c1826}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn:not(.ghost){color:#0c1826}}
+
+/* 1% */
+.calc{display:grid;grid-template-columns:320px minmax(0,1fr);gap:28px;align-items:start}
+.ctrl label{display:block;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:18px 0 8px}
+.ctrl label:first-child{margin-top:0}
+input[type=range]{width:100%;accent-color:var(--green)}
+.readout{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.ro{border-radius:12px;padding:14px;background:var(--surface-2);border:1px solid var(--line-soft)}
+.ro .v{font-family:'Fraunces',serif;font-size:32px;font-weight:700;line-height:1}
+.ro .l{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.ro.up .v{color:var(--green)}.ro.down .v{color:var(--red)}
+.chart svg{width:100%;height:auto;display:block}
+.ax{stroke:var(--line);stroke-width:1}
+.axt{font-family:'Space Mono',monospace;font-size:11px;fill:var(--faint)}
+.ln-up{fill:none;stroke:var(--green);stroke-width:3;stroke-linecap:round}
+.ln-down{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round}
+.ln-base{fill:none;stroke:var(--faint);stroke-width:1.5;stroke-dasharray:4 5}
+.ln-gold{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round}
+.dot-up{fill:var(--green)}.dot-down{fill:var(--red)}
+.svgl{font-family:'Space Mono',monospace;font-size:11.5px;font-weight:700}
+.fill-valley{fill:var(--red-tint)}
+.fill-win{fill:var(--green-tint)}
+
+/* goals vs systems */
+.gs-row{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--line-soft)}
+.gs-row:first-of-type{border-top:none}
+.gs-row .who{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint)}
+.gs-row .txt{font-size:17px;transition:opacity .25s}
+.gs-card.sys .txt{color:var(--ink)}
+.gs-card .badge{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;font-weight:700}
+.gs-card.goal .badge{background:var(--gold-tint);color:var(--gold)}
+.gs-card.sys .badge{background:var(--green-tint);color:var(--green)}
+
+/* layers */
+.layers{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:34px;align-items:center}
+.rings svg{width:100%;height:auto;display:block}
+.ring{cursor:pointer;transition:opacity .25s, transform .25s}
+.ring circle{stroke:var(--bg);stroke-width:4;transition:fill .25s}
+.ring text{font-family:'Space Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.08em;fill:#fff;pointer-events:none}
+.ring.dim{opacity:.45}
+.layer-panel .tag{margin-bottom:6px}
+.layer-panel h3{margin-bottom:10px}
+.layer-panel ul{padding-left:20px;margin-top:12px;color:var(--muted)}
+.layer-panel li{margin:6px 0}
+.layer-panel li b{color:var(--ink)}
+
+/* votes */
+.votes{margin-top:40px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.vbtns{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.vbtn{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:9px 14px;font-size:14.5px;color:var(--ink);transition:transform .15s,border-color .15s}
+.vbtn:hover{border-color:var(--green);transform:translateY(-2px)}
+.vbtn.neg{border-style:dashed}
+.ballot{text-align:center}
+.ballot .id{font-family:'Fraunces',serif;font-size:19px;line-height:1.3}
+.meter{height:14px;border-radius:999px;background:var(--red-tint);overflow:hidden;margin:16px 0 8px;position:relative}
+.meter i{position:absolute;left:0;top:0;bottom:0;background:var(--green);border-radius:999px;transition:width .35s}
+.tally{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:12px;color:var(--muted)}
+.vfeed{margin-top:12px;min-height:44px;font-size:14px;color:var(--muted)}
+.pip{display:inline-block;width:12px;height:12px;border-radius:50%;margin:2px;animation:pop .35s}
+.pip.y{background:var(--green)}.pip.n{background:var(--red)}
+
+/* loop */
+.loopwrap{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:34px;align-items:center}
+.loop svg{width:100%;height:auto;display:block}
+.lnode{cursor:pointer}
+.lnode circle{fill:var(--surface);stroke:var(--line);stroke-width:2;transition:fill .2s,stroke .2s}
+.lnode.on circle{fill:var(--green);stroke:var(--green)}
+.lnode text{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.06em;fill:var(--ink);pointer-events:none}
+.lnode.on text{fill:#fff}
+.lnode .n{font-size:10px;fill:var(--faint)}
+.lnode.on .n{fill:#e5f4ec}
+.larc{fill:none;stroke:var(--line);stroke-width:2;stroke-dasharray:5 6}
+.lcenter{font-family:'Fraunces',serif;font-size:17px;fill:var(--muted)}
+.scen{margin-bottom:18px}
+.lstage{display:grid;gap:10px}
+.lrow{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;padding:12px 14px;border-radius:12px;border:1px solid var(--line-soft);background:var(--surface);transition:border-color .2s, background .2s;cursor:pointer;text-align:left}
+.lrow.on{border-color:var(--green);background:var(--green-tint)}
+.lrow .k{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:700;padding-top:2px}
+.lfix{margin-top:16px;border-radius:14px;padding:16px 18px;background:var(--navy);color:var(--on-navy)}
+.lfix b{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:4px}
+
+/* laws */
+.laws{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:26px}
+.law{border-top:4px solid var(--green);position:relative;overflow:hidden;transition:border-color .3s}
+.lawmode-break .law{border-top-color:var(--red)}
+.law .lnum{font-family:'Space Mono',monospace;font-size:12px;color:var(--faint);letter-spacing:.12em}
+.law h3{font-size:22px;margin:6px 0 4px;transition:color .3s}
+.lawmode-break .law h3{color:var(--red)}
+.law .stage{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.law ul{padding-left:18px;margin-top:12px;font-size:15px;color:var(--muted)}
+.law li{margin:7px 0}
+.law li b{color:var(--ink)}
+
+/* pillars */
+.ptabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.ptab{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 14px 8px 8px;font-size:14.5px;font-weight:600;color:var(--muted);transition:all .2s}
+.ptab .pn{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2);font-family:'Space Mono',monospace;font-size:11.5px;color:var(--muted)}
+.ptab[aria-selected="true"]{border-color:var(--green);color:var(--green);box-shadow:var(--shadow)}
+.ptab[aria-selected="true"] .pn{background:var(--green);color:#fff}
+.ppanel{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow-lg);overflow:hidden}
+.phead{background:var(--navy);color:var(--on-navy);padding:26px 28px;position:relative;overflow:hidden}
+.phead:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(46,125,87,.45),transparent 60%);pointer-events:none}
+.phead > *{position:relative}
+.phead .tag{color:var(--gold-soft)}
+.phead h3{color:#fff;font-size:clamp(26px,3.6vw,36px);margin:6px 0 8px}
+.phead .goal{color:var(--on-navy-muted);font-size:16px}
+.phead .ident{margin-top:16px;font-family:'Fraunces',serif;font-style:italic;font-size:clamp(18px,2.2vw,22px);color:#fff}
+.phead .ident span{font-family:'Space Mono',monospace;font-style:normal;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-soft);display:block;margin-bottom:4px}
+.pbody{padding:26px 28px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px}
+.plaw{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line-soft)}
+.plaw:first-child{border-top:none;padding-top:0}
+.plaw .ic{width:34px;height:34px;border-radius:10px;background:var(--green-tint);color:var(--green);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;font-size:13px}
+.plaw h4{font-size:16px;font-family:'Inter';font-weight:700;margin-bottom:2px}
+.plaw p{color:var(--muted);font-size:15.5px}
+.stack{margin-top:18px;border-radius:14px;padding:16px 18px;background:var(--green-tint);border:1px solid var(--line-soft)}
+.stack .k{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700}
+.stack p{font-family:'Fraunces',serif;font-size:19px;margin-top:4px;line-height:1.35}
+.ladder h4{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:12px}
+.rung{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;border:1px solid var(--line-soft);margin-bottom:8px;background:var(--surface-2);transition:all .25s;position:relative}
+.rung .lv{flex:0 0 auto;font-family:'Space Mono',monospace;font-size:11px;font-weight:700;color:var(--faint);padding-top:3px;width:52px}
+.rung.done{background:var(--green-tint);border-color:var(--green)}
+.rung.done .lv{color:var(--green)}
+.rung.cur{border-color:var(--gold);background:var(--gold-tint)}
+.rung.cur .lv{color:var(--gold)}
+.rung.locked{opacity:.5}
+.ladder .lctl{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.breakbox{margin-top:20px;border-radius:14px;border:1px dashed var(--red);padding:14px 16px;background:var(--red-tint)}
+.breakbox .k{font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:700}
+.breakbox p{font-size:15px;margin-top:4px}
+
+/* builder */
+.builder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+select,input[type=text]{width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font-size:16px;color:var(--ink)}
+.sentence{font-family:'Fraunces',serif;font-size:clamp(21px,2.6vw,27px);line-height:1.35;padding:22px;border-radius:16px;background:var(--navy);color:#fff;min-height:110px}
+.sentence em{color:var(--gold-soft);font-style:normal;border-bottom:2px solid rgba(231,196,137,.5)}
+.plan{list-style:none;padding:0;margin-top:16px}
+.plan li{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line-soft);font-size:15.5px}
+.plan li button{border:none;background:none;color:var(--faint);font-size:18px;line-height:1;padding:0 4px}
+.plan li button:hover{color:var(--red)}
+.plan .empty{color:var(--faint);font-style:italic}
+
+/* scorecard */
+.score{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.sitem{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:11px 12px 11px 16px;text-align:left;transition:border-color .2s,background .2s}
+.sitem .mark{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-weight:700;font-size:18px;color:var(--faint)}
+.sitem[data-v="p"]{border-color:var(--green);background:var(--green-tint)}
+.sitem[data-v="p"] .mark{border:none;background:var(--green);color:#fff}
+.sitem[data-v="z"]{border-color:var(--faint)}
+.sitem[data-v="z"] .mark{border:none;background:var(--faint);color:#fff}
+.sitem[data-v="m"]{border-color:var(--red);background:var(--red-tint)}
+.sitem[data-v="m"] .mark{border:none;background:var(--red);color:#fff}
+.stally{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.stally .ro{flex:1 1 120px}
+.ro.flat .v{color:var(--faint)}
+
+/* tracker */
+.trk{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:26px;align-items:start}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin-top:16px}
+.dh{font-family:'Space Mono',monospace;font-size:11px;color:var(--faint);text-align:center}
+.day{aspect-ratio:1;border-radius:12px;border:1px solid var(--line);background:var(--surface);font-family:'Space Mono',monospace;font-size:12px;color:var(--faint);display:flex;align-items:center;justify-content:center;position:relative;transition:transform .12s,background .2s}
+.day:hover{transform:scale(1.05)}
+.day.d{background:var(--green);border-color:var(--green);color:#fff}
+.day.d:after{content:"\2713";font-size:18px;position:absolute}
+.day.d span{opacity:0}
+.day.m{background:var(--surface-2);border-style:dashed;color:var(--muted)}
+.day.m:after{content:"\00d7";font-size:20px;position:absolute;color:var(--muted)}
+.day.m span{opacity:0}
+.day.twice{border:2px solid var(--red);background:var(--red-tint)}
+.day.twice:after{color:var(--red)}
+.tstats .ro{margin-bottom:12px}
+.tmsg{border-radius:12px;padding:14px 16px;font-size:15px;background:var(--surface-2);border:1px solid var(--line-soft)}
+.tmsg.warn{background:var(--red-tint);border-color:var(--red)}
+.tmsg.good{background:var(--green-tint);border-color:var(--green)}
+
+/* extras */
+.trio .card h4{margin:8px 0 6px}
+.trio .card p{color:var(--muted);font-size:15.5px}
+.gold-svg svg{width:100%;height:auto;display:block;margin-top:12px}
+
+/* science */
+.sci{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.sci th,.sci td{text-align:left;padding:16px 18px;vertical-align:top;border-top:1px solid var(--line-soft);font-size:15.5px}
+.sci thead th{border-top:none;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--surface-2)}
+.sci td:first-child{font-weight:600;width:26%}
+.sci td:nth-child(2){color:var(--muted)}
+.verdict{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.v-solid{background:var(--green-tint);color:var(--green)}
+.v-mixed{background:var(--gold-tint);color:var(--gold)}
+.v-meta{background:rgba(63,110,165,.14);color:var(--blue)}
+.srcs{margin-top:16px;font-size:13px;color:var(--faint)}
+
+/* week plan */
+.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+.wday{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;text-align:left;transition:all .2s;position:relative}
+.wday .dn{font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;color:var(--gold);font-weight:700}
+.wday h4{font-size:16px;margin:6px 0;font-family:'Inter';font-weight:700}
+.wday p{font-size:13.5px;color:var(--muted)}
+.wday.ok{background:var(--green-tint);border-color:var(--green)}
+.wday.ok:after{content:"\2713";position:absolute;top:12px;right:14px;color:var(--green);font-weight:700}
+
+.end{background:var(--navy);color:var(--on-navy);padding:70px 0;position:relative;overflow:hidden}
+.end:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(46,125,87,.42),transparent 58%);pointer-events:none}
+.end .wrap{position:relative}
+.end h2{color:#fff}
+.end p{color:var(--on-navy-muted);max-width:640px;margin-top:14px;font-size:18px}
+.end .eyebrow{color:var(--gold-soft)}
+.disc{margin-top:28px;border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:16px 18px;font-size:14px;color:var(--on-navy-muted);max-width:820px}
+.end .links{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.end .links a{color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:9px 16px;font-size:14.5px}
+.end .links a:hover{border-color:var(--gold-soft)}
+.sig{margin-top:34px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8aa3b4}
+
+@media (max-width:960px){
+  .laws{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .week{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:820px){
+  .calc,.layers,.loopwrap,.votes,.pbody,.builder,.trk{grid-template-columns:minmax(0,1fr)}
+  .rings,.loop{max-width:380px;margin:0 auto}
+  .g3,.g2{grid-template-columns:minmax(0,1fr)}
+  .score{grid-template-columns:minmax(0,1fr)}
+  .gs-row{grid-template-columns:minmax(0,1fr);gap:4px}
+  .sci thead{display:none}
+  .sci tr{display:block;border-top:1px solid var(--line-soft)}
+  .sci td{display:block;border-top:none;width:auto!important;padding:8px 18px}
+  .sci td:first-child{padding-top:16px}
+  .sci td:last-child{padding-bottom:16px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  section{padding:56px 0}
+  .laws,.g4{grid-template-columns:minmax(0,1fr)}
+  .week{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .thesis{padding:24px 22px}
+  .phead,.pbody{padding:22px 18px}
+  .lrow{grid-template-columns:minmax(0,1fr);gap:2px}
+  .days{gap:5px}
+  .day{border-radius:8px}
+}
+@media print{
+  .toc,.progress,.themebtn,.hero-bg{display:none}
+  .reveal{opacity:1;transform:none}
+  section{break-inside:avoid-page}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="hero" id="top">
+  <div class="hero-bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+  <div class="wrap">
+    <div class="brandbar">
+      <a class="brandleft" href="index.html" aria-label="Back to the infographic library">
+        <svg class="brandmark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#143050"/><path d="M20 30c-6-3-10-7-10-13a5.5 5.5 0 0110-3 5.5 5.5 0 0110 3c0 6-4 10-10 13z" fill="#2e7d57"/></svg>
+        <span class="brandname">Well <i>on Your Way</i></span>
+      </a>
+      <button class="themebtn" id="themeBtn" type="button" aria-label="Switch light or dark theme">Theme</button>
+    </div>
+    <div class="eyebrow">Interactive Book Guide</div>
+    <h1>Atomic Habits for <em>Weight Loss</em></h1>
+    <p class="sub">The big ideas from James Clear's <i>Atomic Habits</i>, applied one by one to our Eight Steps to Wellness. Try the tools as you go. By the end you will have a habit plan you can start today.</p>
+    <div class="chips">
+      <span class="chip"><b>8</b> pillars</span>
+      <span class="chip"><b>4</b> laws of behavior change</span>
+      <span class="chip"><b>6</b> hands-on tools</span>
+      <span class="chip"><b>~15</b> min read</span>
+    </div>
+    <div class="thesis reveal">
+      <div class="k">The big idea</div>
+      <p>Weight that stays off rarely comes from one big push. It comes from small, ordinary habits repeated until they are simply who you are. Fix the system and the results follow.</p>
+      <div class="cite">Based on <i>Atomic Habits</i> by James Clear (Avery, 2018). This guide is an independent summary and is not affiliated with the author or publisher.</div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap" id="toc">
+    <a href="#one-percent">1% better</a>
+    <a href="#plateau">The plateau</a>
+    <a href="#systems">Systems</a>
+    <a href="#identity">Identity</a>
+    <a href="#loop">Habit loop</a>
+    <a href="#laws">Four laws</a>
+    <a href="#pillars">8 pillars</a>
+    <a href="#stack">Habit stacking</a>
+    <a href="#scorecard">Scorecard</a>
+    <a href="#tracker">Never miss twice</a>
+    <a href="#science">Science check</a>
+    <a href="#start">7-day start</a>
+  </div>
+</nav>
+
+<main>
+<!-- 1% -->
+<section id="one-percent">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">1</span>The power of tiny gains</span>
+      <h2>Small choices add up. In both directions.</h2>
+      <p>One healthy swap feels like nothing on the day you make it. So does one skipped walk. But choices repeated every day add up over time. Move the sliders to see the math the book uses.</p>
+    </div>
+    <div class="card calc reveal">
+      <div class="ctrl">
+        <label for="rate">Daily change: <span id="rateOut">1.0%</span></label>
+        <input id="rate" type="range" min="0.1" max="2" step="0.1" value="1">
+        <label for="days">Days: <span id="daysOut">365</span></label>
+        <input id="days" type="range" min="1" max="365" step="1" value="365">
+        <div class="readout">
+          <div class="ro up"><div class="v" id="upOut">37.8×</div><div class="l">A little better each day</div></div>
+          <div class="ro down"><div class="v" id="downOut">0.03×</div><div class="l">A little worse each day</div></div>
+        </div>
+      </div>
+      <div class="chart" id="chart1" aria-label="Chart of compounding gains and losses"></div>
+    </div>
+    <div class="callout reveal">
+      <b>For weight loss</b>
+      Your body does not grow like money in a bank, so treat this as a picture, not a promise. The point is the direction you are headed. Ten minutes of walking after dinner, a glass of water before each meal, a quarter less on the plate. None of them shows up on the scale this week. All of them add up over a year.
+    </div>
+  </div>
+</section>
+
+<!-- plateau -->
+<section id="plateau">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">2</span>The plateau of latent potential</span>
+      <h2>Why it feels like nothing is working (when it is)</h2>
+      <p>We expect results to show up in a straight line. Real progress is slow at first and then speeds up. Clear calls the gap between the two the "valley of disappointment." It's where most people quit. Drag through the weeks.</p>
+    </div>
+    <div class="card reveal">
+      <div class="chart" id="chart2"></div>
+      <label class="mono small muted" for="wk" style="display:block;margin-top:10px">Week <span id="wkOut">6</span> of 24</label>
+      <input id="wk" type="range" min="1" max="24" value="6">
+      <p id="wkMsg" style="margin-top:12px;font-size:17px"></p>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:20px">
+      <div class="card"><span class="tag">Early wins nobody sees</span><p class="muted small" style="margin-top:8px">Steadier blood sugar, better sleep, fewer cravings and more energy often show up before the scale moves.</p></div>
+      <div class="card"><span class="tag">The scale is noisy</span><p class="muted small" style="margin-top:8px">Water, salt, hormones and digestion can shift your weight 1–4 lb from one day to the next. Watch the weekly average, not one morning.</p></div>
+      <div class="card"><span class="tag">Track what you control</span><p class="muted small" style="margin-top:8px">Count the reps: walks taken, glasses of water, protein at breakfast. If those are steady, the results will follow.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- systems -->
+<section id="systems">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">3</span>Forget goals, focus on systems</span>
+      <h2>Your goal sets the direction. Your system gets you there.</h2>
+      <p>Everyone at the start line wants to lose weight, so the goal can't be what separates the people who succeed. What separates them is the daily routine underneath. Flip each line to see the difference.</p>
+    </div>
+    <div class="card reveal gs-card goal" id="gsCard">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="badge" id="gsBadge">Goal thinking</span>
+        <div class="seg" role="group" aria-label="Goal or system thinking">
+          <button type="button" aria-pressed="true" data-gs="goal">Goal</button>
+          <button type="button" aria-pressed="false" data-gs="sys">System</button>
+        </div>
+      </div>
+      <div id="gsRows"></div>
+    </div>
+    <div class="grid g3 reveal" style="margin-top:20px">
+      <div class="card"><h4>Goals can backfire</h4><p class="muted small" style="margin-top:6px">"I'll be happy when I'm 30 lb down" puts your happiness on hold for months.</p></div>
+      <div class="card"><h4>The finish-line trap</h4><p class="muted small" style="margin-top:6px">Hit the number, stop the effort, and the weight comes back. A system has no finish line.</p></div>
+      <div class="card"><h4>You win every day</h4><p class="muted small" style="margin-top:6px">With a system, you've succeeded the moment you take the walk, whatever the scale says.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- identity -->
+<section id="identity">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">4</span>Identity-based habits</span>
+      <h2>Start with who you want to become</h2>
+      <p>Clear describes three layers of change. Most diets work from the outside in, starting with a number. Habits that last work from the inside out, starting with who you are. Tap each ring.</p>
+    </div>
+    <div class="layers reveal">
+      <div class="rings" id="rings"></div>
+      <div class="card layer-panel" id="layerPanel" aria-live="polite"></div>
+    </div>
+
+    <div class="votes reveal">
+      <div class="card">
+        <h3>Every action is a vote</h3>
+        <p class="muted" style="margin-top:8px">You don't need to be perfect. You just need to win the vote most days. Tap the things you did yesterday and watch your new identity add up.</p>
+        <div class="vbtns" id="vbtns"></div>
+      </div>
+      <div class="card ballot">
+        <span class="tag">Identity I'm voting for</span>
+        <p class="id" style="margin-top:8px">"I'm someone who takes care of my body."</p>
+        <div class="meter"><i id="vmeter" style="width:50%"></i></div>
+        <div class="tally"><span id="vyes">0 for</span><span id="vno">0 against</span></div>
+        <div class="vfeed" id="vfeed">No votes yet.</div>
+        <button class="btn ghost" id="vreset" type="button" style="margin-top:8px">Reset votes</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- loop -->
+<section id="loop">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">5</span>How habits work</span>
+      <h2>The four-step habit loop</h2>
+      <p>Every habit, good or bad, runs the same loop: <b>cue → craving → response → reward</b>. Once you can see your loop, you know where to step in. Pick a situation.</p>
+    </div>
+    <div class="loopwrap reveal">
+      <div class="loop" id="loopSvg"></div>
+      <div>
+        <div class="seg scen" role="tablist" aria-label="Habit situation" id="scenTabs"></div>
+        <div class="lstage" id="lstage"></div>
+        <div class="lfix" id="lfix"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- laws -->
+<section id="laws">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">6</span>The Four Laws of Behavior Change</span>
+      <h2>One law for each step of the loop</h2>
+      <p>To build a good habit, work each step of the loop in your favor. To break a bad one, turn each law around. Switch modes to see both.</p>
+    </div>
+    <div class="seg reveal" role="group" aria-label="Build or break mode">
+      <button type="button" aria-pressed="true" data-mode="build">Build a good habit</button>
+      <button type="button" aria-pressed="false" data-mode="break">Break a bad habit</button>
+    </div>
+    <div class="laws" id="laws-grid"></div>
+  </div>
+</section>
+
+<!-- pillars -->
+<section id="pillars">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">7</span>Applied to our pillars</span>
+      <h2>The Four Laws × the Eight Steps to Wellness</h2>
+      <p>Here is the whole book applied to each of our eight pillars: the identity to vote for, one tactic for each law, a ready-made habit stack, and a ladder that starts with a two-minute version. Climb one rung at a time. Your progress saves in this browser.</p>
+    </div>
+    <div class="ptabs reveal" role="tablist" aria-label="Pillars" id="ptabs"></div>
+    <div class="ppanel reveal" id="ppanel" role="tabpanel" aria-live="polite"></div>
+    <div class="callout reveal">
+      <b>The two-minute rule</b>
+      New habits should take less than two minutes when you start. "Walk 10 minutes after dinner" becomes "put my shoes on after dinner." It sounds too easy, and that's the point. You have to show up before you can get better. Make it easy to start and the rest gets easier.
+    </div>
+  </div>
+</section>
+
+<!-- stacking -->
+<section id="stack">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">8</span>Tool: habit stacking</span>
+      <h2>Tie a new habit to one you already have</h2>
+      <p>The best cue for a new habit is something you already do every day. Use the formula <b>"After I [current habit], I will [new habit]"</b>, plus where it happens. Build a few, then print your plan.</p>
+    </div>
+    <div class="builder reveal">
+      <div class="card">
+        <div class="field"><label for="after">After I…</label><select id="after"></select></div>
+        <div class="field"><label for="will">I will…</label><select id="will"></select></div>
+        <div class="field"><label for="where">Where (optional)</label><input id="where" type="text" placeholder="e.g. in the kitchen" maxlength="60"></div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn" id="addStack" type="button">+ Add to my plan</button>
+          <button class="btn ghost" id="printPlan" type="button">Print my plan</button>
+        </div>
+      </div>
+      <div>
+        <div class="sentence" id="sentence" aria-live="polite"></div>
+        <div class="card" style="margin-top:16px">
+          <h4>My habit stack plan</h4>
+          <ul class="plan" id="plan"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="callout reveal"><b>Chain them</b>Stacks can link up. After I pour my coffee, I drink a glass of water. After the water, I take my vitamins. After the vitamins, I write tomorrow's meals. One cue can start a whole morning routine.</div>
+  </div>
+</section>
+
+<!-- scorecard -->
+<section id="scorecard">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">9</span>Tool: the habits scorecard</span>
+      <h2>See your autopilot first</h2>
+      <p>Most of what we do each day happens without thinking. Before you change anything, notice it. Tap each habit you have to rate it: <b>+</b> helps the person you want to be, <b>=</b> neutral, <b>−</b> works against you. No judgment. Just notice.</p>
+    </div>
+    <div class="score reveal" id="score"></div>
+    <div class="stally reveal">
+      <div class="ro up"><div class="v" id="sP">0</div><div class="l">Helping (+)</div></div>
+      <div class="ro flat"><div class="v" id="sZ">0</div><div class="l">Neutral (=)</div></div>
+      <div class="ro down"><div class="v" id="sM">0</div><div class="l">Hurting (−)</div></div>
+    </div>
+    <p class="muted reveal" id="sMsg" style="margin-top:14px"></p>
+  </div>
+</section>
+
+<!-- tracker -->
+<section id="tracker">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">10</span>Tool: habit tracker</span>
+      <h2>Don't break the chain, and never miss twice</h2>
+      <p>Checking off a habit feels good, and that good feeling brings you back tomorrow. Missing one day is normal. Missing two in a row is how a new habit starts to slip. Tap a day once for done and twice for missed.</p>
+    </div>
+    <div class="trk reveal">
+      <div class="card">
+        <div class="field"><label for="hname">Habit I'm tracking</label><input id="hname" type="text" maxlength="60" value="Walk 10 minutes after dinner"></div>
+        <div class="days" id="tdays" aria-label="28-day tracker"></div>
+        <div style="margin-top:14px"><button class="btn ghost" id="tReset" type="button">Clear tracker</button></div>
+      </div>
+      <div class="tstats">
+        <div class="ro up"><div class="v" id="tStreak">0</div><div class="l">Current streak</div></div>
+        <div class="ro"><div class="v" id="tRate">0%</div><div class="l">Days done (of days logged)</div></div>
+        <div class="tmsg" id="tMsg" aria-live="polite">Tap today's square once you've done your habit.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- extras -->
+<section id="advanced">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">11</span>Staying with it</span>
+      <h2>What keeps a habit going for years</h2>
+      <p>Starting is the easy part. These ideas from the last part of the book are what carry a habit from week three to year three.</p>
+    </div>
+    <div class="grid g3 trio reveal">
+      <div class="card gold-svg">
+        <span class="tag">The Goldilocks rule</span>
+        <h4>Not too hard, not too easy</h4>
+        <p>We stay most motivated when a task is just a little past what we can easily do now. Once a rung on your ladder feels routine, move up. If it feels like a fight, step back down.</p>
+        <svg viewBox="0 0 300 110" aria-hidden="true"><path d="M10 95 C 90 95, 110 15, 150 15 S 210 95, 290 95" class="ln-gold"/><text x="20" y="80" class="axt">boring</text><text x="128" y="10" class="axt" style="fill:var(--gold)">just right</text><text x="236" y="80" class="axt">too hard</text></svg>
+      </div>
+      <div class="card">
+        <span class="tag">Fall in love with boredom</span>
+        <h4>Show up on the dull days</h4>
+        <p>The real enemy of lasting weight loss is boredom, not failure. People who succeed keep going even when it no longer feels new. Keep a "bad day" version of each habit: a 5-minute walk, one glass of water. It still counts as a vote.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Accountability</span>
+        <h4>Make skipping cost something</h4>
+        <p>Make the bad choice a little uncomfortable. Text a walking partner when you finish. Share your tracker with your health coach. Make a simple habit contract with someone you trust. Knowing someone is watching helps us follow through.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Environment beats willpower</span>
+        <h4>Design the kitchen, not your resolve</h4>
+        <p>People who seem to have great self-control often just face fewer temptations. Keep fruit on the counter and treats in a cupboard, put water at eye level in the fridge, and move the cookie jar.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Motion vs action</span>
+        <h4>Planning is not doing</h4>
+        <p>Researching diets, buying gear and making meal plans feel productive, but they aren't the habit. Make sure each day includes at least one actual rep, however small.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Review and reflect</span>
+        <h4>Check in every season</h4>
+        <p>Every few months, ask: which habits are still voting for the person I want to be? Which ones have slipped? Habits that run on autopilot can drift without you noticing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- science -->
+<section id="science">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">12</span>Science check</span>
+      <h2>What the research says about the big ideas</h2>
+      <p><i>Atomic Habits</i> is a practical book, not a research review. Most of its main ideas hold up well. A few are better treated as helpful pictures than as hard science.</p>
+    </div>
+    <div class="reveal">
+      <table class="sci">
+        <thead><tr><th>The idea</th><th>What the research shows</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>Habits form through repetition, not a set number of days</td><td>In a well-known 2010 study, it took people a median of about 66 days for a new daily habit to feel automatic, with a range of 18 to 254 days. The "21 days" idea is a myth. Simpler habits form faster.</td><td><span class="verdict v-solid">Well supported</span></td></tr>
+          <tr><td>Missing one day doesn't ruin a habit</td><td>That same study found a single missed day had no real effect on how automatic the habit became. "Never miss twice" fits the data.</td><td><span class="verdict v-solid">Well supported</span></td></tr>
+          <tr><td>Implementation intentions ("I will [do X] at [time] in [place]")</td><td>A review of 94 studies found that if-then plans had a medium-to-large effect on actually following through. In an exercise study the book cites, 91% of people who wrote down when and where they'd exercise did it, compared with roughly 35–38% in the other groups.</td><td><span class="verdict v-solid">Well supported</span></td></tr>
+          <tr><td>Environment design shapes what we eat</td><td>A hospital cafeteria that moved water into easy view and made healthier choices easier to grab saw soda sales fall about 11% and bottled water sales rise about 26%. Studies of how food is displayed point the same way.</td><td><span class="verdict v-solid">Well supported</span></td></tr>
+          <tr><td>Tracking makes behavior change stick</td><td>Systematic reviews of weight-loss programs keep finding that tracking food, activity or weight goes along with more weight lost.</td><td><span class="verdict v-solid">Well supported</span></td></tr>
+          <tr><td>Identity drives behavior</td><td>Studies of self-identity and noun wording ("be a voter" rather than "vote") suggest it matters, but the evidence is smaller and still being tested. Good advice, with less proof than the rest.</td><td><span class="verdict v-mixed">Promising</span></td></tr>
+          <tr><td>1% better every day = 37× better in a year</td><td>The arithmetic is right (1.01<sup>365</sup> ≈ 37.8), but health and body weight don't grow like interest. Weight loss also slows as the body adapts. Read it as a picture of consistency, not a forecast.</td><td><span class="verdict v-meta">Helpful metaphor</span></td></tr>
+        </tbody>
+      </table>
+      <p class="srcs">Key sources: Lally et al., <i>Eur J Soc Psychol</i> 2010 (habit formation); Gollwitzer &amp; Sheeran, <i>Adv Exp Soc Psychol</i> 2006 (implementation intentions meta-analysis); Milne, Orbell &amp; Sheeran, <i>Br J Health Psychol</i> 2002 (exercise intentions); Thorndike et al., <i>Am J Public Health</i> 2012 (cafeteria choice architecture); Burke et al., <i>J Am Diet Assoc</i> 2011 (self-monitoring in weight loss); Bryan et al., <i>PNAS</i> 2011 (identity wording).</p>
+    </div>
+    <div class="callout reveal"><b>On a GLP-1 or other weight-loss medicine?</b>Medicine can quiet the "craving" part of the loop, and that's a real help. But the habits that protect muscle, energy and long-term results still need building: protein, water, lifting, sleep. Use this time, while hunger is quieter, to put them in place.</div>
+  </div>
+</section>
+
+<!-- start -->
+<section id="start">
+  <div class="wrap">
+    <div class="kicker reveal">
+      <span class="eyebrow"><span class="num-badge">13</span>Your first week</span>
+      <h2>A 7-day start, one tiny step at a time</h2>
+      <p>Don't try all eight pillars at once. This week sets up the system. Tap each day as you finish it.</p>
+    </div>
+    <div class="week reveal" id="week"></div>
+  </div>
+</section>
+</main>
+
+<footer class="end">
+  <div class="wrap">
+    <div class="eyebrow">Well on Your Way</div>
+    <h2 style="margin-top:12px">You do not rise to a goal.<br>You build a system.</h2>
+    <p>Pick one pillar. Make it a two-minute habit. Stack it onto something you already do. Track it, never miss twice, and let the votes add up.</p>
+    <div class="links">
+      <a href="Eight-Steps-to-Wellness-Simplified.html">The Eight Steps, easy-read</a>
+      <a href="Eight-Steps-to-Wellness.html">The Eight Steps, full guide</a>
+      <a href="index.html">All infographics</a>
+    </div>
+    <div class="disc">This guide is for education only and is not medical advice. Talk with your own healthcare provider before changing your diet, exercise, or any medicine, especially if you have diabetes, heart or kidney disease, or a history of disordered eating. <i>Atomic Habits</i> is by James Clear; this page is an independent summary and is not endorsed by the author or publisher.</div>
+    <div class="sig">&copy; <span id="yr">2026</span> Well on Your Way · Weight Loss · Lifestyle · Longevity</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  'use strict';
+  function $(s,c){return (c||document).querySelector(s)}
+  function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+  function el(tag,cls,html){var e=document.createElement(tag);if(cls)e.className=cls;if(html!=null)e.innerHTML=html;return e}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  var store={
+    get:function(k,d){try{var v=localStorage.getItem('woyw-ah-'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},
+    set:function(k,v){try{localStorage.setItem('woyw-ah-'+k,JSON.stringify(v))}catch(e){}}
+  };
+  $('#yr').textContent=new Date().getFullYear();
+
+  /* theme */
+  var root=document.documentElement;
+  var savedTheme=store.get('theme',null);
+  if(savedTheme) root.setAttribute('data-theme',savedTheme);
+  function isDark(){var t=root.getAttribute('data-theme');if(t)return t==='dark';return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches}
+  function themeLabel(){$('#themeBtn').textContent=isDark()?'☀ Light':'☾ Dark'}
+  themeLabel();
+  $('#themeBtn').addEventListener('click',function(){var t=isDark()?'light':'dark';root.setAttribute('data-theme',t);store.set('theme',t);themeLabel()});
+
+  /* progress + reveal + toc */
+  var prog=$('#progress');
+  var tocLinks=$$('#toc a');
+  var secs=tocLinks.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
+  function onScroll(){
+    var h=document.documentElement;var max=h.scrollHeight-h.clientHeight;
+    prog.style.width=(max>0?(h.scrollTop/max*100):0)+'%';
+    var cur=-1;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<140)cur=i});
+    tocLinks.forEach(function(a,i){var on=i===cur;if(a.classList.contains('on')!==on){a.classList.toggle('on',on);if(on&&a.scrollIntoView){var p=a.parentNode;p.scrollTo({left:a.offsetLeft-p.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}}});
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+    $$('.reveal').forEach(function(r){io.observe(r)});
+  } else { root.classList.add('no-io'); }
+
+  var SVGNS='http://www.w3.org/2000/svg';
+
+  /* ---------- 1% chart ---------- */
+  var W=640,H=300,PL=46,PR=86,PT=20,PB=34;
+  function compoundChart(){
+    var r=parseFloat($('#rate').value)/100, d=parseInt($('#days').value,10);
+    $('#rateOut').textContent=(r*100).toFixed(1)+'%';$('#daysOut').textContent=d;
+    var up=Math.pow(1+r,d), dn=Math.pow(1-r,d);
+    $('#upOut').textContent=(up>=100?Math.round(up):up.toFixed(up>=10?1:2))+'×';
+    $('#downOut').textContent=(dn<0.01?dn.toFixed(3):dn.toFixed(2))+'×';
+    var maxY=Math.max(2,Math.pow(1+r,365)); // fixed scale per rate
+    function x(t){return PL+(t/365)*(W-PL-PR)}
+    function y(v){return PT+(1-v/maxY)*(H-PT-PB)}
+    var pu='',pd='';
+    for(var t=0;t<=d;t+=Math.max(1,Math.floor(d/120))){pu+=(t?'L':'M')+x(t).toFixed(1)+' '+y(Math.pow(1+r,t)).toFixed(1);pd+=(t?'L':'M')+x(t).toFixed(1)+' '+y(Math.pow(1-r,t)).toFixed(1)}
+    pu+='L'+x(d).toFixed(1)+' '+y(up).toFixed(1);pd+='L'+x(d).toFixed(1)+' '+y(dn).toFixed(1);
+    var ticks='';[0,90,180,270,365].forEach(function(t){ticks+='<text class="axt" x="'+x(t)+'" y="'+(H-10)+'" text-anchor="middle">'+(t===0?'day 0':t)+'</text>'});
+    var yt='';[0,maxY/2,maxY].forEach(function(v){yt+='<line class="ax" x1="'+PL+'" x2="'+(W-PR)+'" y1="'+y(v)+'" y2="'+y(v)+'" stroke-dasharray="2 6"/><text class="axt" x="'+(PL-8)+'" y="'+(y(v)+4)+'" text-anchor="end">'+(v<10?v.toFixed(v%1?1:0):Math.round(v))+'×</text>'});
+    var yu=Math.min(y(up),H-PB-24), yd=Math.max(y(dn),yu+22);
+    $('#chart1').innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="After '+d+' days: '+up.toFixed(2)+' times better versus '+dn.toFixed(2)+' times">'+yt+
+      '<line class="ax" x1="'+PL+'" x2="'+(W-PR)+'" y1="'+(H-PB)+'" y2="'+(H-PB)+'"/>'+ticks+
+      '<line class="ln-base" x1="'+x(0)+'" x2="'+x(365)+'" y1="'+y(1)+'" y2="'+y(1)+'"/><text class="axt" x="'+(W-PR+6)+'" y="'+(y(1)+4)+'">no change</text>'+
+      '<path class="ln-up" d="'+pu+'"/><path class="ln-down" d="'+pd+'"/>'+
+      '<circle class="dot-up" cx="'+x(d)+'" cy="'+y(up)+'" r="5"/><circle class="dot-down" cx="'+x(d)+'" cy="'+y(dn)+'" r="5"/>'+
+      '<text class="svgl" style="fill:var(--green)" x="'+(x(d)+10)+'" y="'+(yu+4)+'">better</text>'+
+      '<text class="svgl" style="fill:var(--red)" x="'+(x(d)+10)+'" y="'+(yd+4)+'">worse</text></svg>';
+  }
+  $('#rate').addEventListener('input',compoundChart);$('#days').addEventListener('input',compoundChart);compoundChart();
+
+  /* ---------- plateau chart ---------- */
+  function plateau(){
+    var wk=parseInt($('#wk').value,10);$('#wkOut').textContent=wk;
+    var W2=640,H2=280,L=40,R=20,T=20,B=36,N=24;
+    function x(t){return L+(t/N)*(W2-L-R)}
+    function exp(t){return t/N}
+    function act(t){return Math.pow(t/N,2.4)}
+    function y(v){return T+(1-v)*(H2-T-B)}
+    var pe='',pa='',valley='M'+x(0)+' '+y(0);
+    for(var t=0;t<=N;t+=0.25){pe+=(t?'L':'M')+x(t).toFixed(1)+' '+y(exp(t)).toFixed(1);pa+=(t?'L':'M')+x(t).toFixed(1)+' '+y(act(t)).toFixed(1)}
+    // valley fill: between expected and actual up to crossing (t=N)
+    var vf='M'+x(0)+' '+y(0);for(t=0;t<=N;t+=0.25)vf+='L'+x(t)+' '+y(exp(t));for(t=N;t>=0;t-=0.25)vf+='L'+x(t)+' '+y(act(t));vf+='Z';
+    var e=exp(wk),a=act(wk);
+    var svg='<svg viewBox="0 0 '+W2+' '+H2+'" role="img" aria-label="Expected versus actual progress">'+
+      '<path class="fill-valley" d="'+vf+'"/>'+
+      '<line class="ax" x1="'+L+'" x2="'+(W2-R)+'" y1="'+(H2-B)+'" y2="'+(H2-B)+'"/>'+
+      '<line class="ax" x1="'+L+'" x2="'+L+'" y1="'+T+'" y2="'+(H2-B)+'"/>'+
+      '<text class="axt" x="'+L+'" y="'+(H2-12)+'">start</text><text class="axt" x="'+(W2-R)+'" y="'+(H2-12)+'" text-anchor="end">week 24</text>'+
+      '<text class="axt" transform="translate(16 '+(H2/2+40)+') rotate(-90)">results you can see</text>'+
+      '<path class="ln-base" style="stroke-width:2.5" d="'+pe+'"/><path class="ln-up" d="'+pa+'"/>'+
+      '<text class="svgl" style="fill:var(--faint)" x="'+x(9)+'" y="'+(y(exp(9))-12)+'">what we expect</text>'+
+      '<text class="svgl" style="fill:var(--green)" x="'+x(19.6)+'" y="'+(y(act(19.6))+20)+'">what really happens</text>'+
+      '<text class="svgl" style="fill:var(--red)" x="'+x(13.4)+'" y="'+(y(0.42))+'" text-anchor="middle">valley of</text><text class="svgl" style="fill:var(--red)" x="'+x(13.4)+'" y="'+(y(0.42)+15)+'" text-anchor="middle">disappointment</text>'+
+      '<line x1="'+x(wk)+'" x2="'+x(wk)+'" y1="'+y(e)+'" y2="'+y(a)+'" stroke="var(--gold)" stroke-width="2" stroke-dasharray="3 3"/>'+
+      '<circle cx="'+x(wk)+'" cy="'+y(e)+'" r="5" fill="var(--faint)"/><circle cx="'+x(wk)+'" cy="'+y(a)+'" r="7" fill="var(--gold)" stroke="var(--surface)" stroke-width="2"/>'+
+      '</svg>';
+    $('#chart2').innerHTML=svg;
+    var msg;
+    if(wk<=3) msg='<b>Weeks 1–3: the honeymoon.</b> Motivation is high and the first few pounds (often water) come off quickly. It feels easy, so this is the moment to set up systems, not rely on willpower.';
+    else if(wk<=10) msg='<b>Weeks 4–10: the valley.</b> You\'re doing the work but the scale has slowed. This is where most people quit. Your habits are still building under the surface. Keep counting reps, not pounds.';
+    else if(wk<=17) msg='<b>Weeks 11–17: the habits take hold.</b> Walking after dinner and protein at breakfast now happen without thinking. Results grow because the behavior no longer runs on willpower.';
+    else msg='<b>Weeks 18–24: breakthrough.</b> From outside it looks sudden, but it came from months of small votes. The work wasn\'t wasted. It was being stored up.';
+    $('#wkMsg').innerHTML=msg;
+  }
+  $('#wk').addEventListener('input',plateau);plateau();
+
+  /* ---------- goals vs systems ---------- */
+  var GS=[
+    ['Scale','"Lose 30 pounds by summer."','"Take a quarter off my biggest meal, every day."'],
+    ['Movement','"Run a 5K."','"Walk 10 minutes after dinner. Lift two days a week."'],
+    ['Food','"Stop eating junk."','"Put fruit on the counter and keep treats out of the house."'],
+    ['Sleep','"Sleep better."','"Phone charges in the kitchen. Lights out by 10:30."'],
+    ['Hydration','"Drink more water."','"After I pour my coffee, I drink one full glass of water."']
+  ];
+  var gsMode='goal';
+  function renderGS(){
+    var rows=$('#gsRows');rows.innerHTML='';
+    GS.forEach(function(g){var r=el('div','gs-row');r.appendChild(el('div','who',g[0]));r.appendChild(el('div','txt',gsMode==='goal'?g[1]:g[2]));rows.appendChild(r)});
+    var c=$('#gsCard');c.classList.toggle('goal',gsMode==='goal');c.classList.toggle('sys',gsMode==='sys');
+    $('#gsBadge').textContent=gsMode==='goal'?'Goal thinking: the result you want':'System thinking: what you do every day';
+    $$('[data-gs]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.gs===gsMode))});
+  }
+  $$('[data-gs]').forEach(function(b){b.addEventListener('click',function(){gsMode=b.dataset.gs;renderGS()})});
+  renderGS();
+
+  /* ---------- identity rings ---------- */
+  var LAYERS=[
+    {k:'outcomes',name:'Outcomes',tag:'Outer layer · what you get',title:'Changing your results',body:'Losing the weight, lowering A1c, fitting into the old jeans. Most plans start here. They often fail because nothing deeper has changed.',ex:['<b>Weight:</b> "I want to lose 30 pounds."','<b>Labs:</b> "I want my blood sugar in range."','<b>Fitness:</b> "I want to climb stairs without stopping."'],r:150,col:'#cf9440'},
+    {k:'processes',name:'Processes',tag:'Middle layer · what you do',title:'Changing your habits and systems',body:'The routines that produce the outcome. This is where the Four Laws do their work.',ex:['<b>Food:</b> protein first at every meal.','<b>Movement:</b> a 10-minute walk after dinner.','<b>Rhythm:</b> the kitchen closes at 7 pm.'],r:104,col:'#3f6ea5'},
+    {k:'identity',name:'Identity',tag:'Inner layer · who you are',title:'Changing your beliefs about yourself',body:'The deepest layer is who you believe you are. Say "I\'m not a snacker" instead of "I\'m trying to cut back." Every habit then becomes proof of that identity.',ex:['<b>Step 1:</b> decide who you want to be. "I\'m a healthy person who moves every day."','<b>Step 2:</b> prove it to yourself with small wins.','<b>Test:</b> before a choice, ask "What would a healthy person do?"'],r:58,col:'#2e7d57'}
+  ];
+  var curLayer='identity';
+  function renderRings(){
+    var s='<svg viewBox="0 0 320 320" role="group" aria-label="Three layers of behavior change">';
+    LAYERS.forEach(function(L){
+      var dim=curLayer!==L.k?' dim':'';
+      var ty=L.k==='identity'?165:(160-L.r+28);
+      s+='<g class="ring'+dim+'" data-k="'+L.k+'" tabindex="0" role="button" aria-label="'+L.name+'"><circle cx="160" cy="160" r="'+L.r+'" fill="'+L.col+'"/><text x="160" y="'+ty+'" text-anchor="middle">'+L.name.toUpperCase()+'</text></g>';
+    });
+    s+='</svg>';
+    $('#rings').innerHTML=s;
+    $$('#rings .ring').forEach(function(g){
+      function go(){curLayer=g.getAttribute('data-k');renderRings()}
+      g.addEventListener('click',function(e){e.stopPropagation();go()});
+      g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
+    });
+    var L=LAYERS.filter(function(l){return l.k===curLayer})[0];
+    $('#layerPanel').innerHTML='<div class="tag">'+L.tag+'</div><h3>'+L.title+'</h3><p class="muted">'+L.body+'</p><ul>'+L.ex.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>';
+  }
+  renderRings();
+
+  /* ---------- votes ---------- */
+  var VOTES=[['Drank water before lunch',1],['Walked after dinner',1],['Protein at breakfast',1],['Took ¼ off my plate',1],['In bed by 10:30',1],['Chose sparkling water',1],['Ate at my normal times',1],['Late-night snacking',0],['Skipped my walk',0],['Soda with lunch',0],['Scrolled until midnight',0]];
+  var vy=0,vn=0;
+  var vb=$('#vbtns');
+  VOTES.forEach(function(v){var b=el('button','vbtn'+(v[1]?'':' neg'),(v[1]?'+ ':'− ')+esc(v[0]));b.type='button';b.addEventListener('click',function(){if(v[1])vy++;else vn++;voteRender(v)});vb.appendChild(b)});
+  function voteRender(v){
+    var tot=vy+vn;$('#vmeter').style.width=(tot?vy/tot*100:50)+'%';
+    $('#vyes').textContent=vy+' for';$('#vno').textContent=vn+' against';
+    var f=$('#vfeed');
+    if(!tot){f.textContent='No votes yet.';return}
+    if(f.textContent==='No votes yet.')f.textContent='';
+    var p=el('span','pip '+(v[1]?'y':'n'));f.appendChild(p);
+    var pct=Math.round(vy/tot*100);
+    $('#vfeed').setAttribute('title',pct+'% for');
+  }
+  $('#vreset').addEventListener('click',function(){vy=vn=0;$('#vmeter').style.width='50%';$('#vyes').textContent='0 for';$('#vno').textContent='0 against';$('#vfeed').textContent='No votes yet.'});
+
+  /* ---------- habit loop ---------- */
+  var STAGES=['Cue','Craving','Response','Reward'];
+  var SCEN=[
+    {k:'snack',name:'Evening snacking',type:'break',s:['8:30 pm, on the couch, TV on, chips in sight in the pantry.','Wanting to relax and have something to do with your hands. You\'re not really hungry.','Eating straight from the bag until it\'s half gone.','A moment of comfort and crunch. The loop is learned.'],fix:'<b>Break it: make it invisible and difficult</b>Move snacks to an opaque bin on a high shelf, or keep them out of the house. "Close the kitchen" by brushing your teeth after dinner. If you still want something, plate one portion. No eating from the bag.'},
+    {k:'soda',name:'Afternoon soda',type:'break',s:['The 3 pm energy dip at your desk, and the vending machine down the hall.','Wanting a lift and a break from work.','Buying and drinking a 20 oz soda.','A burst of sugar and caffeine, then a crash at 4.'],fix:'<b>Swap it: same cue, new response</b>Keep the cue and the reward (a break and a lift) and change what you do. At 3 pm, walk to refill your water bottle, or have sparkling water or unsweetened tea. Put a cold bottle on your desk so it is the easiest choice.'},
+    {k:'walk',name:'Post-dinner walk',type:'build',s:['Plates are cleared, and your walking shoes are waiting by the door.','Wanting to feel light, clear-headed and good about the day.','A 10-minute walk around the block. Start with just putting the shoes on.','Steadier blood sugar, fresh air, a check mark on the tracker.'],fix:'<b>Build it: all four laws</b>Obvious: shoes by the door. Attractive: only listen to your favorite podcast on the walk. Easy: start with two minutes. Satisfying: check it off, or text a walking friend "done ✓".'},
+    {k:'protein',name:'Protein breakfast',type:'build',s:['The coffee maker starts brewing in the morning.','Wanting energy that lasts until lunch, not a mid-morning crash.','Greek yogurt or two eggs before anything else.','Feeling full until noon. Fewer cravings later in the day.'],fix:'<b>Build it: stack and prep</b>"After I start the coffee, I\'ll make my protein." Hard-boil a dozen eggs on Sunday. Keep the yogurt at the front of the fridge. The less you have to decide in the morning, the more often it happens.'}
+  ];
+  var curScen=0,curStage=0;
+  function loopSvg(){
+    var cx=200,cy=200,R=130,pos=[[cx,cy-R],[cx+R,cy],[cx,cy+R],[cx-R,cy]];
+    var s='<svg viewBox="0 0 400 400" role="group" aria-label="Habit loop"><circle class="larc" cx="200" cy="200" r="130"/>';
+    // arrows
+    [[45],[135],[225],[315]].forEach(function(a){var ang=(a[0]-90)*Math.PI/180;var px=cx+R*Math.cos(ang),py=cy+R*Math.sin(ang);s+='<g transform="translate('+px+' '+py+') rotate('+(a[0])+')"><path d="M-6 -7 L6 0 L-6 7" fill="none" stroke="var(--faint)" stroke-width="2"/></g>'});
+    STAGES.forEach(function(st,i){
+      s+='<g class="lnode'+(i===curStage?' on':'')+'" data-i="'+i+'" tabindex="0" role="button" aria-label="'+st+'"><circle cx="'+pos[i][0]+'" cy="'+pos[i][1]+'" r="44"/><text class="n" x="'+pos[i][0]+'" y="'+(pos[i][1]-8)+'" text-anchor="middle">0'+(i+1)+'</text><text x="'+pos[i][0]+'" y="'+(pos[i][1]+10)+'" text-anchor="middle">'+st.toUpperCase()+'</text></g>';
+    });
+    var sc=SCEN[curScen];
+    s+='<text class="lcenter" x="200" y="194" text-anchor="middle">'+esc(sc.name)+'</text><text class="axt" x="200" y="216" text-anchor="middle" style="fill:'+(sc.type==='build'?'var(--green)':'var(--red)')+'">'+(sc.type==='build'?'HABIT TO BUILD':'HABIT TO BREAK')+'</text></svg>';
+    $('#loopSvg').innerHTML=s;
+    $$('#loopSvg .lnode').forEach(function(g){function go(){curStage=+g.getAttribute('data-i');renderLoop()}g.addEventListener('click',go);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
+  }
+  function renderLoop(){
+    var sc=SCEN[curScen];
+    var st=$('#lstage');st.innerHTML='';
+    sc.s.forEach(function(t,i){var r=el('button','lrow'+(i===curStage?' on':''),'<span class="k">'+STAGES[i]+'</span><span>'+esc(t)+'</span>');r.type='button';r.addEventListener('click',function(){curStage=i;renderLoop()});st.appendChild(r)});
+    $('#lfix').innerHTML=sc.fix;
+    $$('#scenTabs button').forEach(function(b,i){b.setAttribute('aria-selected',String(i===curScen))});
+    loopSvg();
+  }
+  SCEN.forEach(function(sc,i){var b=el('button',null,esc(sc.name));b.type='button';b.setAttribute('role','tab');b.addEventListener('click',function(){curScen=i;curStage=0;renderLoop()});$('#scenTabs').appendChild(b)});
+  renderLoop();
+  var loopTimer=setInterval(function(){
+    var r=$('#loopSvg').getBoundingClientRect();
+    if(r.top<innerHeight&&r.bottom>0&&!document.hidden&&!loopTouched){curStage=(curStage+1)%4;renderLoop()}
+  },3200);
+  var loopTouched=false;
+  $('#loop').addEventListener('pointerdown',function(){loopTouched=true;clearInterval(loopTimer)});
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){clearInterval(loopTimer)}
+
+  /* ---------- four laws ---------- */
+  var LAWS=[
+    {stage:'Cue',build:{t:'Make it obvious',li:['<b>Implementation intention:</b> "I will walk at 6:30 pm around my block."','<b>Habit stack:</b> "After I pour my coffee, I drink a glass of water."','<b>Design the space:</b> fruit on the counter, water bottle on the desk, shoes by the door.']},brk:{t:'Make it invisible',li:['<b>Hide the cues:</b> treats go in opaque containers on a high shelf, or out of the house.','<b>Change the route</b> so you don\'t pass the drive-through or vending machine.','<b>Phone out of the bedroom</b> so it can\'t start the late-night snack-and-scroll loop.']}},
+    {stage:'Craving',build:{t:'Make it attractive',li:['<b>Temptation bundling:</b> favorite podcast or show only while walking or on the bike.','<b>Join a group</b> where your habit is normal, like a walking club or a coaching cohort.','<b>Reframe:</b> "I get to move my body," not "I have to exercise."']},brk:{t:'Make it unattractive',li:['<b>Reframe the payoff:</b> list what the habit really costs you (the crash, the regret, poor sleep).','<b>Read the label:</b> 65 g of sugar takes some of the shine off a soda.','<b>Spend less time</b> with the cues and people that pull you back into old patterns.']}},
+    {stage:'Response',build:{t:'Make it easy',li:['<b>Two-minute rule:</b> start with a version that takes two minutes or less.','<b>Prime the space:</b> chop the vegetables, portion the snacks and fill the bottles ahead of time.','<b>Fewer steps:</b> dumbbells in the living room, not in the garage.']},brk:{t:'Make it difficult',li:['<b>Add steps:</b> buy single-serve treats, not family size.','<b>Commitment devices:</b> grocery delivery from a set list; book workouts ahead.','<b>Automate it:</b> set app limits for late-night scrolling.']}},
+    {stage:'Reward',build:{t:'Make it satisfying',li:['<b>Track it:</b> an X on the calendar, a rubber band moved on your water bottle.','<b>Never miss twice:</b> one miss is an accident, two is a new pattern.','<b>Reward right away:</b> put the $4 you didn\'t spend on soda toward something you want.']},brk:{t:'Make it unsatisfying',li:['<b>Accountability partner:</b> someone who knows your plan and checks in.','<b>Habit contract:</b> write it down, sign it, and give it to your coach or a friend.','<b>Make the cost show up now</b>, not just "someday."']}}
+  ];
+  var lawMode='build';
+  function renderLaws(){
+    var g=$('#laws-grid');g.innerHTML='';g.classList.toggle('lawmode-break',lawMode==='break');
+    LAWS.forEach(function(L,i){
+      var d=lawMode==='build'?L.build:L.brk;
+      var c=el('div','card law reveal in','<div class="lnum">'+(lawMode==='build'?'LAW ':'INVERSION ')+(i+1)+'</div><h3>'+d.t+'</h3><div class="stage">Step: '+L.stage+'</div><ul>'+d.li.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>');
+      g.appendChild(c);
+    });
+    $$('[data-mode]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.mode===lawMode))});
+  }
+  $$('[data-mode]').forEach(function(b){b.addEventListener('click',function(){lawMode=b.dataset.mode;renderLaws()})});
+  renderLaws();
+
+  /* ---------- pillars ---------- */
+  var P=[
+    {name:'Eat a Little Less',goal:'Take one fourth of your plate back off before the first bite.',id:'I\'m someone who eats until satisfied, not stuffed.',
+      laws:['Serve plates from the stove, not family-style at the table. Put a leftovers container next to the stove before dinner.','Box the extra quarter as tomorrow\'s lunch, so it feels like a bonus meal, not a loss.','Ask for a to-go box when you order and pack half right away. Buy snacks in single-serve sizes.','After meals, rate your fullness from 1 to 10. Aim for 7. Check off each "quarter off" meal.'],
+      stack:'After I fill my plate, I will move one quarter of it into a leftovers container.',
+      ladder:['Put one spoonful back','Take ¼ off your biggest meal','Take ¼ off two meals a day','Box half at restaurants, without thinking'],
+      brk:'Eating straight from the bag → keep it out of sight and add a step: portion one serving into a bowl, then put the bag away before you sit down.'},
+    {name:'Move a Little Every Day',goal:'Walk 10 minutes after your biggest meal. Lift something heavy two days a week.',id:'I\'m someone who moves after meals.',
+      laws:['Keep walking shoes by the door and resistance bands next to the TV.','Save your favorite podcast or audiobook for walks only.','Start with "shoes on and out the door." A walk around the block counts.','Check it off on a calendar or step app. Text a friend "done ✓."'],
+      stack:'After I clear the dinner plates, I will put on my shoes and walk for 10 minutes.',
+      ladder:['Shoes on and step outside after dinner','10 minutes after your biggest meal','After two meals, plus lifting 2× a week','After every meal, plus lifting 3× a week'],
+      brk:'Sitting all evening → add friction: keep the remote in a drawer, and stand or do 10 squats every time an ad comes on.'},
+    {name:'Drink More Water',goal:'About 80 oz a day: two big bottles, plus a glass before each meal.',id:'I\'m someone who stays hydrated.',
+      laws:['Keep a full bottle in your line of sight: desk, car cup holder, nightstand.','Use a bottle you love. Add lemon, cucumber or mint.','Fill two bottles the night before and keep them cold in the fridge.','Put two rubber bands on the bottle and move one each time you refill. Check that your urine is a light color.'],
+      stack:'After I pour my morning coffee, I will drink one full glass of water first.',
+      ladder:['One glass when you wake up','A glass before each meal','One big bottle finished by lunch','Two bottles a day (~80 oz)'],
+      brk:'Thirst mistaken for hunger → when a craving hits between meals, drink a glass of water and wait 10 minutes before deciding.'},
+    {name:'Cut Back on Sugar',goal:'Swap sugary drinks first, then bring desserts down to treat-only.',id:'I\'m someone who doesn\'t need sugar to feel good.',
+      laws:['Keep a fruit bowl on the counter and put sparkling water at eye level in the fridge.','Find two or three "better sweet" swaps you actually like: berries and yogurt, dark chocolate squares.','Don\'t keep sweets at home. If you want dessert, go out and get one serving.','Track sugar-free days. Spend the soda money on something you\'ll enjoy.'],
+      stack:'After I sit down for lunch, I will pour sparkling water instead of soda.',
+      ladder:['Swap one sweet drink for water or sparkling','No sugary drinks on weekdays','Dessert only on weekends','Added sugar is a rare, chosen treat'],
+      brk:'The 3 pm sweet tooth → make it invisible: no candy dish, a different route past the break room, and a protein snack ready for 2:45.'},
+    {name:'Eat More Protein',goal:'Build every meal around a palm-sized (or larger) portion of protein.',id:'I\'m someone who builds every meal around protein.',
+      laws:['Put protein foods at the front of the fridge: eggs, Greek yogurt, cooked chicken.','Find three protein breakfasts you look forward to and rotate them.','Batch-cook on Sunday: a dozen hard-boiled eggs and a tray of chicken thighs.','Count "protein palms" each day and aim for one at every meal. Notice how full you stay.'],
+      stack:'After I start the coffee maker, I will make my protein breakfast before anything else.',
+      ladder:['Add one protein food to breakfast','Protein at every meal','A palm-sized portion at each meal','About 25–30 g at each meal'],
+      brk:'Carb-only breakfasts (toast, cereal) → don\'t keep cereal on the counter. Keep a protein option easier to grab than the toast.'},
+    {name:'Get Enough Sleep',goal:'7–9 hours most nights, with the same bedtime and wake time.',id:'I\'m someone who protects my sleep.',
+      laws:['Set a "start winding down" alarm one hour before bed.','Make winding down something you look forward to: herbal tea, a paper book, a warm shower.','Charge your phone in the kitchen. Keep the bedroom cool, dark and quiet.','Rate your morning energy from 1 to 10 and watch it rise as your bedtime steadies.'],
+      stack:'After I brush my teeth at night, I will plug my phone in outside the bedroom.',
+      ladder:['Set a bedtime alarm','Phone sleeps outside the bedroom','Same bedtime 5 nights a week','7–9 hours most nights'],
+      brk:'Late-night scrolling → set app limits that lock social apps after 10 pm, and keep a book on your pillow.'},
+    {name:'Eat Real Food',goal:'Most of your food should be things your great-grandparents would recognize.',id:'I\'m someone who eats real food most of the time.',
+      laws:['Wash and cut produce as soon as you get home. Store it at eye level in clear containers.','Try one new vegetable recipe a week. Cook with someone.','Keep frozen vegetables, bagged salads and rotisserie chicken on hand for 10-minute meals.','Use a "colors on the plate" check. Aim for three or more at dinner.'],
+      stack:'After I put the groceries away, I will wash and chop one container of vegetables.',
+      ladder:['Add one vegetable to dinner','Half your dinner plate is vegetables','One fully home-cooked meal a day','Real food at most meals'],
+      brk:'Ultra-processed snacks → shop from a list, never hungry, and don\'t go down the snack aisles. If it isn\'t in the house, you can\'t eat it on autopilot.'},
+    {name:'Eat at the Same Times',goal:'Regular meal times and a set time when the kitchen closes.',id:'I\'m someone with a steady eating rhythm.',
+      laws:['Set phone reminders for your meal times. Put a "kitchen closed" sign on the fridge after dinner.','Make dinner a set family time you look forward to, at the table.','Plan tomorrow\'s meals the night before so there\'s nothing to decide.','Check off each day the kitchen closed on time.'],
+      stack:'After I finish dinner, I will brush my teeth, and that means the kitchen is closed.',
+      ladder:['Pick a "kitchen closes" time','The kitchen closes on time 5 nights a week','Three meals at set times','A steady eating window most days'],
+      brk:'Grazing all evening → brushing your teeth is the signal that the kitchen is closed. If you\'re truly hungry, have a planned snack, not whatever is in the pantry.'}
+  ];
+  var LAWNAMES=['Make it obvious','Make it attractive','Make it easy','Make it satisfying'];
+  var curP=store.get('pillar',0); if(!(curP>=0&&curP<P.length))curP=0;
+  var ladderState=store.get('ladder',{});
+  function renderPillar(){
+    $$('#ptabs .ptab').forEach(function(b,i){b.setAttribute('aria-selected',String(i===curP));b.tabIndex=i===curP?0:-1});
+    var p=P[curP], lv=ladderState[curP]||0;
+    var h='<div class="phead"><div class="tag">Pillar '+(curP+1)+' of 8</div><h3>'+esc(p.name)+'</h3><div class="goal">'+esc(p.goal)+'</div><div class="ident"><span>Identity to vote for</span>"'+esc(p.id)+'"</div></div>';
+    h+='<div class="pbody"><div>';
+    p.laws.forEach(function(t,i){h+='<div class="plaw"><div class="ic">'+(i+1)+'</div><div><h4>'+LAWNAMES[i]+'</h4><p>'+esc(t)+'</p></div></div>'});
+    h+='<div class="stack"><div class="k">Ready-made habit stack</div><p>'+esc(p.stack)+'</p></div>';
+    h+='</div><div class="ladder"><h4>Your habit ladder</h4>';
+    for(var i=p.ladder.length-1;i>=0;i--){
+      var cls=i<lv?'done':(i===lv?'cur':'locked');
+      h+='<div class="rung '+cls+'"><span class="lv">'+(i===0?'2-MIN':'LVL '+(i+1))+'</span><span>'+esc(p.ladder[i])+(i===lv?' <b style="color:var(--gold)">← you are here</b>':'')+(i<lv?' ✓':'')+'</span></div>';
+    }
+    if(lv>=p.ladder.length) h+='<p style="margin-top:6px;color:var(--green);font-weight:600">All four rungs done. This one is part of who you are now. 🎉</p>';
+    h+='<div class="lctl"><button class="btn" type="button" id="lvUp"'+(lv>=p.ladder.length?' disabled style="opacity:.5"':'')+'>I\'ve got this rung ↑</button><button class="btn ghost" type="button" id="lvDn"'+(lv<=0?' disabled style="opacity:.5"':'')+'>Step back ↓</button></div>';
+    h+='<div class="breakbox"><div class="k">Break the opposite habit</div><p>'+esc(p.brk)+'</p></div>';
+    h+='</div></div>';
+    $('#ppanel').innerHTML=h;
+    $('#lvUp').addEventListener('click',function(){ladderState[curP]=Math.min(p.ladder.length,(ladderState[curP]||0)+1);store.set('ladder',ladderState);renderPillar()});
+    $('#lvDn').addEventListener('click',function(){ladderState[curP]=Math.max(0,(ladderState[curP]||0)-1);store.set('ladder',ladderState);renderPillar()});
+  }
+  P.forEach(function(p,i){
+    var b=el('button','ptab','<span class="pn">'+(i+1)+'</span>'+esc(p.name));b.type='button';b.setAttribute('role','tab');
+    b.addEventListener('click',function(){curP=i;store.set('pillar',i);renderPillar()});
+    b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();curP=(curP+(e.key==='ArrowRight'?1:P.length-1))%P.length;store.set('pillar',curP);renderPillar();$$('#ptabs .ptab')[curP].focus()}});
+    $('#ptabs').appendChild(b);
+  });
+  renderPillar();
+
+  /* ---------- habit stacking ---------- */
+  var AFTER=['pour my morning coffee','get out of bed','sit down to eat a meal','clear the dinner plates','get home from work','brush my teeth at night','sit down at my desk','put the groceries away','park the car at work','turn off the TV'];
+  var WILL=['drink one full glass of water','walk for 10 minutes','move ¼ of my plate into a leftovers box','add a protein food to my plate','plug my phone in outside the bedroom','write down tomorrow\'s meals','do 10 squats','refill my water bottle','close the kitchen for the night','chop one container of vegetables','set out my walking shoes for tomorrow'];
+  function fill(sel,arr){arr.forEach(function(a){var o=document.createElement('option');o.value=a;o.textContent=a;sel.appendChild(o)})}
+  fill($('#after'),AFTER);fill($('#will'),WILL);$('#will').selectedIndex=0;
+  function sentence(){
+    var w=$('#where').value.trim();
+    return {html:'After I <em>'+esc($('#after').value)+'</em>, I will <em>'+esc($('#will').value)+'</em>'+(w?' <em>'+esc(w)+'</em>':'')+'.',text:'After I '+$('#after').value+', I will '+$('#will').value+(w?' '+w:'')+'.'};
+  }
+  function renderSentence(){$('#sentence').innerHTML=sentence().html}
+  ['after','will','where'].forEach(function(id){$('#'+id).addEventListener('input',renderSentence)});
+  renderSentence();
+  var plan=store.get('plan',[]);if(!Array.isArray(plan))plan=[];
+  function renderPlan(){
+    var ul=$('#plan');ul.innerHTML='';
+    if(!plan.length){ul.appendChild(el('li','empty','Nothing yet. Build a stack and add it here.'));return}
+    plan.forEach(function(t,i){var li=el('li',null,'<span>'+(i+1)+'. '+esc(t)+'</span>');var x=el('button',null,'×');x.type='button';x.setAttribute('aria-label','Remove');x.addEventListener('click',function(){plan.splice(i,1);store.set('plan',plan);renderPlan()});li.appendChild(x);ul.appendChild(li)});
+  }
+  $('#addStack').addEventListener('click',function(){var t=sentence().text;if(plan.indexOf(t)===-1&&plan.length<12){plan.push(t);store.set('plan',plan);renderPlan()}});
+  $('#printPlan').addEventListener('click',function(){
+    var w=window.open('','_blank');if(!w)return;
+    var items=(plan.length?plan:[sentence().text]).map(function(t){return '<li>'+esc(t)+'</li>'}).join('');
+    w.document.write('<!doctype html><html><head><meta charset="utf-8"><title>My Habit Stack Plan</title><style>body{font-family:Georgia,serif;max-width:640px;margin:40px auto;padding:0 20px;color:#17293a}h1{font-size:28px}li{font-size:20px;margin:14px 0;line-height:1.4}p{font-family:Arial,sans-serif;color:#5d6b78;font-size:13px}</style></head><body><h1>My Habit Stack Plan</h1><ol>'+items+'</ol><p>Well on Your Way · Atomic Habits for Weight Loss</p></body></html>');
+    w.document.close();w.focus();setTimeout(function(){w.print()},300);
+  });
+  renderPlan();
+
+  /* ---------- scorecard ---------- */
+  var SC=['Check my phone first thing','Coffee with sugar and creamer','Glass of water on waking','Skip breakfast, then graze','Eat lunch at my desk','Afternoon vending machine snack','Walk at lunch or after dinner','Soda or sweet tea with a meal','Go back for second helpings','Eat dinner in front of the TV','Snack after 9 pm','Scroll in bed before sleep','Same bedtime most nights','Pack lunch the night before'];
+  var scState=store.get('score',{});
+  var CYC=['','p','z','m'],SYM={'':'?','p':'+','z':'=','m':'−'};
+  function renderScore(){
+    var g=$('#score');g.innerHTML='';var n={p:0,z:0,m:0};
+    SC.forEach(function(t,i){var v=scState[i]||'';if(v)n[v]++;var b=el('button','sitem','<span>'+esc(t)+'</span><span class="mark">'+SYM[v]+'</span>');b.type='button';b.dataset.v=v;b.setAttribute('aria-label',t+': '+(v?{p:'helps',z:'neutral',m:'hurts'}[v]:'not rated'));
+      b.addEventListener('click',function(){scState[i]=CYC[(CYC.indexOf(scState[i]||'')+1)%4];store.set('score',scState);renderScore()});g.appendChild(b)});
+    $('#sP').textContent=n.p;$('#sZ').textContent=n.z;$('#sM').textContent=n.m;
+    var tot=n.p+n.z+n.m,msg;
+    if(!tot)msg='Tap a habit to rate it. Ratings cycle through + = − and back to unrated.';
+    else if(n.m===0)msg='Nothing marked as hurting yet. Be honest with yourself. The scorecard only helps if it shows you the truth.';
+    else msg='Pick the one "−" habit that comes up most often. Find its cue in the habit loop, then use the "Break a bad habit" laws on it. Just one, for now.';
+    $('#sMsg').textContent=msg;
+  }
+  renderScore();
+
+  /* ---------- tracker ---------- */
+  var tState=store.get('track',{});if(typeof tState!=='object'||!tState)tState={};
+  var hname=store.get('hname',null);if(hname)$('#hname').value=hname;
+  $('#hname').addEventListener('input',function(){store.set('hname',$('#hname').value)});
+  function renderTrack(){
+    var d=$('#tdays');d.innerHTML='';
+    ['M','T','W','T','F','S','S'].forEach(function(x){d.appendChild(el('div','dh',x))});
+    var st=[];for(var i=0;i<28;i++)st.push(tState[i]||'');
+    var twice={};for(i=1;i<28;i++){if(st[i]==='m'&&st[i-1]==='m'){twice[i]=1;twice[i-1]=1}}
+    st.forEach(function(v,i){var b=el('button','day'+(v?' '+v:'')+(twice[i]?' twice':''),'<span>'+(i+1)+'</span>');b.type='button';b.setAttribute('aria-label','Day '+(i+1)+': '+(v==='d'?'done':v==='m'?'missed':'not logged'));
+      b.addEventListener('click',function(){tState[i]=v===''?'d':v==='d'?'m':'';store.set('track',tState);renderTrack()});d.appendChild(b)});
+    var last=-1;for(i=27;i>=0;i--){if(st[i]){last=i;break}}
+    var streak=0;for(i=last;i>=0;i--){if(st[i]==='d')streak++;else break}
+    var done=st.filter(function(x){return x==='d'}).length,logged=st.filter(function(x){return x}).length;
+    $('#tStreak').textContent=streak;$('#tRate').textContent=logged?Math.round(done/logged*100)+'%':'0%';
+    var m=$('#tMsg');m.className='tmsg';
+    var lastTwo=last>0&&st[last]==='m'&&st[last-1]==='m';
+    if(!logged)m.textContent='Tap today\'s square once you\'ve done your habit.';
+    else if(lastTwo){m.classList.add('warn');m.innerHTML='<b>Two misses in a row.</b> This is the moment that matters. Do the two-minute version today. It still counts.'}
+    else if(last>=0&&st[last]==='m'){m.innerHTML='<b>One miss is fine.</b> Everyone misses. Just make tomorrow a "done" day, even with the smallest version.'}
+    else if(Object.keys(twice).length){m.classList.add('good');m.innerHTML='<b>You bounced back.</b> The red squares show where you slipped two days, and you came back anyway. That is how lasting habits are built.'}
+    else if(streak>=7){m.classList.add('good');m.innerHTML='<b>'+streak+'-day streak.</b> At this point you\'re just someone who does this.'}
+    else m.innerHTML='<b>Nice.</b> Every check mark is a vote for who you\'re becoming.';
+  }
+  $('#tReset').addEventListener('click',function(){tState={};store.set('track',tState);renderTrack()});
+  renderTrack();
+
+  /* ---------- week ---------- */
+  var WEEK=[
+    ['Day 1','Pick one pillar','Choose the pillar from the 8 where a small change would help most. Just one.'],
+    ['Day 2','Write your identity','Finish the sentence: "I\'m the kind of person who…"'],
+    ['Day 3','Do the scorecard','Rate your daily habits. Find the cue for one "−".'],
+    ['Day 4','Design your space','Make the good cue obvious and the bad cue invisible.'],
+    ['Day 5','Build your stack','"After I [current habit], I will [2-min habit]." Write it down.'],
+    ['Day 6','Do the 2-minute version','Just show up. Check off your first day in the tracker.'],
+    ['Day 7','Review and repeat','How did it go? Keep the same rung next week. Never miss twice.']
+  ];
+  var wk=store.get('week',{});
+  function renderWeek(){var g=$('#week');g.innerHTML='';WEEK.forEach(function(w,i){var b=el('button','wday'+(wk[i]?' ok':''),'<div class="dn">'+w[0].toUpperCase()+'</div><h4>'+esc(w[1])+'</h4><p>'+esc(w[2])+'</p>');b.type='button';b.setAttribute('aria-pressed',String(!!wk[i]));b.addEventListener('click',function(){wk[i]=!wk[i];store.set('week',wk);renderWeek()});g.appendChild(b)})}
+  renderWeek();
+})();
+</script>
+</body>
+</html>
